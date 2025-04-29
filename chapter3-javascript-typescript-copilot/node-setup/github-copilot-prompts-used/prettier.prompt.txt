@@ -1,0 +1,2 @@
+Prompt Used:
+// Create a Prettier config with single quotes, trailing commas, and 100-char line width.

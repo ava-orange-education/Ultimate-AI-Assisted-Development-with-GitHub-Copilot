@@ -1,0 +1,7 @@
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for 'GitHub Copilot'
+4. Install the extension
+5. Sign in to your GitHub account
+6. Approve permissions
+7. Verify GitHub Copilot icon appears in the status bar

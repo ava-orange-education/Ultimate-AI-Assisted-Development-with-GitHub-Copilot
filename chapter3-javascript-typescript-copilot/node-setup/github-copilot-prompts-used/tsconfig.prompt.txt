@@ -1,0 +1,2 @@
+Prompt Used:
+// Create a tsconfig.json file for a TypeScript project targeting ES2020, using ES6 modules, and with strict mode enabled.

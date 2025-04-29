@@ -1,0 +1,2 @@
+Prompt Used:
+// Configure ESLint for a TypeScript project integrated with Prettier.

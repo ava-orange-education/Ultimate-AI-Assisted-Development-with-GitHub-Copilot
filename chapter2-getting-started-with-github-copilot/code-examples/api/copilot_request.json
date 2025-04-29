@@ -1,0 +1,8 @@
+{
+    "prompt": "def add_numbers(a, b):",
+    "max_tokens": 50,
+    "temperature": 0.5,
+    "top_p": 1,
+    "n": 1,
+    "stop": ["\n"]
+  }

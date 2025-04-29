@@ -1,0 +1,21 @@
+import re
+
+def is_valid_email(email):
+    pattern = r'^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, email))
+
+# Test the function with some email addresses
+sample_emails = [
+    "user@example.com",        # Valid email
+    "user.name@domain.co.uk",  # Valid email with subdomain
+    "user123@website-name.org",# Valid email with hyphen in domain
+    "invalid@email",           # Invalid - missing top-level domain
+    "no_at_symbol.com",        # Invalid - missing @ symbol
+    "user@.com",               # Invalid - empty domain name
+    "spaces are@invalid.com"   # Invalid - contains spaces
+]
+
+# Check each email and print the result
+for email in sample_emails:
+    status = "Valid" if is_valid_email(email) else "Invalid"
+    print(f"{email}: {status}")
