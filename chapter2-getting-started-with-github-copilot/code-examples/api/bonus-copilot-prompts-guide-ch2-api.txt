@@ -1,0 +1,93 @@
+## Chapter 2 — Section: code-examples/api
+
+Prompt 1: Simulate Copilot API Request Using Python
+-----------------------------------------------------
+Write a Python function to simulate a POST request to a Copilot-style API.
+Requirements:
+- Use requests library
+- Send JSON with prompt, model, language
+- Return suggestions from response
+- Handle timeouts and status codes
+- Include unit test using unittest.mock
+
+Prompt 2: Validate API Request Payload with Marshmallow
+-----------------------------------------------------
+Use Marshmallow to define and validate a schema for Copilot API input.
+Requirements:
+- Fields: prompt (str), model (str), language (str)
+- Raise error for missing or empty fields
+- Provide CLI script to read JSON and validate
+- Add docstring and error message formatting
+
+Prompt 3: Build FastAPI Endpoint to Accept Prompt Input
+-----------------------------------------------------
+Create a FastAPI app that accepts prompt input and returns mock code suggestions.
+Requirements:
+- POST /suggest with JSON body
+- Use Pydantic model for validation
+- Return a response with id, suggestion, score
+- Add OpenAPI tags and descriptions
+
+Prompt 4: Generate API Response Examples for Swagger
+-----------------------------------------------------
+Define a FastAPI response model with OpenAPI documentation.
+Requirements:
+- Fields: suggestionId, text, confidenceScore
+- Add example in @app.post decorator
+- Auto-generate Swagger docs
+- Include 400 error example for invalid input
+
+Prompt 5: Write Curl Commands for Copilot-style Endpoint
+-----------------------------------------------------
+Write curl commands to:
+- POST a prompt
+- GET a list of suggestions
+- Include Authorization header with bearer token
+- Pretty-print response using jq
+- Include error handling with status check
+
+Prompt 6: Secure API Endpoint with API Key Header
+-----------------------------------------------------
+Secure your Copilot-style API using a required API key in header.
+Requirements:
+- Reject requests without key
+- Return 401 Unauthorized JSON response
+- Include API key check middleware
+- Document expected header format
+
+Prompt 7: Simulate Copilot Feedback Collection Endpoint
+-----------------------------------------------------
+Create a POST endpoint `/feedback` to accept user feedback for Copilot suggestions.
+Requirements:
+- Accept JSON with prompt, suggestion, accepted (boolean), timestamp
+- Validate fields using FastAPI
+- Return success response
+- Include test case using TestClient
+
+Prompt 8: Serialize Copilot Suggestion List as JSON
+-----------------------------------------------------
+Write a Python script that serializes a list of suggestion objects to JSON.
+Requirements:
+- Each suggestion has id, code, score
+- Output to `suggestions.json`
+- Ensure UTF-8 encoding
+- Pretty print JSON with indent
+
+Prompt 9: Create API Gateway Mock for Copilot Services
+-----------------------------------------------------
+Use AWS API Gateway (or a mock) to route requests to a Copilot suggestion microservice.
+Requirements:
+- POST to /copilot/suggest
+- Map headers and payload correctly
+- Add CORS headers
+- Return mock JSON response
+
+Prompt 10: Implement API Rate Limiting with FastAPI
+-----------------------------------------------------
+Protect your API using rate limiting middleware.
+Requirements:
+- Limit to 10 requests per minute per IP
+- Return 429 Too Many Requests if exceeded
+- Use `slowapi` or custom middleware
+- Add retry-after header in response
+

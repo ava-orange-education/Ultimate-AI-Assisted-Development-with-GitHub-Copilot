@@ -1,0 +1,93 @@
+## Chapter 3 — Section: typescript-basic
+
+Prompt 1: Declare Typed Variables in TypeScript
+-----------------------------------------------------
+Write a TypeScript snippet declaring variables with explicit types.
+Requirements:
+- Use string, number, boolean, and array types
+- Show both inline type and type inference
+- Include an invalid assignment example (commented)
+- Add console.log statements for each
+
+Prompt 2: Function with Typed Parameters and Return Type
+-----------------------------------------------------
+Create a function that multiplies two numbers and returns the result.
+Requirements:
+- Use number type for parameters and return
+- Handle optional third parameter as multiplier
+- Use default value for optional param
+- Add JSDoc comments
+
+Prompt 3: Interface for User Object
+-----------------------------------------------------
+Define a TypeScript interface `User` with id, name, email, isActive.
+Requirements:
+- Use appropriate types
+- Create a sample `const user1: User`
+- Log output using template literals
+- Include optional property (e.g., phone?)
+
+Prompt 4: Type Assertion Example
+-----------------------------------------------------
+Write a function that accepts an unknown input and asserts it as string.
+Requirements:
+- Use `as` keyword for assertion
+- Handle case when input is not a string
+- Include try-catch or fallback logic
+- Log length of string after assertion
+
+Prompt 5: Function to Validate Email Using RegExp
+-----------------------------------------------------
+Create a function that validates email addresses in TypeScript.
+Requirements:
+- Accepts string
+- Returns boolean
+- Use RegExp pattern
+- Add type annotations and tests
+- Handle null/undefined gracefully
+
+Prompt 6: Create Enum for User Roles
+-----------------------------------------------------
+Define an enum `UserRole` with ADMIN, USER, GUEST.
+Requirements:
+- Assign string values
+- Write a function that takes UserRole and returns permission level
+- Log different cases
+- Add fallback for unknown role
+
+Prompt 7: Union Types for Payment Method
+-----------------------------------------------------
+Create a function that accepts payment method as 'credit' | 'paypal' | 'upi'.
+Requirements:
+- Use union type
+- Log different flows based on method
+- Use exhaustive switch-case
+- Include error on unexpected type
+
+Prompt 8: Define and Use Type Alias for Product
+-----------------------------------------------------
+Create a type alias `Product` with id, name, price, and category.
+Requirements:
+- Use `readonly` for id
+- Write function to print product details
+- Add product validation logic for price > 0
+- Demonstrate usage with example
+
+Prompt 9: Use Tuple Type for Coordinate
+-----------------------------------------------------
+Create a function that takes a 2D coordinate tuple [x, y].
+Requirements:
+- Use `type Coordinate = [number, number]`
+- Function should return distance from origin
+- Add type guard for length != 2
+- Include test call
+
+Prompt 10: Narrowing Type with Type Guards
+-----------------------------------------------------
+Write a function that handles input which could be string or number.
+Requirements:
+- Use typeof check to narrow type
+- For string: return uppercase
+- For number: return square
+- Return null for any other type
+

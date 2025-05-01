@@ -1,0 +1,20 @@
+Prompt Used:
+// Provide steps to install and set up GitHub Copilot in IntelliJ IDEA
+
+1. Open IntelliJ IDEA.
+
+2. Go to:
+   > Settings → Plugins → Marketplace
+
+3. Search for "GitHub Copilot" and install the plugin.
+
+4. Restart IntelliJ IDEA after installation.
+
+5. Upon restarting:
+   - Log in to GitHub (you must have GitHub Copilot subscription or access).
+   - Authorize IntelliJ to use Copilot.
+
+6. You should now see Copilot suggestions inside your Java files.
+
+7. (Optional) Configure Copilot settings:
+   > Settings → GitHub Copilot → Customize suggestion behavior

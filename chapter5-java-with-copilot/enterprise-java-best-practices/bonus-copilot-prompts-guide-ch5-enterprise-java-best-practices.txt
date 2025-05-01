@@ -1,0 +1,158 @@
+## Chapter 5 — Section: enterprise-java-best-practices
+
+Prompt 1: Implement a Factory Design Pattern in Java
+-----------------------------------------------------
+Generate a `PaymentProcessorFactory` that returns instances of `CreditCardProcessor`, `UPIProcessor`, etc.
+Requirements:
+- Use `switch-case` or map
+- Interface-driven design
+- Throw exception for unsupported type
+
+Prompt 2: Refactor Factory Class to Use Enum Instead of String Keys
+-----------------------------------------------------
+Update the factory to use `PaymentType` enum instead of strings.
+Requirements:
+- Add `fromString()` method in enum
+- Validate input type
+- Improve readability and avoid typos
+
+Prompt 3: Use Interface and Implementations for Strategy Pattern
+-----------------------------------------------------
+Write interfaces for `NotificationSender` and its email/sms variants.
+Requirements:
+- Create `send()` method in interface
+- Use Spring DI to inject correct strategy
+- Add unit tests for each type
+
+Prompt 4: Design a Scalable Modular Service Class
+-----------------------------------------------------
+Structure an `OrderService` class that delegates tasks to multiple helpers.
+Requirements:
+- Follow SRP
+- Use composition over inheritance
+- Add proper package structure
+
+Prompt 5: Externalize Configuration via application.properties
+-----------------------------------------------------
+Use `@ConfigurationProperties` to bind `security.enabled=true`.
+Requirements:
+- Create `SecurityConfig` class
+- Load property using Spring Boot
+- Add fallback default
+
+Prompt 6: Enable Role-Based Access Using @PreAuthorize
+-----------------------------------------------------
+Apply access control to `NotificationController`.
+Requirements:
+- Annotate with `@PreAuthorize`
+- Restrict based on `hasRole('ADMIN')`
+- Add security configuration class
+
+Prompt 7: Configure Password Encoding in Spring Security
+-----------------------------------------------------
+Use `BCryptPasswordEncoder` as password encoder bean.
+Requirements:
+- Define `@Bean`
+- Use it in login logic
+- Add strength parameterization
+
+Prompt 8: Write a Unit Test for Factory Implementation
+-----------------------------------------------------
+Create JUnit test for `PaymentProcessorFactory`.
+Requirements:
+- Test for valid and invalid inputs
+- Use `assertTrue(instance instanceof X)`
+- Include test name suffix convention
+
+Prompt 9: Secure REST APIs with CSRF and CORS Config
+-----------------------------------------------------
+Create a `SecurityConfig.java` with:
+- CORS enabled globally
+- CSRF disabled for APIs
+- Add whitelist of origins
+
+Prompt 10: Inject Dependencies via Constructor for Testability
+-----------------------------------------------------
+Convert field-based injection to constructor injection.
+Requirements:
+- Avoid `@Autowired` on field
+- Add `final` modifiers
+- Enable easier mocking
+
+Prompt 11: Use Factory Pattern for Object Pooling
+-----------------------------------------------------
+Create a factory that returns reusable DB connections or clients.
+Requirements:
+- Use pool config
+- Avoid instantiating every time
+- Add shutdown logic
+
+Prompt 12: Extract Constants into Final Utility Class
+-----------------------------------------------------
+Move magic strings like `"ADMIN"`, `"TOKEN"` into a `Constants.java`.
+Requirements:
+- Use `public static final` fields
+- Add Javadoc and group by module
+- Prevent instantiation of constants class
+
+Prompt 13: Document Each Public API with JavaDoc and Swagger
+-----------------------------------------------------
+Use Copilot to:
+- Add JavaDoc to every public controller method
+- Annotate with `@Operation` for Swagger
+- Add summary and description
+
+Prompt 14: Build a Plugin-Ready Modular Service Design
+-----------------------------------------------------
+Structure code so new processors can be plugged without modifying factory.
+Requirements:
+- Use interface registry pattern
+- Add SPI support if advanced
+- Document extension points
+
+Prompt 15: Use Java Record for Immutable DTOs
+-----------------------------------------------------
+Convert request/response objects to Java `record`.
+Requirements:
+- Use `record ProductDto(String name, BigDecimal price)`
+- Replace POJO-style class
+- Ensure compatibility with JSON serializer
+
+Prompt 16: Add Runtime Profiling to Service Layer
+-----------------------------------------------------
+Integrate Spring Boot actuator and add custom metrics.
+Requirements:
+- Define timer for `@Timed`
+- Expose `/actuator/metrics`
+- Monitor endpoint latency
+
+Prompt 17: Write Abstract Factory for Notification System
+-----------------------------------------------------
+Create abstract factory to support `EmailSenderFactory`, `SMSSenderFactory`.
+Requirements:
+- Define abstract parent
+- Add concrete subclasses
+- Unit test factory logic
+
+Prompt 18: Follow Layered Architecture in OrderService
+-----------------------------------------------------
+Structure `OrderService` with:
+- Separation of controller, service, and repository layers
+- No business logic in controller
+- Add interface-based abstraction
+
+Prompt 19: Secure App with Spring Boot OAuth2 Configuration
+-----------------------------------------------------
+Configure OAuth2 login flow using Spring Boot.
+Requirements:
+- Add `application.yml` for provider details
+- Use `SecurityFilterChain`
+- Protect `/api/**` endpoints
+
+Prompt 20: Ask Copilot to Scaffold Enterprise-Ready Java App Structure
+-----------------------------------------------------
+Prompt Copilot to:
+- Generate base folder structure (controller, service, repo, config, dto)
+- Include factory pattern, exception handler, unit tests
+- Create README.md with architecture diagram
+

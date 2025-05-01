@@ -1,0 +1,56 @@
+Prompt 1: Simple Counter with Mutex
+-----------------------------------
+Write a Go program that increments a shared counter variable from multiple goroutines.
+Use sync.Mutex to ensure thread-safe increments.
+Print the final counter value after all goroutines complete.
+
+Prompt 2: Extend Counter to Use RWMutex
+---------------------------------------
+Refactor the counter to use sync.RWMutex.
+Use RLock for read operations and Lock for write operations.
+Allow multiple readers but only one writer at a time.
+
+Prompt 3: Simulate High-Concurrency Load
+----------------------------------------
+Create 1000 goroutines that each increment the counter 10 times.
+Ensure the final count is 10000.
+Add timing code to benchmark the operation duration.
+
+Prompt 4: Add REST API to Serve Counter
+---------------------------------------
+Expose the counter value via a GET endpoint `/count` using net/http.
+Ensure access to the counter is protected by mutex and does not block other reads.
+
+Prompt 5: Add POST Endpoint to Increment Counter
+------------------------------------------------
+Add a POST endpoint `/increment` that increases the counter safely.
+Return the updated value in JSON.
+Use proper locking in handler functions.
+
+Prompt 6: Protect Multiple Shared Variables
+-------------------------------------------
+Add another shared metric (e.g., request duration avg).
+Use separate mutexes for each shared variable to prevent lock contention.
+Demonstrate concurrent access.
+
+Prompt 7: Graceful Shutdown and State Dump
+------------------------------------------
+On SIGINT, write the final counter value to a file and exit cleanly.
+Ensure mutex is acquired during read. Use a signal handler with a cancel context.
+
+Prompt 8: Add Test for Concurrent Increments
+--------------------------------------------
+Write a unit test that launches 50 goroutines, each incrementing the counter 20 times.
+Assert that the final counter value equals 1000.
+Ensure thread-safety via race detector.
+
+Prompt 9: Detect Potential Deadlocks (Static Example)
+-----------------------------------------------------
+Simulate a deadlock scenario with two mutexes acquired in opposite order.
+Explain why it leads to deadlock and refactor to enforce consistent lock acquisition order.
+
+Prompt 10: Replace Mutex with Atomic for Optimization
+-----------------------------------------------------
+Rewrite the counter logic using atomic.AddInt64 and atomic.LoadInt64 from sync/atomic package.
+Compare performance and thread-safety with the mutex-based version.
+

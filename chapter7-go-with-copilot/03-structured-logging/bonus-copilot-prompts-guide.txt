@@ -1,0 +1,51 @@
+Prompt 1: Structured JSON Logging with Logrus
+---------------------------------------------
+Configure Logrus to log all events in JSON format.
+Log every function entry and exit, log input parameters and return values, and include timestamps and levels.
+
+Prompt 2: Add Contextual Fields to Each Log
+-------------------------------------------
+Use `WithFields` in Logrus to attach contextual metadata to each log entry.
+For example: worker_id, task_id, execution_time. Ensure all logs are traceable by task.
+
+Prompt 3: Logging Levels and Filtering
+--------------------------------------
+Demonstrate the use of different log levels: Info, Warn, Error, Debug.
+Configure Logrus to only show warnings and above in production mode using environment flags.
+
+Prompt 4: Log to Rotating Files
+-------------------------------
+Use the lumberjack library or logrus hook to log entries into rotating files.
+Configure file size, backups, and rotation policy. Include a fallback to stdout if file logging fails.
+
+Prompt 5: Correlation IDs for Tracing
+-------------------------------------
+Generate and attach a correlation ID to every task processed.
+Ensure this ID appears in all logs related to the task. Use UUIDs and pass them through function calls.
+
+Prompt 6: Log Format Customization
+----------------------------------
+Customize log output to include fields: timestamp, level, message, module, and custom fields like thread_id.
+Use logrus Formatter interface to create a custom formatter.
+
+Prompt 7: Panic and Recovery Logging
+------------------------------------
+Wrap worker execution in defer-recover blocks and log panics using logrus.Error.
+Include stack trace and task info in panic logs. Ensure service does not crash on single failure.
+
+Prompt 8: Integrate Prometheus Metrics with Logs
+------------------------------------------------
+Expose metrics via Prometheus and log spike anomalies.
+If task failures > threshold, emit a warning log.
+Include histogram of task processing durations in logs and metrics.
+
+Prompt 9: Inject Logger Interface via Dependency Injection
+----------------------------------------------------------
+Abstract logger behind a Logger interface.
+Pass it to each worker instance. Allow switching between logrus, zap, or mock logger in unit tests.
+
+Prompt 10: Unit Test Log Output
+-------------------------------
+Write tests that verify the logger is called with expected fields and levels using a mock logger implementation.
+Test that errors, retries, and success messages are properly logged.
+

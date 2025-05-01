@@ -1,0 +1,91 @@
+## Chapter 4 — Section: memory-efficient-coding
+
+Prompt 1: Count Log File Errors Using Generator
+-----------------------------------------------------
+Write a function to count 'ERROR' lines in a large log file using a generator.
+Requirements:
+- Use `with open()` and yield each line
+- Count lines containing 'ERROR'
+- Print total error count
+- Ensure memory efficiency
+
+Prompt 2: Iterate Over Large CSV in Chunks
+-----------------------------------------------------
+Use pandas to process a CSV file in chunks (e.g., 1000 rows at a time).
+Requirements:
+- Use `pd.read_csv(..., chunksize=1000)`
+- Print row count of each chunk
+- Accumulate stats like row count and column sums
+- Avoid loading entire file
+
+Prompt 3: Use `yield` to Return Large Computed List
+-----------------------------------------------------
+Refactor a function that returns a large computed list to use a generator.
+Requirements:
+- Replace `return list` with `yield` in loop
+- Show memory usage difference with `psutil`
+- Add inline comments for clarity
+- Provide test to show output works as expected
+
+Prompt 4: Efficiently Merge Sorted Files Line by Line
+-----------------------------------------------------
+Write a Python function to merge two sorted text files into one without loading them into memory.
+Requirements:
+- Use `heapq.merge()` from standard library
+- Stream both files line-by-line
+- Write merged output to a new file
+- Handle file closing safely
+
+Prompt 5: Avoid List Growth by Using itertools.chain
+-----------------------------------------------------
+Use `itertools.chain()` to merge multiple iterables without creating large lists.
+Requirements:
+- Demonstrate with 3 lists of numbers
+- Iterate and print each element
+- Log memory usage with `tracemalloc`
+- Provide equivalent list-concatenation comparison
+
+Prompt 6: Use Generator Expression for Sum of Squares
+-----------------------------------------------------
+Compute the sum of squares from 1 to 1 million using a generator expression.
+Requirements:
+- Use `sum(x*x for x in range(1_000_001))`
+- Show memory profile
+- Compare with list comprehension method
+
+Prompt 7: Read Compressed File Without Decompression
+-----------------------------------------------------
+Read a `.gz` file using `gzip` module and count lines.
+Requirements:
+- Open using `gzip.open()` in text mode
+- Stream file line by line
+- Print total line count
+- Log file size before/after
+
+Prompt 8: Use Lazy Evaluation with map() and filter()
+-----------------------------------------------------
+Use `map()` and `filter()` to lazily evaluate transformations on a large iterable.
+Requirements:
+- Example: filter even numbers, square them
+- Avoid intermediate lists
+- Print first 10 results only
+- Time execution on large input
+
+Prompt 9: Process Log File with mmap for Efficient Access
+-----------------------------------------------------
+Use `mmap` to search and read parts of a large file efficiently.
+Requirements:
+- Use memory-mapped file object
+- Search for a keyword (e.g., "ERROR")
+- Count number of hits
+- Ensure proper file and mmap closure
+
+Prompt 10: Chunk a List into Batches with Generator
+-----------------------------------------------------
+Write a generator function that yields batches from a list of data.
+Requirements:
+- Accept batch_size param
+- Yield slices of the list (not copy)
+- Handle remainder items
+- Test with batch size = 3 and sample list
+

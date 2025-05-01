@@ -1,0 +1,52 @@
+Prompt 1: Login Test with Valid Credentials
+-------------------------------------------
+Use Playwright and JavaScript to write a test that opens the login page, enters valid email and password, submits the form, and asserts the redirected dashboard URL.
+
+Prompt 2: Test Invalid Password Scenario
+----------------------------------------
+Write a Playwright test for invalid login where the password is incorrect.
+Check that an error message like 'Invalid credentials' appears, and no redirection occurs.
+
+Prompt 3: Test Missing Email Field
+----------------------------------
+Automate the login form submission with the email field left blank.
+Verify that an error message 'Email is required' appears and form is not submitted.
+
+Prompt 4: Test Password Field Validation
+----------------------------------------
+Test the behavior when the password field is less than 6 characters.
+Ensure validation prevents submission and displays appropriate message.
+
+Prompt 5: Validate Form Reset Behavior
+--------------------------------------
+Check that clicking a reset/clear button clears both email and password fields.
+Assert the fields are empty after the action.
+
+Prompt 6: Screenshot on Test Failure
+------------------------------------
+Modify the Playwright config or test to capture a screenshot when a login test fails.
+Save the screenshot in a `screenshots/` folder with a timestamped name.
+
+Prompt 7: Use Page Object Model for Login
+-----------------------------------------
+Refactor the login test to use a LoginPage class.
+Encapsulate selectors and methods like `enterEmail()`, `enterPassword()`, `clickLogin()`, `getErrorText()`.
+
+Prompt 8: Parallel Execution Across Browsers
+--------------------------------------------
+Configure Playwright to run login tests in parallel across Chromium, Firefox, and WebKit.
+Include the config setup and test report output comparison.
+
+Prompt 9: Add Environment Support for Test URLs
+-----------------------------------------------
+Use environment variables or a config file to run the login test against multiple environments (dev, staging, prod).
+Parameterize the base URL and assert different expected results per env.
+
+Prompt 10: Data-Driven Login Tests
+----------------------------------
+Use test.each() to define multiple login scenarios in a table:
+- valid login
+- wrong password
+- blank fields
+Each row should be validated with expected result and error message.
+

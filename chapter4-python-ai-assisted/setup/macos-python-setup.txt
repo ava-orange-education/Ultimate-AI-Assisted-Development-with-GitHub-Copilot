@@ -1,0 +1,17 @@
+Prompt Used:
+// Provide steps to install Python 3.8+ on macOS using Homebrew, verify installation, and create a virtual environment
+
+1. Install Homebrew (if not installed):
+   > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Install Python 3:
+   > brew install python
+
+3. Verify Python installation:
+   > python3 --version
+
+4. Create a virtual environment:
+   > python3 -m venv myenv
+
+5. Activate the virtual environment:
+   > source myenv/bin/activate

@@ -1,0 +1,53 @@
+Prompt 1: Basic POST API Test Function with JSON Payload
+--------------------------------------------------------
+Write a Python function using `requests.post()` to send JSON payloads to a given API endpoint.
+Log the status code and return the response JSON or raise an exception if status != expected.
+
+Prompt 2: Add Custom Headers and Token Support
+----------------------------------------------
+Enhance the API test function to accept optional headers including Authorization Bearer tokens.
+Allow users to pass custom content-type and log headers in debug mode.
+
+Prompt 3: Parameterize Status Code Expectations
+-----------------------------------------------
+Allow the function to accept a parameter `expected_status_code` and validate the actual response code.
+Raise AssertionError if the returned code doesn’t match.
+
+Prompt 4: Handle and Log JSON Decode Errors
+-------------------------------------------
+If the API returns invalid JSON, catch and log the decode error.
+Return a dictionary with success=False and the raw text or raise a formatted exception with code context.
+
+Prompt 5: Add Retry Logic on API Timeout
+----------------------------------------
+Retry failed requests (e.g., timeout, 500 errors) using exponential backoff.
+Log each retry attempt. Max retry count should be configurable (default 3).
+
+Prompt 6: Write Unit Tests for post_api_test Function
+-----------------------------------------------------
+Use `unittest` or `pytest` to test:
+- Successful API calls
+- Status mismatches
+- Malformed responses
+Mock `requests.post()` to simulate scenarios.
+
+Prompt 7: Support for Multipart/Form-Data Uploads
+-------------------------------------------------
+Enhance the function to detect `form_data=True` and allow file uploads.
+Test API endpoints that require multipart encoding (e.g., file + fields combo).
+
+Prompt 8: Verbose Logging for Debugging
+---------------------------------------
+Add verbose mode to log request method, URL, headers, payload, and full response.
+Use structured logging with timestamps and log level.
+
+Prompt 9: Support for Query Parameters in POST
+----------------------------------------------
+Allow appending query parameters to the base URL in POST request calls.
+Validate encoding and correct inclusion of both JSON and query string.
+
+Prompt 10: Benchmark API Performance with Repeated Calls
+--------------------------------------------------------
+Add a benchmarking function that repeatedly calls the API N times and records latency, success rate, and average response time.
+Present results in tabular format.
+

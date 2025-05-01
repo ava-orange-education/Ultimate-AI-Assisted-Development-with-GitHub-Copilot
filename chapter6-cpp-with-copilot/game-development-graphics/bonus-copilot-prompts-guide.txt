@@ -1,0 +1,101 @@
+Prompt 1: 2D Collision Detection Between Rectangles
+---------------------------------------------------
+Write a C++ function to detect collision between two 2D rectangles.
+Return true if rectangles overlap and log collision coordinates.
+Use AABB (axis-aligned bounding box) logic.
+
+Prompt 2: Visualize Collision with Debug Borders
+------------------------------------------------
+Use a graphics library (e.g., SDL, SFML) to draw rectangles on screen.
+Render a red outline around overlapping rectangles when a collision occurs.
+
+Prompt 3: Pixel-Perfect Collision Detection
+-------------------------------------------
+Implement pixel-level collision detection using sprite bitmaps.
+Compare alpha masks of two sprites to determine precise overlaps.
+
+Prompt 4: Create a Rotating Cube in OpenGL
+------------------------------------------
+Write a C++ OpenGL program to draw a 3D cube that rotates around its center.
+Use transformation matrices and control speed using keyboard inputs.
+
+Prompt 5: Add Perspective and Lighting to OpenGL Cube
+-----------------------------------------------------
+Add perspective projection and a basic lighting model to the rotating cube.
+Simulate ambient and directional lighting using GLSL shaders.
+
+Prompt 6: Implement Camera Controls for 3D View
+-----------------------------------------------
+Allow the user to move and rotate the camera using WASD keys and mouse movement.
+Update the view matrix accordingly in your OpenGL scene.
+
+Prompt 7: NPC Pathfinding with A* Algorithm
+-------------------------------------------
+Write a basic grid-based A* pathfinding algorithm in C++ for an NPC to reach a target position.
+Allow walls and variable terrain costs.
+
+Prompt 8: NPC Follows Player with Smooth Motion
+-----------------------------------------------
+Simulate an NPC that follows the player’s position using a basic vector-based steering behavior.
+Update direction and speed each frame to move towards the player smoothly.
+
+Prompt 9: NPC Collision Avoidance While Following
+-------------------------------------------------
+Extend NPC behavior to avoid obstacles while moving.
+Use simple raycasts or collision flags and path redirection logic.
+
+Prompt 10: Basic Animation System for Sprite Frames
+---------------------------------------------------
+Animate a 2D sprite by cycling through image frames.
+Use a timer or frame count to advance frames and loop the animation.
+
+Prompt 11: Load Textures for Sprites and 3D Models
+--------------------------------------------------
+Load a texture file (e.g., PNG or BMP) and apply it to a 2D sprite or 3D cube surface.
+Use OpenGL or SDL to bind and map texture coordinates.
+
+Prompt 12: Add Jumping Physics to Player Object
+-----------------------------------------------
+Add vertical movement to a player object using gravity and jump impulse.
+Apply acceleration/deceleration and clamp maximum fall speed.
+
+Prompt 13: Handle Multiple NPC States (Idle, Follow, Attack)
+------------------------------------------------------------
+Design an FSM (Finite State Machine) for NPCs with states: idle, follow, and attack.
+Implement transitions and behaviors per state.
+
+Prompt 14: Optimize Rendering with Dirty Rectangles
+---------------------------------------------------
+Only redraw portions of the screen that change by tracking dirty rectangles.
+Improve frame rate and CPU usage on low-power devices.
+
+Prompt 15: Use VBO and VAO for Efficient OpenGL Rendering
+---------------------------------------------------------
+Refactor OpenGL drawing code to use Vertex Buffer Objects (VBOs) and Vertex Array Objects (VAOs).
+Batch draw calls and reduce glBegin/glEnd usage.
+
+Prompt 16: Render Frame Rate Counter
+------------------------------------
+Display real-time FPS in the game window using a timer and text overlay.
+Update every 500ms to show average frame time.
+
+Prompt 17: Add Collision Cooldown Timer
+---------------------------------------
+After a collision, prevent further collision detection for 0.5s using a cooldown timer.
+Avoid repeated collision triggers in every frame.
+
+Prompt 18: Write Unit Tests for Collision Logic
+-----------------------------------------------
+Use Catch2 or Google Test to write unit tests for rectangle collision function.
+Test overlapping, edge-touching, and non-overlapping cases.
+
+Prompt 19: Export NPC Path as JSON Log
+--------------------------------------
+Log NPC movement path to a JSON file including x/y position and timestamp.
+Useful for debugging AI path behavior.
+
+Prompt 20: Add Pause Menu with Resume and Exit Options
+------------------------------------------------------
+Implement a basic pause menu that freezes the game loop.
+Add key bindings to resume or exit the game and render a simple UI overlay.
+

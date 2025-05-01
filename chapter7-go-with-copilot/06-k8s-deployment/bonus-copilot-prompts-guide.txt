@@ -1,0 +1,52 @@
+Prompt 1: Basic Kubernetes Deployment YAML for gRPC Microservice
+----------------------------------------------------------------
+Write a Kubernetes deployment YAML for a gRPC-based Go microservice.
+Include fields: replicas, container name, image, ports, labels, and resource limits.
+Set containerPort to 50051.
+
+Prompt 2: Add Liveness and Readiness Probes
+-------------------------------------------
+Enhance the deployment to include liveness and readiness probes.
+Use an HTTP GET on /healthz on port 8080 with proper initialDelaySeconds and timeoutSeconds values.
+
+Prompt 3: Horizontal Pod Autoscaler for CPU
+-------------------------------------------
+Create an HPA (HorizontalPodAutoscaler) YAML that scales between 2 and 10 replicas based on CPU usage.
+Set target CPU utilization threshold to 70%.
+
+Prompt 4: Add ConfigMap and Mount as Volume
+-------------------------------------------
+Create a ConfigMap for environment variables such as DB_HOST and LOG_LEVEL.
+Mount it as a volume inside the container under /config and reference it in your container spec.
+
+Prompt 5: Create a Service for Internal Access
+----------------------------------------------
+Write a Kubernetes Service YAML to expose the gRPC deployment internally.
+Use ClusterIP as the type and map port 50051 to targetPort 50051.
+
+Prompt 6: Add Resource Requests and Limits
+------------------------------------------
+Set requests and limits for CPU and memory for the user-service container.
+Example: request 100m CPU and 128Mi memory, limit 300m CPU and 256Mi memory.
+
+Prompt 7: Add Node Affinity Rules
+---------------------------------
+Configure node affinity in your pod spec to prefer nodes with label `tier=backend`.
+Use preferredDuringSchedulingIgnoredDuringExecution policy.
+
+Prompt 8: Rolling Update Strategy
+---------------------------------
+Set deployment strategy to RollingUpdate with maxSurge=1 and maxUnavailable=1.
+Ensure zero downtime during updates and add comments explaining each strategy field.
+
+Prompt 9: Add NetworkPolicy to Restrict Traffic
+-----------------------------------------------
+Create a NetworkPolicy that allows incoming traffic to the user-service only from pods with label `app=api-gateway`.
+Block all other traffic from external sources.
+
+Prompt 10: Create a Helm Chart Template for Deployment
+------------------------------------------------------
+Create a Helm template for the user-service deployment and service.
+Use `values.yaml` to parameterize image, replicas, and ports.
+Include helpers.tpl and provide instructions to install the chart.
+

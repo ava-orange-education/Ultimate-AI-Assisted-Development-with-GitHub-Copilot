@@ -1,0 +1,92 @@
+## Chapter 4 — Section: ai-powered-optimizations
+
+Prompt 1: Optimize Sum of Large List Using NumPy
+-----------------------------------------------------
+Refactor a Python script that sums a list of 1 million numbers using NumPy for performance.
+Requirements:
+- Compare `sum()` vs `np.sum()` execution time
+- Use `timeit` module to benchmark
+- Show memory profiling (optional)
+- Add fallback for missing NumPy
+
+Prompt 2: Suggest AI-Based Code Optimization Hints
+-----------------------------------------------------
+Create a helper that takes a function and returns hints using static analysis (e.g., AI-lint).
+Requirements:
+- Accept string of Python code
+- Check for common anti-patterns
+- Suggest vectorization, memoization, or loop refactor
+- Return structured hints list
+
+Prompt 3: Apply Memoization to Recursive Function
+-----------------------------------------------------
+Optimize a recursive Fibonacci function using LRU cache.
+Requirements:
+- Use `@lru_cache(maxsize=None)`
+- Print comparison of execution time for fib(35)
+- Log cache hits/misses
+- Add unit test to validate correctness
+
+Prompt 4: Accelerate Matrix Multiplication with NumPy
+-----------------------------------------------------
+Refactor nested loops used for matrix multiplication using NumPy.
+Requirements:
+- Generate random matrices with given shape
+- Multiply using dot()
+- Benchmark both versions
+- Validate results are equal
+
+Prompt 5: Leverage Parallel Processing with joblib
+-----------------------------------------------------
+Use joblib to parallelize a CPU-bound computation.
+Requirements:
+- Use Parallel + delayed for factorial computation
+- Process values 1 to 50
+- Print execution time vs sequential
+- Log per-task completion
+
+Prompt 6: Optimize File Parsing with Pandas Chunking
+-----------------------------------------------------
+Process a 1GB CSV using pandas chunks instead of full load.
+Requirements:
+- Use `read_csv(..., chunksize=100000)`
+- Compute total row count and mean of a column
+- Log time for each chunk
+- Return final aggregated values
+
+Prompt 7: Use Cython to Accelerate Python Loop
+-----------------------------------------------------
+Refactor a loop-heavy Python function into Cython.
+Requirements:
+- Use `%%cython` in Jupyter or `.pyx` file
+- Declare variable types
+- Show speedup vs plain Python
+- Explain setup steps
+
+Prompt 8: Optimize Data Merge with join() vs concat()
+-----------------------------------------------------
+Compare performance of `pandas.concat()` vs `merge()` for combining large DataFrames.
+Requirements:
+- Time both methods
+- Log memory usage
+- Show use case suitability
+- Return merged result
+
+Prompt 9: Cache Heavy Computation Results to Disk
+-----------------------------------------------------
+Use `joblib.dump()` and `load()` to persist results of expensive function.
+Requirements:
+- Use hash of input as cache key
+- Save results to `./cache/`
+- Return cached result if exists
+- Add option to force recompute
+
+Prompt 10: Suggest Copilot Prompt for Performance Optimization
+-----------------------------------------------------
+Design a GitHub Copilot prompt that explicitly asks for:
+- Loop optimization
+- Memory-efficient logic
+- Vectorization if applicable
+- Annotate why each change matters
+- Provide sample code snippet
+

@@ -115,10 +115,276 @@ Chapter 3 focuses on using GitHub Copilot in JavaScript and TypeScript projects�
 - Generating reusable interfaces and method decorators
 - Working with ECMAScript 2024 features like decorators
 
+## Chapter 4: Python and AI-Assisted Coding
+
+Chapter 4 demonstrates GitHub Copilot usage in Python scripting, libraries, machine learning, AI-powered optimizations, and debugging.
+
+### Directory Structure for Chapter 4
+
+- **chapter4-python-ai-assisted/**
+  - **setup/** - Python installation and virtual environment setup
+    - **windows-python-setup.txt**
+    - **macos-python-setup.txt**
+  - **basic-python-scripting/**
+    - **factorial_calculation.py**
+  - **libraries-and-packages/**
+    - **web_scraping/scrape_headlines.py**
+    - **data_analysis/calculate_average_price.py**
+  - **web-development/**
+    - **flask-api/flask_status_api.py**
+    - **django-app/product_model.py**
+  - **data-analysis-machine-learning/**
+    - **data_preprocessing/fill_missing_with_median.py**
+    - **decision_tree/decision_tree_classifier.py**
+  - **memory-efficient-coding/**
+    - **count_errors_memory_efficient.py**
+    - **count_errors_generator.py**
+  - **ai-powered-optimizations/**
+    - **optimized_sum_example.py**
+  - **jupyter-notebooks-examples/**
+    - **seaborn_barplot_notebook_example.ipynb**
+  - **python312-features/**
+    - **typing_override_example.py**
+    - **asyncio_taskgroup_example.py**
+  - **debugging-with-copilot/**
+    - **fix_empty_list_average.py**
+    - **fix_api_response_type.py**
+
+### Key Concepts from Chapter 4
+
+- Python scripting best practices with Copilot
+- Building web scrapers and REST APIs
+- Integrating AI and ML with Copilot’s help
+- Efficient coding patterns and optimization
+- Jupyter Notebook visualization
+- Using Python 3.12 features
+- Debugging and fixing real-world code with AI assistance
+
+## Chapter 5: Java with GitHub Copilot
+
+Chapter 5 focuses on streamlining Java backend development with Copilot, covering core Java, Spring Boot APIs, Security, Kafka integration, and full-stack case studies.
+
+### Directory Structure for Chapter 5
+
+- **chapter5-java-with-copilot/**
+  - **setup/** - Java environment setup instructions
+  - **basic-java-programming/**
+    - **factorial_calculation/FactorialCalculator.java**
+    - **prime_number_check/PrimeNumberChecker.java**
+  - **collections-and-streams/**
+    - **user_filter/UserFilter.java**
+    - **product_name_generator/ProductNameGenerator.java**
+    - **order_grouper/OrderGrouper.java**
+    - **test_counter/TestCounter.java**
+  - **spring-boot-rest-api/**
+    - **main_app/DemoApplication.java**
+    - **pom/pom.xml**
+    - **controllers/ProductController.java**
+    - **validation/Product.java**
+    - **exception_handling/GlobalExceptionHandler.java**
+  - **spring-boot-service-layer/**
+    - **singleton/DatabaseConnectionManager.java**
+    - **pagination/ItemController.java**
+    - **dependency_injection/UserService.java**
+    - **unit_tests/DatabaseConnectionManagerTest.java**
+  - **enterprise-java-best-practices/**
+    - **factory_pattern/PaymentProcessorFactory.java**
+    - **dependency_injection/NotificationController.java**
+    - **security/SecurityConfig.java**
+    - **modular_design/OrderService.java**
+  - **backend-services/**
+    - **microservice_creation/OrderController.java**
+    - **circuit_breaker/ExternalService.java**
+    - **kafka_integration/KafkaProducerService.java**
+  - **frontend-integration/**
+    - **react/ProductList.jsx**
+    - **react/LiveOrders.jsx**
+    - **vue/UserForm.vue**
+  - **case-studies/**
+    - **e-commerce/ProductController.java**
+    - **e-commerce/PaymentService.java**
+    - **banking/TransactionMonitor.java**
+    - **banking/SecurityConfig.java**
+
+### Key Concepts from Chapter 5
+
+- Writing clean and modular Java code with Copilot
+- Building RESTful APIs with Spring Boot
+- Implementing Singleton, Factory, Dependency Injection patterns
+- Enabling Circuit Breaker resilience and Kafka messaging
+- Integrating React and Vue frontends
+- Real-world case studies in E-commerce and Banking
+
+## Chapter 6: C++ with GitHub Copilot
+
+Chapter 6 explores modern C++ features, performance optimization, and systems/embedded development with Copilot.
+
+### Directory Structure for Chapter 6
+
+- **chapter6-cpp-with-copilot/**
+  - **modern-cpp-features/** - Examples of modern C++ features
+    - **lambda_examples.cpp** - Demonstrates lambda functions
+    - **smart_pointers.cpp** - Usage of unique_ptr and shared_ptr
+  - **performance-optimization/** - Optimizing C++ code
+    - **cache_optimization.cpp** - Cache-friendly coding
+    - **parallel_sort.cpp** - Parallel sorting algorithms
+  - **systems-embedded-development/** - Embedded systems examples
+    - **gpio_toggle_driver.c** - GPIO driver example
+    - **i2c_driver.c** - I2C communication example
+
+### Key Concepts from Chapter 6
+
+- Leveraging modern C++ features for cleaner code
+- Optimizing performance with advanced techniques
+- Writing embedded systems code with Copilot
+
+## Chapter 7: Go with GitHub Copilot
+
+Chapter 7 focuses on Go programming, covering REST APIs, concurrency, and microservices.
+
+### Directory Structure for Chapter 7
+
+- **chapter7-go-with-copilot/**
+  - **01-rest-api/** - Building REST APIs in Go
+    - **main.go** - Basic REST API example
+  - **02-postgres-db/** - PostgreSQL integration
+    - **db_connection.go** - Database connection example
+  - **03-structured-logging/** - Logging best practices
+    - **logger.go** - Structured logging example
+  - **04-goroutines-concurrency/** - Concurrency in Go
+    - **worker_pool.go** - Worker pool implementation
+  - **05-grpc-microservice/** - gRPC microservices
+    - **user_service.proto** - gRPC service definition
+
+### Key Concepts from Chapter 7
+
+- Writing efficient Go code with Copilot
+- Building scalable microservices
+- Managing concurrency with goroutines
+
+## Chapter 8: Pair Programming with Copilot
+
+Chapter 8 demonstrates collaborative coding with Copilot, including testing frameworks and real-world scenarios.
+
+### Directory Structure for Chapter 8
+
+- **chapter8-pair-programming-with-copilot/**
+  - **01-secure-payment-module/** - Secure payment processing
+    - **payment_processor.js** - Payment processing logic
+  - **02-api-test-framework/** - API testing frameworks
+    - **post_api_test.py** - API test example
+  - **03-discount-calculator/** - Discount calculation logic
+    - **discountCalculator.js** - Discount calculator implementation
+  - **04-login-playwright-tests/** - Playwright tests for login
+    - **login.spec.js** - Login test cases
+  - **05-concurrent-file-processing/** - File processing examples
+    - **file_processor.go** - Concurrent file processing
+
+### Key Concepts from Chapter 8
+
+- Enhancing collaboration with Copilot
+- Writing robust test cases
+- Implementing real-world scenarios
+
+## Chapter 9: Advanced Techniques with Copilot
+
+Chapter 9 explores how to maximize Copilot’s productivity using prompt engineering, AI integrations, refactoring legacy systems, performance optimization, and secure development.
+
+### Directory Structure for Chapter 9
+
+- **chapter9-advanced-techniques-with-copilot/**
+  - **prompt-engineering/**
+    - **zero-shot/factorial_zero_shot.py**
+    - **one-shot/sum_with_one_shot.py**
+    - **few-shot/fibonacci_few_shot.py**
+    - **playwright-tests/login_zero_shot.spec.ts**
+  - **refactoring-legacy-code/**
+    - **payroll_basic_refactor.js**
+    - **payroll_refined_refactor.js**
+    - **payroll_advanced_refactor.js**
+    - **find_duplicates_nested.js**
+    - **find_duplicates_optimized.js**
+  - **performance-optimization/**
+    - **process_data_legacy.js**
+    - **process_data_optimized.js**
+    - **get_customers_legacy.js**
+    - **get_customers_optimized.js**
+  - **automating-code-tasks/**
+    - **crud-api-products.js**
+    - **discount_function.js**
+    - **discount_tests.test.js**
+    - **sum_function.js**
+    - **sum_tests.test.js**
+    - **process_order.js**
+    - **github-actions-workflow.yml**
+    - **sequelize-migration.js**
+  - **ai-integration-workflow/**
+    - **api-gateway.js**
+    - **react-native-login.js**
+    - **react-ci.yml**
+    - **csv-sales.py**
+  - **copilot-architecture/**
+    - **codex-features.md**
+    - **context-awareness-demo.js**
+  - **security-and-privacy/**
+    - **secure-s3-connection.py**
+    - **secure-input-handling.js**
+    - **telemetry-settings.md**
+    - **privacy-policy-summary.md**
+
+### Key Concepts from Chapter 9
+
+- Zero-shot, one-shot, and few-shot prompt engineering
+- Refactoring and performance optimization
+- Automating repetitive tasks
+- Building secure, observable, and testable workflows
+- Codex internals and architecture patterns
+
+
+## Chapter 10: Testing and Debugging with Copilot
+
+Chapter 10 focuses on enhancing test automation, debugging, and test management practices using GitHub Copilot.
+
+### Directory Structure for Chapter 10
+
+- **chapter10-testing-and-debugging-with-copilot/**
+  - **functional-tests/**
+    - **gmail-login-functional-table.md**
+    - **gmail-login-gherkin.feature**
+    - **gmail-login-manual-steps.md**
+    - **gmail-login-enhancements.md**
+  - **agile-test-management/**
+    - **epic-story-task-checkout.md**
+    - **epic-user-profile-backlog.md**
+    - **acceptance-criteria-login.feature**
+    - **confluence-test-strategy-banking.md**
+  - **automation-testing/**
+    - **selenium-checkout/** (Page objects and test case)
+    - **playwright-registration/registration.test.ts**
+    - **restassured-payment/PaymentApiTest.java**
+    - **appium-login/LoginTest.java**
+    - **jmeter-login/jmeter-test-plan.jmx**
+  - **debugging/**
+    - **selenium-dynamic-waits/LoginTest.java**
+    - **api-payload-error.md**
+  - **code-quality/**
+    - **process-orders-refactored.java**
+    - **eslint-config.json**
+    - **MathUtilsTest.java**
+    - **login-sql-injection-fixed.java**
+  - **case-studies/**
+    - **selenium-login-pom/LoginPage.java**
+    - **restassured-login/UserAuthTest.java**
+    - **appium-locator/LoginButton.java**
+    - **github-actions-ci.yml**
+
+### Key Concepts from Chapter 10
+
+- Functional and Gherkin-based test writing
+- Story-task decomposition for Agile test management
+- End-to-end automation using Selenium, Appium, Playwright, and Rest Assured
+- Debugging flaky UI and API tests
+- Improving code quality and preventing vulnerabilities
+- Real-world test automation case studies
+
 ---
-
-## Running the Examples
-
-### Assembly Example (Chapter 1)
-[Instructions remain unchanged...]
-

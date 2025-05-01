@@ -1,0 +1,8 @@
+In real setup, you also configure circuit breaker settings in application.yml:
+
+resilience4j.circuitbreaker:
+  instances:
+    externalService:
+      registerHealthIndicator: true
+      slidingWindowSize: 5
+      failureRateThreshold: 50

@@ -1,0 +1,56 @@
+Prompt 1: Discount Calculator with Promotion Code Support
+---------------------------------------------------------
+Write a JavaScript function that applies a percentage discount based on a provided promotion code.
+Handle known codes with fixed discounts and unknown codes with zero discount.
+Return final price and message string.
+
+Prompt 2: Input Validation for Price and Code
+---------------------------------------------
+Add input validation to check if price is a positive number and promoCode is a string.
+Throw descriptive errors for invalid inputs. Include optional default promoCode.
+
+Prompt 3: Dynamic Promo Code Lookup
+-----------------------------------
+Use an object or Map to define supported promo codes and their discount rates.
+Ensure lookups are case-insensitive and fall back to no discount if code is unrecognized.
+
+Prompt 4: Support for Flat Discounts
+------------------------------------
+Enhance the function to support flat amount discounts in addition to percentage discounts.
+Example: 'FLAT100' applies ₹100 off, 'OFF10' applies 10% off. Include both in the lookup map.
+
+Prompt 5: Custom Error Messages and Logging
+-------------------------------------------
+Log all invalid attempts with date, price, and input code.
+Return user-friendly messages like 'Invalid code. Please try another offer.' without exposing internal structures.
+
+Prompt 6: Jest Unit Tests for All Scenarios
+-------------------------------------------
+Write Jest tests for:
+- Valid promo code with % discount
+- Valid flat discount code
+- Invalid promo code
+- Zero and negative price values
+- No code provided
+
+Prompt 7: Parameterized Unit Test with Table
+--------------------------------------------
+Create a parameterized Jest test using `test.each` for multiple test cases:
+- [input, promoCode, expectedPrice, expectedMessage]. Cover edge cases in table.
+
+Prompt 8: Apply Maximum Discount Cap
+------------------------------------
+Limit the maximum discount that can be applied (e.g., ₹500 cap).
+Add logic to calculate discount and clamp the value to max limit.
+Include test case for exceeding cap.
+
+Prompt 9: Currency Formatting in Output
+---------------------------------------
+Format the returned final price using `Intl.NumberFormat` for currency display.
+Support INR or USD based on an optional `locale` parameter.
+
+Prompt 10: TypeScript Version with Proper Typing
+------------------------------------------------
+Convert the discount calculator to TypeScript.
+Define input and output interfaces, strict typing for codes, and unit tests with ts-jest.
+

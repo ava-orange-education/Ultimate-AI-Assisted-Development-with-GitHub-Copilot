@@ -1,0 +1,19 @@
+Prompt Used:
+// Provide steps to install Java JDK 17+ on macOS using Homebrew and set JAVA_HOME
+
+1. Install Homebrew (if not installed):
+   > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2. Install Java:
+   > brew install openjdk@17
+
+3. Add Java to PATH and set JAVA_HOME:
+   Add to ~/.zshrc or ~/.bash_profile:
+   > export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+   > export JAVA_HOME=$(/usr/libexec/java_home -v17)
+
+4. Apply changes:
+   > source ~/.zshrc
+
+5. Verify installation:
+   > java --version

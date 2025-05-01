@@ -1,0 +1,93 @@
+## Chapter 3 — Section: javascript-basic
+
+Prompt 1: Declare and Reassign JavaScript Variables
+-----------------------------------------------------
+Write a JavaScript program to declare a variable using let and reassign it.
+Requirements:
+- Start with a string value
+- Log initial value
+- Reassign to a number
+- Log updated value
+- Explain use of `let` over `var`
+
+Prompt 2: Function to Check Even or Odd
+-----------------------------------------------------
+Create a function `isEven(number)` that returns true if a number is even.
+Requirements:
+- Use modulo operator
+- Return boolean
+- Add input validation (number type)
+- Write sample test cases
+
+Prompt 3: Sum All Numbers in an Array
+-----------------------------------------------------
+Write a JavaScript function that accepts an array and returns the sum of all numbers.
+Requirements:
+- Use `reduce()` method
+- Validate input is array of numbers
+- Return 0 for empty array
+- Include inline documentation
+
+Prompt 4: Capitalize First Letter of Each Word
+-----------------------------------------------------
+Write a function that takes a sentence string and returns it with each word capitalized.
+Requirements:
+- Preserve spaces
+- Ignore punctuation
+- Handle empty string input
+- Return original string if already capitalized
+
+Prompt 5: Create a Greeting Function with Default Parameter
+-----------------------------------------------------
+Write a function `greet(name)` that returns "Hello, [name]!".
+Requirements:
+- If name not provided, use default "Guest"
+- Trim leading/trailing spaces from input
+- Capitalize first letter of name
+- Handle numbers and symbols defensively
+
+Prompt 6: JavaScript Array of Fruits and Search
+-----------------------------------------------------
+Create a JS array `fruits` with at least 5 fruit names.
+Requirements:
+- Implement function `searchFruit(fruitName)`
+- Return true if fruit exists (case-insensitive)
+- Return false otherwise
+- Include examples for matches and non-matches
+
+Prompt 7: Check for Palindrome Word
+-----------------------------------------------------
+Write a JavaScript function `isPalindrome(word)` that checks if a word is a palindrome.
+Requirements:
+- Ignore case
+- Strip out non-alphanumeric characters
+- Handle empty strings
+- Include at least 3 test examples
+
+Prompt 8: Reverse Characters in a String
+-----------------------------------------------------
+Create a function that reverses a given string.
+Requirements:
+- Use built-in `split`, `reverse`, `join`
+- Handle input type errors
+- Return empty string for null or undefined
+- Include inline comments
+
+Prompt 9: Compare Two Objects Shallow Equality
+-----------------------------------------------------
+Write a function `isEqual(obj1, obj2)` that compares if two JS objects have the same key-value pairs.
+Requirements:
+- Use Object.keys() and loop
+- Only do shallow comparison
+- Return false for missing keys
+- Handle null and undefined inputs
+
+Prompt 10: Generate Random Number Within Range
+-----------------------------------------------------
+Write a function that generates a random number between min and max (inclusive).
+Requirements:
+- Parameters: min (number), max (number)
+- Validate that min < max
+- Round to 2 decimal places
+- Add examples using console.log
+

@@ -1,0 +1,92 @@
+## Chapter 3 — Section: react-typescript-frontend
+
+Prompt 1: Create a User List Component in React + TypeScript
+-----------------------------------------------------
+Build a React functional component `UserList` that receives an array of users as props.
+Requirements:
+- Define a `User` type with id, name, and email
+- Use `.map()` to render user info in a list
+- Add prop type using `interface`
+- Include fallback for empty user list
+
+Prompt 2: Fetch and Display Users from API
+-----------------------------------------------------
+Write a React component using `useEffect` to fetch users from `/api/users`.
+Requirements:
+- Use `fetch` with async/await
+- Handle loading, error, and success states
+- Display a spinner while loading
+- Type state using TypeScript interfaces
+
+Prompt 3: Build a Reusable Input Component
+-----------------------------------------------------
+Create a reusable `TextInput` component in React + TypeScript.
+Requirements:
+- Props: label, value, onChange, placeholder
+- Support input type as prop (`text`, `email`, etc.)
+- Use `FC<Props>` for type definition
+- Include a usage example
+
+Prompt 4: Manage Form State with useReducer
+-----------------------------------------------------
+Implement a form using `useReducer` for state management.
+Requirements:
+- Track name and email fields
+- Define reducer and action types
+- Use type-safe actions
+- Add reset button to clear form
+
+Prompt 5: Display Product Grid with Conditional Styles
+-----------------------------------------------------
+Write a component that shows products in a grid layout.
+Requirements:
+- Props: array of products
+- If product is out of stock, apply faded style
+- Use conditional rendering and styling
+- Define `Product` interface with name, price, stock
+
+Prompt 6: Use Context to Share Theme State
+-----------------------------------------------------
+Create a `ThemeContext` in TypeScript and provide a theme toggle.
+Requirements:
+- Theme: 'light' | 'dark'
+- Provide context to child components
+- Use `useContext` for consumption
+- Add toggle button in header
+
+Prompt 7: Render List with Optional Sorting Prop
+-----------------------------------------------------
+Create a `SortedList` component that accepts an array and optional `sort` prop.
+Requirements:
+- Generic type <T>
+- If sort=true, sort alphabetically
+- Render items in <li> tags
+- Add test case with number and string arrays
+
+Prompt 8: Create Modal Component with Portal
+-----------------------------------------------------
+Build a `Modal` component using React Portal API.
+Requirements:
+- Props: isOpen, onClose, children
+- Render to a `#modal-root` div
+- Close on backdrop click or ESC key
+- Fully typed with TypeScript
+
+Prompt 9: Type-safe Event Handling in Form
+-----------------------------------------------------
+Create a form that captures user input using `onChange` handlers.
+Requirements:
+- Inputs: name, email
+- Type event handlers properly using React.ChangeEvent
+- Use controlled components
+- Validate on submit
+
+Prompt 10: Fetch Users using Axios and AbortController
+-----------------------------------------------------
+Write a hook `useUsers` that fetches user list via Axios and supports cancellation.
+Requirements:
+- Use `useEffect` and `AbortController`
+- Return users, loading, error
+- Clean up request on component unmount
+- Use TypeScript types for all returns
+

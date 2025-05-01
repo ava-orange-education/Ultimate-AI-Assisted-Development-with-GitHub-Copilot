@@ -1,0 +1,161 @@
+## Chapter 5 — Section: setup/linux-java-setup.txt
+
+Prompt 1: Install OpenJDK on Ubuntu using apt
+-----------------------------------------------------
+Write a shell script to install OpenJDK 17 on Ubuntu.
+Requirements:
+- Update apt packages
+- Install using `sudo apt install openjdk-17-jdk`
+- Confirm with `java -version` and `javac -version`
+- Log output to setup.log
+
+Prompt 2: Set JAVA_HOME in Linux Environment
+-----------------------------------------------------
+Create a script that sets JAVA_HOME in `.bashrc` or `.zshrc`.
+Requirements:
+- Use `readlink -f $(which java)`
+- Extract JAVA_HOME using `dirname` logic
+- Append export statements to profile file
+- Source updated profile
+
+Prompt 3: Validate Java Installation and Environment Variables
+-----------------------------------------------------
+Write a bash function to validate:
+- JAVA_HOME is set
+- `java` and `javac` return expected version
+- Print PASS/FAIL per step
+- Recommend fix if failed
+
+Prompt 4: Install GitHub Copilot CLI on Linux
+-----------------------------------------------------
+Write a prompt to Copilot:
+- Install Node.js and npm using nvm or package manager
+- Use `npm install -g @githubnext/copilot-cli`
+- Authenticate using Copilot CLI
+- Add CLI binary path to bashrc
+
+Prompt 5: Create Java Project Directory from Shell Script
+-----------------------------------------------------
+Write a bash script to scaffold a Java app.
+Requirements:
+- Create folders: `src`, `bin`
+- Create sample `Main.java` with Hello World
+- Compile to `bin/` folder
+- Run compiled class
+
+Prompt 6: Troubleshoot Missing javac on Linux
+-----------------------------------------------------
+Prompt Copilot to:
+- Check if `javac` is available
+- Suggest installing `openjdk-17-jdk`
+- Add check for sudo permissions
+- Log troubleshooting steps
+
+Prompt 7: Automate JAVA_HOME Export with Dynamic Detection
+-----------------------------------------------------
+Write a script that:
+- Uses `update-alternatives --config java` to find install path
+- Extracts JAVA_HOME using realpath
+- Adds export to `.bashrc`
+- Verifies with test run
+
+Prompt 8: Install Maven and Gradle on Linux
+-----------------------------------------------------
+Prompt Copilot to:
+- Install Maven and Gradle via apt or SDKMAN
+- Validate with `mvn -v` and `gradle -v`
+- Add to path if needed
+- Print success message
+
+Prompt 9: Setup IntelliJ IDE from Terminal on Ubuntu
+-----------------------------------------------------
+Prompt Copilot to:
+- Install IntelliJ Community using snap
+- Launch using terminal
+- Open Java project
+- Verify Java SDK is linked
+
+Prompt 10: Create Script to Manage Multiple JDKs
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Install and switch between JDK 11, 17 using `update-alternatives`
+- List installed JDKs
+- Choose default interactively
+- Persist choice
+
+Prompt 11: Configure Java Environment for GitHub Actions Runner
+-----------------------------------------------------
+Generate a script that:
+- Installs Java on a Linux runner
+- Sets JAVA_HOME dynamically
+- Adds JDK path to PATH
+- Runs a test Java build
+
+Prompt 12: Fix Permission Errors When Installing JDK
+-----------------------------------------------------
+Prompt Copilot to:
+- Detect permission issues on install path
+- Suggest `chown` or `chmod` fix
+- Print owner and permission status
+- Recommend sudo alternatives
+
+Prompt 13: Generate a Java Installer for Debian Systems
+-----------------------------------------------------
+Write a bash script that:
+- Installs Java
+- Sets environment variables
+- Logs each step with timestamp
+- Uses traps to catch errors
+
+Prompt 14: Add Java Setup Verification to Dockerfile
+-----------------------------------------------------
+Prompt Copilot to:
+- Create Dockerfile that installs Java
+- Verifies with `java -version`
+- Adds labels for version metadata
+- Keeps image size optimized
+
+Prompt 15: Download JDK tar.gz and Extract to Custom Location
+-----------------------------------------------------
+Write a script that:
+- Downloads JDK tar.gz from URL
+- Extracts to `/opt/java/jdk-17`
+- Sets JAVA_HOME
+- Adds bin to PATH
+
+Prompt 16: Auto-Rotate Java Logs via Cron Job
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Rotate `java-setup.log` weekly
+- Archive older logs
+- Retain only 5 backups
+- Schedule using crontab
+
+Prompt 17: Compare Java Install Path Across Distros
+-----------------------------------------------------
+Prompt Copilot to:
+- Show differences in install location (e.g., Debian vs Arch vs RHEL)
+- Recommend path-agnostic detection
+- Suggest using `/etc/alternatives`
+
+Prompt 18: Check Java Support in WSL (Windows Subsystem for Linux)
+-----------------------------------------------------
+Prompt Copilot to:
+- Detect if script is running in WSL
+- Suggest Java installation method
+- Check for file system compatibility issues
+
+Prompt 19: Set Up Java Logging to Syslog on Linux
+-----------------------------------------------------
+Write a configuration or script to:
+- Redirect Java application logs to syslog
+- Use `logger` or log4j configuration
+- Verify log in `/var/log/syslog`
+
+Prompt 20: Annotate a Full Java Setup Shell Script for Linux
+-----------------------------------------------------
+Prompt Copilot to:
+- Auto-comment a multi-step Java install script
+- Document each phase
+- Add pre-flight and post-setup checks
+

@@ -1,0 +1,92 @@
+## Chapter 4 — Section: basic-python-scripting
+
+Prompt 1: Calculate Factorial Using a While Loop
+-----------------------------------------------------
+Write a Python script to calculate the factorial of a number using a while loop.
+Requirements:
+- Read input from user
+- Validate that input is a non-negative integer
+- Calculate using while loop (no recursion)
+- Print result with formatted message
+
+Prompt 2: Factorial Function with Unit Tests
+-----------------------------------------------------
+Write a Python function `factorial(n)` that returns the factorial of n.
+Requirements:
+- Use recursion
+- Handle edge cases: 0! = 1
+- Raise ValueError for negative inputs
+- Write unit tests using `unittest` module
+
+Prompt 3: Compare Iterative vs Recursive Factorial
+-----------------------------------------------------
+Create two functions: one iterative and one recursive to compute factorial.
+Requirements:
+- Use `time` module to measure execution time
+- Compare performance for large values like 1000
+- Print formatted benchmark results
+- Handle RecursionError safely
+
+Prompt 4: Factorial Using math Module
+-----------------------------------------------------
+Write a short Python script that calculates factorial using the `math` module.
+Requirements:
+- Use `math.factorial()`
+- Add input prompt with exception handling
+- Ensure input is a valid integer
+- Compare result with manual method
+
+Prompt 5: Print Factorial Table for First N Numbers
+-----------------------------------------------------
+Create a script that prints a table of factorials from 1 to N.
+Requirements:
+- N is passed as command-line argument
+- Use a for loop to compute factorial
+- Align output using string formatting
+- Include header row with titles
+
+Prompt 6: Store Factorials in a Dictionary
+-----------------------------------------------------
+Write a Python script that creates a dictionary of factorials from 1 to N.
+Requirements:
+- Use dictionary comprehension
+- Print each key-value pair
+- Export dictionary to JSON file
+- Include docstring for the main function
+
+Prompt 7: Create a CLI for Factorial Calculation
+-----------------------------------------------------
+Use argparse to build a command-line tool that calculates factorial.
+Requirements:
+- Accept integer argument --number
+- Add --method option for recursive/iterative
+- Print result with method used
+- Handle argument parsing errors
+
+Prompt 8: GUI Factorial Calculator with Tkinter
+-----------------------------------------------------
+Create a basic GUI to enter a number and compute factorial using Tkinter.
+Requirements:
+- Input box, calculate button, result label
+- Validate input
+- Display error if input is invalid
+- Style the layout using grid manager
+
+Prompt 9: Save Factorial Results to a CSV
+-----------------------------------------------------
+Enhance a script to compute factorials and save results to a CSV.
+Requirements:
+- Use csv.writer
+- Columns: Number, Factorial
+- Append results to file named `factorials.csv`
+- Ensure file opens in append mode
+
+Prompt 10: Animate Factorial Calculation in Console
+-----------------------------------------------------
+Write a script that prints each multiplication step of a factorial calculation.
+Requirements:
+- Show animation step-by-step (e.g. 1 x 2 x 3 ...)
+- Use `time.sleep()` for delay
+- Add progress percentage
+- Clear and update console using `` or curses
+

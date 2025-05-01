@@ -1,0 +1,151 @@
+## Chapter 5 — Section: setup/intellij-copilot-setup.txt
+
+Prompt 1: Install GitHub Copilot Plugin in IntelliJ IDEA
+-----------------------------------------------------
+Write a prompt for Copilot to:
+- Open IntelliJ Plugin Marketplace
+- Search and install "GitHub Copilot"
+- Restart IDE after installation
+- Verify plugin appears in settings
+
+Prompt 2: Configure Copilot Keybindings for Java Files
+-----------------------------------------------------
+Prompt Copilot to:
+- Show how to rebind Copilot code suggestion shortcut
+- Assign it to Ctrl+Alt+Space
+- Add support for `.java` and `.kt` files
+- Save keymap profile
+
+Prompt 3: Enable Copilot for Specific File Types in IntelliJ
+-----------------------------------------------------
+Write an IntelliJ configuration prompt to:
+- Enable Copilot only for `.java` and `.xml`
+- Disable for `.json`, `.txt`, etc.
+- Add settings profile name: "Copilot-Java"
+- Document changes in markdown
+
+Prompt 4: Write a Copilot Prompt to Generate Java Class Skeleton
+-----------------------------------------------------
+Ask Copilot to:
+- Create a Java class with constructor, private fields, getters/setters
+- Add equals/hashCode using IntelliJ shortcut
+- Use template for new file automation
+
+Prompt 5: Create Live Template for Copilot Java Method
+-----------------------------------------------------
+Prompt Copilot to:
+- Define IntelliJ live template named `logMethod`
+- Template prints method entry/exit with variable logging
+- Use with Copilot to auto-complete method logging
+
+Prompt 6: Use Copilot in IntelliJ to Add Javadoc Automatically
+-----------------------------------------------------
+Ask Copilot to:
+- Generate Javadoc for a given Java method
+- Include @param and @return tags
+- Format aligned with company style
+- Auto-insert on typing `/**`
+
+Prompt 7: Copilot Prompt to Create Java Test Class from Existing Code
+-----------------------------------------------------
+Ask Copilot to:
+- Detect existing class (e.g., `OrderService`)
+- Generate corresponding JUnit5 test class
+- Include setup/teardown
+- Suggest IntelliJ test class creation shortcut
+
+Prompt 8: Automate Maven Project Setup with Copilot + IntelliJ
+-----------------------------------------------------
+Prompt Copilot to:
+- Create basic Maven project
+- Define `pom.xml` with dependencies
+- Create `App.java` and run config
+- Configure IntelliJ auto-import
+
+Prompt 9: Enable Copilot Auto-suggestion Only on Enter
+-----------------------------------------------------
+Prompt Copilot to:
+- Set suggestion trigger to Enter instead of Tab
+- Configure in IntelliJ Copilot plugin settings
+- Explain trade-offs and productivity
+
+Prompt 10: Use Copilot to Refactor Java Loops to Streams in IntelliJ
+-----------------------------------------------------
+Write a prompt to:
+- Identify traditional for-loops
+- Refactor into Stream API
+- Highlight inside IntelliJ editor
+- Show before/after version comparison
+
+Prompt 11: Set Up GitHub Authentication for IntelliJ Copilot Plugin
+-----------------------------------------------------
+Prompt Copilot to:
+- Authenticate via GitHub token
+- Store token securely
+- Test authentication by generating Copilot completion
+- Refresh session on logout
+
+Prompt 12: Highlight Copilot Suggestions vs Manual Code in IntelliJ
+-----------------------------------------------------
+Write a prompt to:
+- Enable inline indicators for Copilot-generated code
+- Show Copilot icon in margin or gutter
+- Use different font color if possible
+- Add Copilot watermark in comment
+
+Prompt 13: Use Copilot to Build IntelliJ Plugin Boilerplate
+-----------------------------------------------------
+Ask Copilot to:
+- Generate IntelliJ Plugin main class
+- Add `plugin.xml`, build.gradle config
+- Include sample action to show popup
+- Configure plugin build and run config
+
+Prompt 14: Annotate Copilot Code Completion with AI Source Tag
+-----------------------------------------------------
+Prompt Copilot to:
+- Auto-comment `// Copilot suggestion` on inserted blocks
+- Track suggestions for audit
+- Enable toggle from IntelliJ settings
+
+Prompt 15: Use Copilot with IntelliJ Terminal for CLI Tools
+-----------------------------------------------------
+Prompt Copilot to:
+- Generate shell script to compile and run `.java` from terminal
+- Suggest IntelliJ Terminal shortcuts
+- Compare execution inside vs outside IDE
+
+Prompt 16: Integrate Copilot Feedback Loop into IntelliJ
+-----------------------------------------------------
+Ask Copilot to:
+- Show how to give thumbs up/down to suggestions
+- Link to GitHub Copilot feedback dashboard
+- Track suggestion accuracy for Java snippets
+
+Prompt 17: Copilot Prompt for IntelliJ Plugin Suggestion Testing
+-----------------------------------------------------
+Ask Copilot to:
+- Generate UI test for IntelliJ Plugin using JUnit + Robot Framework
+- Validate that Copilot suggestions appear inside editor
+
+Prompt 18: Enable Experimental Copilot Features in IntelliJ
+-----------------------------------------------------
+Prompt Copilot to:
+- Enable beta/preview features in plugin settings
+- Activate experimental Java prompt chaining
+- Report suggestions feedback
+
+Prompt 19: Use Copilot to Document IntelliJ Setup in README
+-----------------------------------------------------
+Prompt Copilot to:
+- Create a markdown file describing Java + IntelliJ + Copilot integration steps
+- Add screenshots placeholders
+- Format with headings, steps, and notes
+
+Prompt 20: Configure Copilot for IntelliJ Community vs Ultimate
+-----------------------------------------------------
+Prompt Copilot to:
+- Check which edition is installed
+- Suggest compatibility tips for each
+- Recommend plugins if Copilot plugin not directly supported
+

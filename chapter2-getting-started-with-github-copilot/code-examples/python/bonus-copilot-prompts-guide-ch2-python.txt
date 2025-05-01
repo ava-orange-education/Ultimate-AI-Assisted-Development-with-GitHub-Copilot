@@ -1,0 +1,96 @@
+## Chapter 2 — Section: code-examples/python
+
+Prompt 1: Email Validation Function with Regex
+-----------------------------------------------------
+Write a Python function that validates email addresses using regular expressions.
+Requirements:
+- Use re.match() with appropriate pattern
+- Accepts a string as input
+- Return True if valid, False otherwise
+- Include unit tests for valid/invalid samples
+- Add docstring and type hints
+
+Prompt 2: Secure Login Function with SHA256 Hashing
+-----------------------------------------------------
+Create a secure login handler in Python using SHA256 hashing for password validation.
+Requirements:
+- Compare hashed input password with stored hash
+- Use hashlib for hashing
+- Raise error for blank or null input
+- Add logging for attempts
+- Include test case with correct and incorrect passwords
+
+Prompt 3: Add Custom Exception for Input Validation
+-----------------------------------------------------
+Write a Python class `InvalidInputException` and raise it in a function that only accepts integers > 0.
+Requirements:
+- Include __str__ override
+- Validate input using isinstance and range
+- Add a main block that catches and prints exception
+- Write unit test to trigger the exception
+
+Prompt 4: Email Validation with Domain Restriction
+-----------------------------------------------------
+Enhance email validator to only allow addresses ending in '@example.com'.
+Requirements:
+- Regex must enforce domain check
+- Strip whitespace from input before validation
+- Handle edge cases like uppercase domain
+- Include list of accepted formats in docstring
+
+Prompt 5: Login System with User Class and Dictionary
+-----------------------------------------------------
+Build a login system with a `User` class storing username and hashed password.
+Requirements:
+- Store users in a dictionary keyed by username
+- Login function checks existence and password match
+- Use SHA256 hashing
+- Handle user not found and wrong password cases
+- Add sample users in test block
+
+Prompt 6: Python Script for Copilot API Request Mock
+-----------------------------------------------------
+Write a mock script that sends a sample prompt to a dummy Copilot-like API and prints the response.
+Requirements:
+- Use requests.post
+- Include headers and JSON body
+- Print status and returned suggestions
+- Mock endpoint: http://localhost:5000/copilot
+
+Prompt 7: Generate Email Validation Docs Automatically
+-----------------------------------------------------
+Use `inspect` and `pydoc` to generate documentation for your email validation module.
+Requirements:
+- Include usage examples
+- Save doc output to a .txt file
+- Show how to use from command line
+- Add --help CLI flag
+
+Prompt 8: Refactor Login Logic into a Class-Based System
+-----------------------------------------------------
+Refactor existing login logic into a class-based system with `Authenticator`.
+Requirements:
+- Store users in memory
+- Use method: `verify_credentials(username, password)`
+- Support adding users dynamically
+- Write unit tests for success, failure, and edge cases
+
+Prompt 9: Validate Password Strength in Signup
+-----------------------------------------------------
+Enhance signup validation to enforce password rules:
+- At least 8 characters
+- One uppercase, one lowercase, one digit
+- No spaces
+Requirements:
+- Return error messages for each rule broken
+- Include test coverage for edge cases
+
+Prompt 10: Log All Login Attempts with Timestamp
+-----------------------------------------------------
+Write a decorator to log login attempts to a file with timestamp and result.
+Requirements:
+- Wrap login function
+- Log success/failure, username, timestamp
+- Rotate log daily using RotatingFileHandler
+- Ensure thread-safe writes
+

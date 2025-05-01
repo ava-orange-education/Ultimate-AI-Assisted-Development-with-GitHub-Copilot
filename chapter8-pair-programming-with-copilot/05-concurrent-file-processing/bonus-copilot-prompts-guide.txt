@@ -1,0 +1,55 @@
+Prompt 1: Basic File Processor with Threads
+-------------------------------------------
+Write a Java program using `ExecutorService` that accepts a list of File objects and processes each in a separate thread.
+Log the thread name and file name during processing.
+
+Prompt 2: Simulate IO Delay in File Reading
+-------------------------------------------
+Simulate file processing delay using `Thread.sleep()`.
+Add logic to measure and log the time taken per file task.
+
+Prompt 3: Add Thread Pool Shutdown Hook
+---------------------------------------
+Ensure `executor.shutdown()` is called gracefully at the end of the program.
+Handle `InterruptedException` and log when the thread pool is completely shut down.
+
+Prompt 4: Custom Thread Naming Strategy
+---------------------------------------
+Use `Executors.newFixedThreadPool()` with a custom `ThreadFactory` that assigns descriptive thread names like 'FileProcessor-1'.
+Log names for clarity in output.
+
+Prompt 5: Handle IOExceptions Per File
+--------------------------------------
+Wrap the file processing block with try-catch.
+Simulate occasional failures and ensure exceptions are caught, logged, and processing continues.
+
+Prompt 6: Add File Extension Filtering
+--------------------------------------
+Enhance the processor to only process `.txt` files.
+Skip other file types and log a warning or ignore silently.
+
+Prompt 7: Track and Return Completed File Count
+-----------------------------------------------
+Use a thread-safe counter or atomic integer to track how many files completed successfully.
+Print a summary at the end with success/failure count.
+
+Prompt 8: Parallel File Processing with CompletableFuture
+---------------------------------------------------------
+Use `CompletableFuture.supplyAsync()` instead of ExecutorService to process files asynchronously.
+Combine results using `allOf()` and log results after completion.
+
+Prompt 9: File Processing Summary Report
+----------------------------------------
+After all threads complete, output a report that includes:
+- file name
+- status (success/failure)
+- time taken.
+Write the report to a CSV file.
+
+Prompt 10: Unit Test File Processor with Mocks
+----------------------------------------------
+Write unit tests using Mockito or JUnit 5 to verify that:
+- Each file is passed to the thread pool
+- Processing logic is executed
+- Failures are handled without crashing the program.
+

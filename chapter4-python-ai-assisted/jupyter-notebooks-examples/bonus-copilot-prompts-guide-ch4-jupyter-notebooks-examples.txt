@@ -1,0 +1,92 @@
+## Chapter 4 — Section: jupyter-notebooks-examples
+
+Prompt 1: Create a Bar Plot of Category Counts in Jupyter
+-----------------------------------------------------
+Write a Jupyter notebook cell that plots a bar chart of item counts by category using seaborn.
+Requirements:
+- Use seaborn.countplot
+- Set custom color palette
+- Display count above each bar
+- Add axis labels and plot title
+
+Prompt 2: Load and Display First Rows of a CSV in Notebook
+-----------------------------------------------------
+Write a cell to load a CSV file using pandas and display the first 5 rows.
+Requirements:
+- Include path validation
+- Add `%timeit` magic to benchmark load time
+- Use `df.head()` for preview
+- Optionally style header row with `df.style`
+
+Prompt 3: Use Markdown Cell to Document Notebook Purpose
+-----------------------------------------------------
+Create a markdown cell that explains the goal of the notebook.
+Requirements:
+- Include purpose, data source, and expected output
+- Use bold, italic, and list formatting
+- Include a horizontal rule
+- Add link to dataset if public
+
+Prompt 4: Compare Two Columns Using a Scatter Plot
+-----------------------------------------------------
+Generate a scatter plot comparing two numeric columns in a DataFrame.
+Requirements:
+- Use `sns.scatterplot`
+- Add regression line if possible
+- Customize point color by category
+- Add chart title and legend
+
+Prompt 5: Highlight Max and Min Values in DataFrame
+-----------------------------------------------------
+Use pandas styling to highlight max and min values in each column.
+Requirements:
+- Use `df.style.highlight_max()` and `highlight_min()`
+- Apply color mapping
+- Format numbers with 2 decimal places
+- Limit display to first 10 rows
+
+Prompt 6: Save Notebook as HTML Programmatically
+-----------------------------------------------------
+Write a Python cell that exports the current notebook to an HTML file.
+Requirements:
+- Use `nbconvert` via command or subprocess
+- Save as `report.html`
+- Check file existence before export
+- Add button cell for re-exporting
+
+Prompt 7: Build Interactive Plot Using Plotly
+-----------------------------------------------------
+Create an interactive line plot using Plotly inside a notebook.
+Requirements:
+- Use `plotly.express`
+- Display time series with hover tooltip
+- Enable zoom and legend toggle
+- Show layout customization
+
+Prompt 8: Use Widgets to Filter DataFrame in Notebook
+-----------------------------------------------------
+Create an interactive dropdown or slider to filter a pandas DataFrame.
+Requirements:
+- Use `ipywidgets`
+- Filter data based on category or range
+- Display filtered DataFrame below widget
+- Use decorator or callback function
+
+Prompt 9: Annotate Data Insights in Markdown
+-----------------------------------------------------
+Write a markdown cell that summarizes key takeaways from the data.
+Requirements:
+- Bullet points with numeric summary
+- Highlight correlation, outliers, trends
+- Use emphasis formatting
+- Add emoji for visual clarity
+
+Prompt 10: Setup Notebook Environment with %load_ext
+-----------------------------------------------------
+Write a cell that sets up common Jupyter extensions.
+Requirements:
+- Load `%load_ext autoreload`
+- Enable `%autoreload 2` for dev workflow
+- Import numpy, pandas, matplotlib
+- Set seaborn plot theme
+

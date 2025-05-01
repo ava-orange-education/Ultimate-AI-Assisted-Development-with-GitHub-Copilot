@@ -1,0 +1,165 @@
+## Chapter 5 — Section: spring-boot-rest-api
+
+Prompt 1: Scaffold a Spring Boot REST API Starter
+-----------------------------------------------------
+Use Copilot to generate the main class for a Spring Boot application.
+Requirements:
+- Annotate with `@SpringBootApplication`
+- Add main method using `SpringApplication.run()`
+- Include class-level comments
+- Place under `main_app/` package
+
+Prompt 2: Create Basic GET Endpoint in Spring Boot
+-----------------------------------------------------
+Generate a REST controller class with a simple GET endpoint.
+Requirements:
+- Annotate with `@RestController` and `@RequestMapping`
+- Add `/hello` endpoint returning plain text
+- Use `@GetMapping`
+
+Prompt 3: Build a Product API with CRUD Endpoints
+-----------------------------------------------------
+Use Copilot to create a `ProductController` with basic CRUD routes.
+Requirements:
+- `GET /products`, `GET /products/{id}`
+- `POST`, `PUT`, `DELETE` routes
+- Return proper HTTP status codes
+- Use DTOs for request/response
+
+Prompt 4: Configure Application Properties for Port and Banner
+-----------------------------------------------------
+Add configuration in `application.properties`.
+Requirements:
+- Set custom port (e.g. 8085)
+- Disable Spring Boot banner
+- Add app name as metadata
+
+Prompt 5: Add Input Validation Using @Valid and @NotBlank
+-----------------------------------------------------
+Define a `Product` class with validation annotations.
+Requirements:
+- Use `@NotBlank`, `@Size`, `@Positive`
+- Apply `@Valid` in controller
+- Return validation errors as JSON
+
+Prompt 6: Handle Exceptions Globally with @ControllerAdvice
+-----------------------------------------------------
+Create a global exception handler for custom API errors.
+Requirements:
+- Handle `EntityNotFoundException`, `MethodArgumentNotValidException`
+- Return JSON response with status and message
+- Add fallback handler
+
+Prompt 7: Generate API Response Wrapper Class
+-----------------------------------------------------
+Use Copilot to define a standard `ApiResponse<T>` class.
+Requirements:
+- Fields: data, success, message, timestamp
+- Use in all controller responses
+- Add factory methods `success()` and `error()`
+
+Prompt 8: Generate OpenAPI Specification Automatically
+-----------------------------------------------------
+Integrate springdoc-openapi into the project.
+Requirements:
+- Add dependency in `pom.xml`
+- Auto-generate docs at `/swagger-ui.html`
+- Annotate controller with `@Operation`
+
+Prompt 9: Create Unit Test for ProductController with MockMVC
+-----------------------------------------------------
+Generate test class for REST controller.
+Requirements:
+- Use `@WebMvcTest`
+- Inject `MockMvc`
+- Test GET and POST endpoints
+- Assert status and content
+
+Prompt 10: Customize Error Response Structure
+-----------------------------------------------------
+Modify Spring Boot's default error structure.
+Requirements:
+- Disable Whitelabel Error Page
+- Return structured JSON with error code, message, timestamp
+- Use `ErrorAttributes` override
+
+Prompt 11: Enable CORS for ProductController
+-----------------------------------------------------
+Add CORS headers to REST endpoints.
+Requirements:
+- Use `@CrossOrigin(origins = "*")`
+- Or define CORS config globally
+- Support preflight requests (OPTIONS)
+
+Prompt 12: Build Filter to Log All REST Requests
+-----------------------------------------------------
+Use Copilot to create a Spring `OncePerRequestFilter`.
+Requirements:
+- Log URL, method, and timestamp
+- Exclude health and metrics endpoints
+- Use SLF4J logger
+
+Prompt 13: Stream List of Products as JSON Array
+-----------------------------------------------------
+Return list of products using streaming API.
+Requirements:
+- Use `StreamingResponseBody`
+- Simulate delay between writes
+- Include JSON array structure
+
+Prompt 14: Add Pagination Support in GET /products Endpoint
+-----------------------------------------------------
+Implement pagination with `Pageable` parameter.
+Requirements:
+- Return `Page<Product>`
+- Use `PageRequest.of(page, size)`
+- Add metadata (totalPages, totalElements) in response
+
+Prompt 15: Create Custom Exception for Not Found Resource
+-----------------------------------------------------
+Define `ProductNotFoundException` and use it in controller.
+Requirements:
+- Extend `RuntimeException`
+- Throw when product ID is missing
+- Handle via `@ExceptionHandler`
+
+Prompt 16: Generate HATEOAS-style Links in API Response
+-----------------------------------------------------
+Use Spring HATEOAS to add self-links.
+Requirements:
+- Return `EntityModel<Product>`
+- Include `self`, `edit`, `delete` links
+- Show example output
+
+Prompt 17: Add Versioning to API Routes
+-----------------------------------------------------
+Define routes like `/api/v1/products`.
+Requirements:
+- Use `@RequestMapping("/api/v1")` on class
+- Prepare for `/v2/` version
+- Move controller under `controllers.v1` package
+
+Prompt 18: Handle Invalid Path Variables Gracefully
+-----------------------------------------------------
+Catch errors for non-numeric or missing IDs in path.
+Requirements:
+- Use `@PathVariable long id`
+- Add fallback handler for `NumberFormatException`
+- Return HTTP 400 with message
+
+Prompt 19: Log Execution Time for Each REST Call
+-----------------------------------------------------
+Write an aspect or filter to time every API request.
+Requirements:
+- Log start and end time
+- Print method name and duration
+- Exclude static assets
+
+Prompt 20: Generate Copilot Prompt for Scaffolding Full Spring Boot API
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Scaffold Spring Boot app with REST controller, DTO, validation, exception handling
+- Add API metadata
+- Include Maven dependencies
+- Print project structure
+

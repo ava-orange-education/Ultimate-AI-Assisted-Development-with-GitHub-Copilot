@@ -1,0 +1,91 @@
+## Chapter 4 — Section: setup
+
+Prompt 1: Install Python 3 on macOS with Homebrew
+-----------------------------------------------------
+Write a shell script that installs Python 3.11 using Homebrew on macOS.
+Requirements:
+- Check if Homebrew is installed
+- Install Python if not present
+- Add `python3` and `pip3` symlinks if missing
+- Verify installation with version output
+
+Prompt 2: Set Up Python on Windows with PATH Check
+-----------------------------------------------------
+Write a PowerShell script that checks if Python is installed on Windows and adds it to PATH if missing.
+Requirements:
+- Use `[Environment]::GetEnvironmentVariable`
+- Download from python.org if not found
+- Validate with `python --version`
+- Log success/failure to a file
+
+Prompt 3: Create a Virtual Environment Using venv
+-----------------------------------------------------
+Write a Python script to create a virtual environment named `.venv`.
+Requirements:
+- Use `venv` module
+- Add check for existing environment
+- Activate it with OS-specific command
+- Add setup instructions as comments
+
+Prompt 4: Install Python Packages from requirements.txt
+-----------------------------------------------------
+Write a Bash script to install dependencies from `requirements.txt`.
+Requirements:
+- Activate `.venv` first
+- Use `pip install -r`
+- Handle missing requirements file
+- Log output and errors to install.log
+
+Prompt 5: Detect Python Version Compatibility in Project
+-----------------------------------------------------
+Create a Python script that checks the current Python version.
+Requirements:
+- Must be >= 3.9
+- Use `sys.version_info`
+- Exit with error if version is too low
+- Print helpful upgrade instructions
+
+Prompt 6: Setup pipx for Global CLI Tools
+-----------------------------------------------------
+Write a script that installs `pipx` and uses it to globally install `black` and `httpie`.
+Requirements:
+- Use `python3 -m pip install --user pipx`
+- Initialize pipx environment
+- Verify installation with pipx list
+- Print location of installed binaries
+
+Prompt 7: Enable VS Code Python Virtual Env Auto-Detection
+-----------------------------------------------------
+Create `.vscode/settings.json` to enable Python interpreter detection.
+Requirements:
+- Set `"python.pythonPath"` to `.venv/bin/python` (or Windows path)
+- Enable `"python.venvPath"` to workspace folder
+- Format JSON correctly with comments
+
+Prompt 8: Create Cross-platform Python Runner Script
+-----------------------------------------------------
+Write a shell script that runs a Python script from the correct virtual environment on macOS, Linux, or Windows.
+Requirements:
+- Detect OS
+- Use correct activation path for `.venv`
+- Run `python main.py`
+- Print which OS was detected
+
+Prompt 9: Check pip and Upgrade if Outdated
+-----------------------------------------------------
+Create a Python script that checks current pip version and upgrades if it's older than 23.x.
+Requirements:
+- Use `pip --version`
+- Compare version as string
+- Run `python -m pip install --upgrade pip` if needed
+- Log before/after versions
+
+Prompt 10: Generate Requirements File Automatically
+-----------------------------------------------------
+Write a command that generates `requirements.txt` with pinned versions.
+Requirements:
+- Use `pip freeze`
+- Redirect output to file
+- Add comment block with timestamp
+- Suggest installing using `-r` later
+

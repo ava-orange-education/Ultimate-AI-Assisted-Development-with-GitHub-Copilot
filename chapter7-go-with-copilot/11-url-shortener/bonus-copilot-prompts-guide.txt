@@ -1,0 +1,53 @@
+Prompt 1: Basic URL Shortener with In-Memory Storage
+----------------------------------------------------
+Create a Go HTTP server with two endpoints:
+POST /shorten to accept a long URL and return a short code,
+GET /{shortcode} to redirect to the original URL.
+Use an in-memory map to store URL mappings.
+
+Prompt 2: Generate Short Code with Random Strings
+-------------------------------------------------
+Write a function that generates a 6-character alphanumeric short code using random package.
+Ensure codes are unique in the map before storing the mapping.
+
+Prompt 3: Add Validation for URL Format
+---------------------------------------
+Validate that the input URL in /shorten is a well-formed HTTP/HTTPS URL.
+Return 400 Bad Request if the URL is invalid.
+
+Prompt 4: Return JSON Response from /shorten
+--------------------------------------------
+Enhance /shorten to return a JSON object with fields: original_url, short_url.
+Set Content-Type to application/json and use encoding/json package.
+
+Prompt 5: Add Expiry Support for Short URLs
+-------------------------------------------
+Add a TTL (time-to-live) field to each short URL entry.
+Periodically clean up expired mappings using a goroutine.
+Use time.AfterFunc or ticker for cleanup.
+
+Prompt 6: Add Persistent Storage with BoltDB
+--------------------------------------------
+Replace in-memory map with BoltDB or BadgerDB for persistent key-value storage.
+Ensure data survives server restart. Use bucket for URL mappings.
+
+Prompt 7: Add Metrics and Rate Limiting
+---------------------------------------
+Use Prometheus to track number of shortened URLs and redirections.
+Add rate limiting middleware to restrict each IP to 100 requests per hour.
+
+Prompt 8: Custom Short Code Support
+-----------------------------------
+Allow users to provide a custom short code via POST payload.
+Check for collision before storing. If already used, return 409 Conflict.
+
+Prompt 9: Unit Tests for Handlers
+---------------------------------
+Write tests using httptest.Server to validate POST /shorten and GET /{shortcode} behavior.
+Test valid, invalid, expired, and non-existing short codes.
+
+Prompt 10: Dockerize the Application
+------------------------------------
+Create a Dockerfile to containerize the URL shortener app.
+Expose port 8080, use multistage builds for Go binary, and write a basic docker-compose.yml for local setup.
+

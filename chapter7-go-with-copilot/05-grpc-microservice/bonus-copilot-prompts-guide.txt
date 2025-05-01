@@ -1,0 +1,59 @@
+Prompt 1: Create a gRPC Service Definition for User Management
+--------------------------------------------------------------
+Write a `user.proto` file defining a gRPC service named `UserService`.
+Include methods: `GetUser`, `CreateUser`, and `ListUsers`.
+Use appropriate request and response messages with message field types and comments.
+
+Prompt 2: Implement gRPC Server in Go
+-------------------------------------
+Generate Go code from your `user.proto` file and implement the server in Go.
+Use in-memory storage to handle CreateUser and GetUser.
+Return meaningful status codes using gRPC status package.
+
+Prompt 3: Add Input Validation in gRPC Handlers
+-----------------------------------------------
+Implement validation logic in your CreateUser handler to check required fields: name (min 3 chars), email (valid format).
+Return `InvalidArgument` status if validation fails.
+
+Prompt 4: Add Structured Logging to gRPC Server
+-----------------------------------------------
+Integrate `logrus` or `zap` with your gRPC server.
+Log incoming requests, metadata, and any handler errors.
+Include timestamp, method name, and client IP.
+
+Prompt 5: Add gRPC Interceptor for Auth Token Validation
+--------------------------------------------------------
+Create a unary server interceptor that checks for a valid token in request metadata.
+If token is missing or invalid, return `Unauthenticated` status.
+Log all auth failures with reason.
+
+Prompt 6: Add gRPC Client in Go
+-------------------------------
+Write a Go client that connects to your UserService and sends CreateUser and GetUser requests.
+Use flags or command-line input to pass request values.
+Print structured output.
+
+Prompt 7: Enable TLS in gRPC Server
+-----------------------------------
+Configure your gRPC server to use TLS encryption with self-signed certificates.
+Update client code to use credentials and verify certificates.
+Document certificate generation steps.
+
+Prompt 8: Add Pagination to ListUsers RPC
+-----------------------------------------
+Update `ListUsers` to accept page and limit parameters.
+Return a paginated list of users and total count.
+Include test cases for various page/limit combinations.
+
+Prompt 9: Unit Test gRPC Handlers
+---------------------------------
+Write unit tests for `CreateUser` and `GetUser` handlers using `testpb` and `mock` storage.
+Validate returned status codes and response content.
+Use table-driven tests for different input scenarios.
+
+Prompt 10: Benchmark gRPC vs REST Performance
+---------------------------------------------
+Create a benchmarking suite to compare gRPC vs REST performance.
+Measure latency and throughput for CreateUser endpoint under load (e.g., 1000 requests).
+Log detailed metrics and plot comparisons.
+

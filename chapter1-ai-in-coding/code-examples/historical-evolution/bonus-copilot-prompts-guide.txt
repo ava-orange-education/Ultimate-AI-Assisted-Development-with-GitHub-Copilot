@@ -1,0 +1,100 @@
+Prompt 1: Add Two Integers in Assembly Using Registers
+-----------------------------------------------------
+Write an x86 Assembly language program using NASM syntax that adds two integers stored in registers and prints the result to the console using Linux syscall. 
+Requirements:
+- Use NASM + LD (Linux).
+- Store operands in registers (e.g., eax, ebx).
+- Use syscall to print result.
+- Annotate each instruction with comments.
+- Output must be properly formatted.
+
+Prompt 2: Fortran Program to Compute Factorial Using Recursion
+-----------------------------------------------------
+Write a Fortran 90 program that reads an integer and computes its factorial using recursion.
+Requirements:
+- Use recursive function definition.
+- Input validation for non-negative integers.
+- Clear prompts and outputs for users.
+- Handle edge cases: 0 and 1 should return 1.
+- Follow modern Fortran structure.
+
+Prompt 3: COBOL Program to Calculate Monthly Salary with Deductions
+-----------------------------------------------------
+Write a COBOL program that calculates net salary.
+Requirements:
+- Read employee name, base pay, bonus, tax.
+- Compute net pay (base + bonus - tax).
+- Use appropriate divisions: IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE.
+- Display formatted salary slip.
+- Include test data block.
+
+Prompt 4: C Program to Create and Traverse a Linked List
+-----------------------------------------------------
+Write a C program to create a singly linked list and print it.
+Requirements:
+- Use dynamic memory allocation.
+- Allow user to input number of nodes and values.
+- Traverse and print all nodes.
+- Free memory after traversal.
+- Include null and malloc checks.
+
+Prompt 5: Sort an Array in Pascal Using Bubble Sort
+-----------------------------------------------------
+Write a Pascal program that sorts an array of integers using Bubble Sort.
+Requirements:
+- Use static array input.
+- Swap procedure for logic separation.
+- Output both unsorted and sorted arrays.
+- Include a header for input size.
+- Use nested loop for sorting.
+
+Prompt 6: BASIC Program to Check if a Number is Prime
+-----------------------------------------------------
+Write a BASIC (GW-BASIC or QBasic) program to check for primality.
+Requirements:
+- Ask user for an integer input.
+- Use simple loop division method.
+- Display whether number is prime.
+- Ensure correct output for 0, 1, and 2.
+- Use minimal variables and simple structure.
+
+Prompt 7: Generate a Timeline of Programming Language Releases Using Python
+-----------------------------------------------------
+Write a Python script that prints languages sorted by release year.
+Requirements:
+- Store language and year in a dictionary.
+- Sort the dictionary by year.
+- Display output in aligned tabular format.
+- Include at least 8 languages.
+- Use f-strings for formatting.
+
+Prompt 8: Print Java Version Milestones with Features
+-----------------------------------------------------
+Write a Java program using HashMap to store version info.
+Requirements:
+- Map version (e.g., 8, 11, 17) to key feature.
+- Loop through and print all entries.
+- Highlight versions with streams or modules.
+- Use basic I/O and enhanced for-loop.
+- Include null safety check.
+
+Prompt 9: Shell Script to Detect Installed GCC and Java Versions
+-----------------------------------------------------
+Write a Bash script to detect and print GCC and Java versions.
+Requirements:
+- Use `which` and `--version` commands.
+- Print colored output using ANSI escape codes.
+- Handle cases where GCC or Java is missing.
+- Show usage help when no args provided.
+- Add exit codes for error scenarios.
+
+Prompt 10: HTML + CSS Timeline of Programming Language Releases
+-----------------------------------------------------
+Create a static HTML + CSS timeline of language history.
+Requirements:
+- Use vertical layout, years aligned left.
+- Tooltip on hover for each language block.
+- Responsive layout for mobile view.
+- CSS styling for timeline dots and lines.
+- Include at least 6 languages with year + info.
+

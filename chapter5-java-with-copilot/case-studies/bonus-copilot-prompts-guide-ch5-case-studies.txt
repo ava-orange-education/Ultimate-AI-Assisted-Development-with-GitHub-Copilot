@@ -1,0 +1,161 @@
+## Chapter 5 — Section: case-studies
+
+Prompt 1: Build ProductController for E-Commerce Use Case
+-----------------------------------------------------
+Generate a Spring Boot `ProductController` with endpoints:
+- `/products` (GET all)
+- `/products/{id}` (GET one)
+- `/products` (POST new)
+- Use DTOs for response
+
+Prompt 2: Implement PaymentService with Retry Logic
+-----------------------------------------------------
+Write a `PaymentService` that processes online payments.
+Requirements:
+- Retry failed payments using `@Retryable`
+- Log each attempt
+- Use exponential backoff policy
+
+Prompt 3: Add SecurityConfig to Restrict Access to Banking APIs
+-----------------------------------------------------
+Secure endpoints in `TransactionMonitor`.
+Requirements:
+- Require token authentication
+- Enable method-level security
+- Allow only authorized users
+
+Prompt 4: Validate Transactions in Banking App
+-----------------------------------------------------
+Add validation for `Transaction` object.
+Requirements:
+- Amount must be > 0
+- Currency must match allowed types
+- Use `@Valid` and custom validator
+
+Prompt 5: Enable Real-Time Order Updates Using Kafka in E-Commerce
+-----------------------------------------------------
+Send order update events from backend to frontend.
+Requirements:
+- Use `KafkaTemplate`
+- Define `OrderUpdateEvent`
+- Log on event publish
+
+Prompt 6: Create Monitoring Dashboard for Banking Transactions
+-----------------------------------------------------
+Expose metrics for `/transactions` endpoint.
+Requirements:
+- Count total transactions per user
+- Log failed transactions
+- Integrate with Prometheus/Grafana
+
+Prompt 7: Design Modular Service Layer for E-Commerce
+-----------------------------------------------------
+Refactor service into:
+- ProductService
+- InventoryService
+- PricingService
+Add interface-based architecture
+
+Prompt 8: Handle Payment Failures Gracefully in E-Commerce
+-----------------------------------------------------
+Catch payment gateway errors in `PaymentService`.
+Requirements:
+- Return error response with failure reason
+- Log transaction trace
+- Retry once if transient error
+
+Prompt 9: Encrypt Customer Data in Banking App
+-----------------------------------------------------
+Encrypt sensitive fields like account number.
+Requirements:
+- Use JCE (Java Cryptography Extension)
+- Secure key management
+- Unit test encrypted fields
+
+Prompt 10: Add Swagger Documentation for E-Commerce APIs
+-----------------------------------------------------
+Annotate all e-commerce controller endpoints.
+Requirements:
+- Use `@Operation` and `@Schema`
+- Document request/response types
+- Expose Swagger UI at `/swagger-ui.html`
+
+Prompt 11: Generate PDF Invoice on Order Completion
+-----------------------------------------------------
+On successful payment, trigger invoice generation.
+Requirements:
+- Use iText or PDFBox
+- Include product list, prices, tax
+- Send as email attachment
+
+Prompt 12: Monitor Suspicious Transactions in Real-Time
+-----------------------------------------------------
+Detect large or frequent transactions.
+Requirements:
+- Use Spring AOP to monitor service calls
+- Flag when threshold crossed
+- Log to secure channel
+
+Prompt 13: Add Scheduled Report Generation for Orders
+-----------------------------------------------------
+Run scheduled job to email daily report.
+Requirements:
+- Use `@Scheduled(cron=...)`
+- Include total orders, revenue
+- Format report in CSV
+
+Prompt 14: Use Async API Calls for Payment Confirmation
+-----------------------------------------------------
+Send payment confirmation email asynchronously.
+Requirements:
+- Use `@Async` annotation
+- Log completion
+- Retry on failure
+
+Prompt 15: Load Testing of Order Checkout API
+-----------------------------------------------------
+Simulate 1000+ checkouts using JMeter or Gatling.
+Requirements:
+- Include cart to checkout flow
+- Capture throughput, failure rate
+- Provide summary report
+
+Prompt 16: Design RESTful URL Conventions for Case Study APIs
+-----------------------------------------------------
+Define endpoints for:
+- `/customers/{id}/orders`
+- `/products/{id}/reviews`
+- `/bank/accounts/{id}/transactions`
+Use RESTful naming
+
+Prompt 17: Store Transaction History in NoSQL for Banking
+-----------------------------------------------------
+Design repository layer to use MongoDB.
+Requirements:
+- Annotate entity with `@Document`
+- Support time-range query
+- Index accountId and timestamp
+
+Prompt 18: Add API Versioning for Breaking Changes
+-----------------------------------------------------
+Refactor `/api/orders` to `/api/v2/orders`.
+Requirements:
+- Maintain backward compatibility
+- Route v1 to legacy controller
+- Deprecate old version
+
+Prompt 19: Audit Order Changes in E-Commerce App
+-----------------------------------------------------
+Log before/after state of order on update.
+Requirements:
+- Use entity listeners
+- Store changes in audit table
+- Expose audit history endpoint
+
+Prompt 20: Ask Copilot to Scaffold Case Study Application Skeleton
+-----------------------------------------------------
+Prompt Copilot to:
+- Generate packages: controllers, services, configs
+- Add class stubs for key flows in e-commerce and banking
+- Include logging, validation, exception handling
+

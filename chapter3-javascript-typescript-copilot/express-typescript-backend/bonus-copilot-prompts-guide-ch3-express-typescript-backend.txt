@@ -1,0 +1,92 @@
+## Chapter 3 — Section: express-typescript-backend
+
+Prompt 1: Set Up Basic Express Server with TypeScript
+-----------------------------------------------------
+Create an Express server using TypeScript.
+Requirements:
+- Listen on port 3000
+- Create a basic GET / route
+- Use ts-node-dev for development
+- Type all request/response objects
+
+Prompt 2: Create a Typed Route for User Creation
+-----------------------------------------------------
+Add a POST /users route that accepts name and email in the body.
+Requirements:
+- Use express.json() middleware
+- Validate required fields
+- Define a `User` interface
+- Return the created user as JSON
+
+Prompt 3: Add Route File Structure and Router Export
+-----------------------------------------------------
+Structure user routes into a separate file and export a router.
+Requirements:
+- Use express.Router()
+- Include GET and POST routes
+- Import and use in main server
+- Type route handlers properly
+
+Prompt 4: Use Middleware to Log Requests with Timestamp
+-----------------------------------------------------
+Create a custom middleware to log all incoming requests.
+Requirements:
+- Print method, URL, and timestamp
+- Use in app.use()
+- Add next() properly
+- Type request, response, next
+
+Prompt 5: Define Error Handling Middleware
+-----------------------------------------------------
+Add centralized error handling middleware for JSON APIs.
+Requirements:
+- Log error stack
+- Send 500 with JSON response
+- Add error class `ApiError` with statusCode and message
+- Handle 404 for unknown routes
+
+Prompt 6: Integrate User Model with In-Memory Store
+-----------------------------------------------------
+Define a `User` model in a separate file.
+Requirements:
+- Store users in an array
+- Provide `createUser`, `getUsers`, `getUserById` functions
+- Use unique ID for each user
+- Write types for user data
+
+Prompt 7: Add CORS Middleware with TypeScript Config
+-----------------------------------------------------
+Enable CORS in the Express app.
+Requirements:
+- Use `cors` npm package
+- Allow only from `http://localhost:3000`
+- Enable credentials
+- Add appropriate TypeScript typings
+
+Prompt 8: Use TypeScript Enum for User Roles
+-----------------------------------------------------
+Define `UserRole` enum with 'admin', 'user', 'guest'.
+Requirements:
+- Include role in User model
+- Add route to filter users by role
+- Type query parameters with interface
+- Include validation for role values
+
+Prompt 9: Create Custom TypeScript Types for API Responses
+-----------------------------------------------------
+Define reusable types for API responses.
+Requirements:
+- `ApiResponse<T>` generic type
+- Success: { status: 'success', data: T }
+- Error: { status: 'error', message: string }
+- Use these in routes and middleware
+
+Prompt 10: Write Integration Tests for User Routes
+-----------------------------------------------------
+Use `supertest` and `jest` to test Express routes.
+Requirements:
+- Test GET /users and POST /users
+- Setup and teardown Express app in tests
+- Include valid and invalid payloads
+- Assert response codes and body
+

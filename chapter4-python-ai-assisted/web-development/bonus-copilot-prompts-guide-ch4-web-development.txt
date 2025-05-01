@@ -1,0 +1,92 @@
+## Chapter 4 — Section: web-development
+
+Prompt 1: Create a Basic Flask API Endpoint
+-----------------------------------------------------
+Write a Flask API with a single route `/status` that returns JSON {"status": "ok"}.
+Requirements:
+- Use Flask with `@app.route`
+- Return response with status code 200
+- Include CORS headers
+- Run on port 5000
+
+Prompt 2: Handle Query Parameters in Flask Route
+-----------------------------------------------------
+Create a Flask route `/greet` that accepts a query param `name`.
+Requirements:
+- Return greeting "Hello, [name]!"
+- Validate param exists
+- Return error 400 for missing param
+- Add type hints
+
+Prompt 3: Flask Route to Accept JSON and Respond
+-----------------------------------------------------
+Write a Flask route `/submit` that accepts POST request with JSON payload: name, age.
+Requirements:
+- Validate data and types
+- Return message including name
+- Return 422 if required fields are missing
+- Include usage curl example in comment
+
+Prompt 4: Build Django Model for Product
+-----------------------------------------------------
+Create a Django model class `Product` with name, price, and category fields.
+Requirements:
+- Price as DecimalField
+- Category with choices (enum-like)
+- Add `__str__` method
+- Register in admin
+
+Prompt 5: Create Django View to List All Products
+-----------------------------------------------------
+Write a Django CBV (Class Based View) that lists all Product objects.
+Requirements:
+- Use ListView
+- Use pagination (10 per page)
+- Order by created_at descending
+- Include template context variables
+
+Prompt 6: Flask Blueprint for Modular Routes
+-----------------------------------------------------
+Create a Flask Blueprint for routes under `/api/products`.
+Requirements:
+- Add GET and POST routes
+- Mount blueprint in main app
+- Use a separate module for blueprint
+- Document each route with comment
+
+Prompt 7: Django Serializer for API Response
+-----------------------------------------------------
+Write a Django REST Framework serializer for the `Product` model.
+Requirements:
+- Include name, price, category fields
+- Validate price > 0
+- Add read-only field for formatted price
+- Include example data as comment
+
+Prompt 8: Flask App with Environment Config
+-----------------------------------------------------
+Initialize a Flask app with config loaded from environment variables.
+Requirements:
+- Use `os.environ` for DB_URL, DEBUG
+- Fallback to default values
+- Log loaded config
+- Organize settings in a Config class
+
+Prompt 9: Django URLConf and Path for Product Detail
+-----------------------------------------------------
+Write a Django URLConf that routes `/product/<int:id>/` to a detail view.
+Requirements:
+- Use `path()` not `url()`
+- Import from views.py
+- Add name='product-detail'
+- Include usage in HTML template
+
+Prompt 10: Flask Form Validation with WTForms
+-----------------------------------------------------
+Create a Flask form to submit email and feedback using WTForms.
+Requirements:
+- Validate email field format
+- Validate feedback length > 10
+- Render form in HTML template
+- Handle POST/GET methods
+

@@ -1,0 +1,50 @@
+Prompt 1: Secure DB Connection and Querying
+-------------------------------------------
+Create a Go function to securely connect to a PostgreSQL database using environment variables for credentials.
+Perform a SELECT query to retrieve a user by email, using parameterized SQL to avoid injection.
+
+Prompt 2: Insert User with Validation and Error Handling
+--------------------------------------------------------
+Write a function that inserts a new user (name, email, password) into a PostgreSQL users table.
+Ensure that the email is unique. Validate inputs and return structured error messages for violations.
+
+Prompt 3: Password Hashing with bcrypt
+--------------------------------------
+Integrate bcrypt to securely hash user passwords before inserting into the database.
+Ensure password is never stored in plaintext. Add unit tests to verify password hash creation and comparison.
+
+Prompt 4: Repository Pattern with Interface Abstraction
+-------------------------------------------------------
+Implement a repository interface for user operations (CreateUser, GetUserByID, GetAllUsers).
+Back the interface with a Postgres-based implementation. Allow for easier mocking and testing.
+
+Prompt 5: Pagination for User Listing
+-------------------------------------
+Write a function to fetch users with support for offset and limit pagination.
+Validate that offset and limit are positive integers. Return a paginated response object with metadata (total, page).
+
+Prompt 6: SQL Transaction Example
+---------------------------------
+Wrap user creation and logging into a single transaction using `BEGIN`, `COMMIT`, and `ROLLBACK`.
+If any step fails, rollback the entire operation and return a detailed error.
+
+Prompt 7: SQL Migration Scripts Generator
+-----------------------------------------
+Create a Go function that auto-generates migration SQL scripts based on struct definitions.
+Generate CREATE TABLE statements with data types mapped from Go fields. Include NOT NULL and default constraints.
+
+Prompt 8: Unit Tests Using sqlmock
+----------------------------------
+Write unit tests for the user repository methods using sqlmock.
+Validate expected SQL queries, input arguments, return rows, and error cases like 'no rows' or constraint violation.
+
+Prompt 9: Exponential Backoff for Connection Retry
+--------------------------------------------------
+Implement a DB connection retry mechanism with exponential backoff using time.Sleep.
+Retry up to 5 times if the connection fails. Log each retry attempt with increasing wait duration.
+
+Prompt 10: JSON Response Mapper from SQL Rows
+---------------------------------------------
+Write a utility function to map SQL rows into JSON serializable Go structs.
+Use reflection to dynamically populate fields if necessary. Return structured JSON with metadata.
+
