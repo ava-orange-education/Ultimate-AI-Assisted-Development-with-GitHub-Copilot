@@ -1,0 +1,18 @@
+Bonus GitHub Copilot Prompts for Students & Educators
+======================================================
+
+1. "Explain recursion with a beginner-friendly example in Python and visualize the call stack using comments."
+2. "Refactor this inefficient loop into a Python list comprehension and explain the performance benefit."
+3. "Generate a JavaScript program that creates a to-do list web app using only vanilla JS."
+4. "Help me understand the difference between call-by-value and call-by-reference with examples in C++ and Python."
+5. "Suggest and implement 3 optimizations for this basic Python sorting function and explain each one."
+6. "Create a beginner project idea using HTML, CSS, and JavaScript, and scaffold the starter files with comments."
+7. "Give me step-by-step guidance to convert a recursive factorial function to an iterative one in Python."
+8. "Write a Python program to find prime numbers in a given range and highlight optimization techniques."
+9. "Create an engaging classroom quiz app using React and provide unit tests using Jest."
+10. "Generate a complete Markdown README for a student Python project with sections like Overview, Setup, and Usage."
+11. "Generate syntax examples for Python, JavaScript, and Java side-by-side to help me compare them easily."
+12. "Suggest 5 real-world mini projects for students learning JavaScript and scaffold one of them."
+13. "Identify common syntax errors beginners make in Python and write a Copilot guide to auto-fix them."
+14. "Write a Python function and generate multiple test cases using unittest or pytest."
+15. "Break down the logic of a linked list traversal and explain each step using inline comments in code."
