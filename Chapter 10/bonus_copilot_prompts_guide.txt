@@ -1,0 +1,504 @@
+# Advanced GitHub Copilot Prompts for Testing and Debugging
+
+These expertly crafted prompts demonstrate how to leverage GitHub Copilot for sophisticated testing and debugging workflows. Each prompt follows best practices in specificity, context-awareness, and step-by-step instruction to maximize Copilot's effectiveness in quality assurance.
+
+## Functional Testing Prompts
+
+### 1. Comprehensive Test Case Design for Authentication
+
+/**
+ * Generate a comprehensive test plan for a user authentication system with:
+ * 1. Test case ID and description for each scenario
+ * 2. Detailed preconditions for test setup
+ * 3. Step-by-step test procedures with expected results
+ * 4. Coverage for:
+ *    - Valid login with correct credentials
+ *    - Invalid login attempts (wrong username, wrong password)
+ *    - Account lockout after multiple failed attempts
+ *    - Password reset flow
+ *    - Session timeout handling
+ *    - Multi-factor authentication (email, SMS, authenticator app)
+ *    - Remember me functionality
+ *    - Concurrent login from multiple devices
+ * 5. Edge cases and security considerations
+ * Format the output as a structured, tabular test plan.
+ */
+
+### 2. BDD-Style Test Scenarios for E-commerce Checkout
+
+/**
+ * Create Behavior-Driven Development (BDD) test scenarios using Gherkin syntax for an e-commerce checkout flow:
+ * 1. Include scenarios for:
+ *    - Adding items to cart
+ *    - Applying discount codes
+ *    - Calculating shipping based on location
+ *    - Payment processing (credit card, PayPal, etc.)
+ *    - Order confirmation
+ *    - Handling out-of-stock items during checkout
+ *    - Address validation
+ * 2. For each scenario, provide:
+ *    - Clear Given-When-Then structure
+ *    - Specific, measurable acceptance criteria
+ *    - Data examples for scenarios requiring different inputs
+ * 3. Include both happy path and exception path scenarios
+ * 4. Add tags for test categorization (@smoke, @regression, etc.)
+ */
+
+### 3. Mobile App Test Matrix with Cross-Platform Considerations
+
+/**
+ * Create a comprehensive mobile app test matrix for a photo-sharing application:
+ * 1. Include test scenarios across:
+ *    - Different operating systems (iOS, Android)
+ *    - Various device types (phones, tablets)
+ *    - Multiple OS versions (last 3 major releases)
+ *    - Network conditions (strong WiFi, weak cellular, offline mode)
+ *    - Permission combinations (camera, storage, location, notifications)
+ * 2. For each test scenario, include:
+ *    - Test case ID and priority (Critical, High, Medium, Low)
+ *    - Test objective and expected behavior
+ *    - Platform-specific considerations
+ * 3. Organize by functional areas:
+ *    - User registration and authentication
+ *    - Photo capture and editing
+ *    - Media upload/download
+ *    - Social features (comments, likes, sharing)
+ *    - Settings and preferences
+ * Format the output as a structured test matrix suitable for inclusion in test documentation.
+ */
+
+## Agile Test Management Prompts
+
+### 4. User Story to Test Case Mapping
+
+/**
+ * Transform this user story into comprehensive test cases:
+ * 
+ * "As a premium user, I want to download my data in different formats (PDF, CSV, JSON) 
+ * so that I can analyze it using my preferred tools."
+ * 
+ * Provide:
+ * 1. Acceptance criteria derived from the user story
+ * 2. Test cases covering all acceptance criteria
+ * 3. Boundary conditions and edge cases
+ * 4. Test data requirements
+ * 5. Dependencies and prerequisites
+ * 6. Automation potential assessment (High/Medium/Low) with justification
+ * 
+ * Format the response as a structured test plan that could be imported into a test management system.
+ */
+
+### 5. Sprint Test Strategy Document
+
+/**
+ * Create a detailed Agile sprint test strategy document for a banking app's new funds transfer feature:
+ * 1. Include sections for:
+ *    - Testing scope and objectives
+ *    - Testing levels (unit, integration, system, acceptance)
+ *    - Testing environments and data requirements
+ *    - Entry and exit criteria for each testing phase
+ *    - Risk analysis and mitigation strategies
+ *    - Test estimation and scheduling
+ *    - Roles and responsibilities
+ *    - Defect management workflow
+ * 2. Address specific testing needs for:
+ *    - Security testing for financial transactions
+ *    - Performance testing for high-volume scenarios
+ *    - Compliance testing for financial regulations
+ * 3. Include a test metrics dashboard template
+ * 4. Add a definition of done for testing activities
+ * 
+ * Format as a professional document suitable for stakeholder review.
+ */
+
+### 6. Jira Epic Decomposition into Testable Stories
+
+/**
+ * Decompose the following epic into well-defined, testable user stories:
+ * 
+ * Epic: "Implement a new customer loyalty program that rewards users based on 
+ * purchase history, engagement level, and referrals."
+ * 
+ * For each user story:
+ * 1. Write a properly formatted user story with acceptance criteria
+ * 2. Define test scenarios that verify all acceptance criteria
+ * 3. Identify technical dependencies and risks
+ * 4. Estimate story points (using Fibonacci sequence)
+ * 5. Tag with appropriate labels for tracking
+ * 
+ * Create a structured output that could be imported directly into Jira, including epic links and relationships.
+ */
+
+## Automation Testing Prompts
+
+### 7. Selenium WebDriver Test Suite with Page Object Model
+
+/**
+ * Create a complete Selenium test suite in Java using Page Object Model for an online banking login flow:
+ * 1. Implement the following structure:
+ *    - BasePage class with common methods
+ *    - LoginPage with all required elements and methods
+ *    - HomePage for post-login verification
+ *    - TestBase for driver setup and teardown
+ *    - Utility classes for logging, screenshots, and reporting
+ * 2. Include tests for:
+ *    - Successful login
+ *    - Failed login with invalid credentials
+ *    - Password recovery flow
+ *    - Session timeout handling
+ *    - Security features (CAPTCHA, 2FA)
+ * 3. Implement explicit waits for reliability
+ * 4. Add cross-browser support (Chrome, Firefox, Edge)
+ * 5. Incorporate reporting with ExtentReports
+ * 6. Implement data-driven testing with external test data
+ * 7. Add proper documentation and inline comments
+ */
+
+### 8. Playwright E2E Testing Framework Setup
+
+/**
+ * Design a complete Playwright E2E testing framework in TypeScript for a multi-step form application:
+ * 1. Create the following architecture:
+ *    - Page objects for each form step
+ *    - Fixtures for test data and authentication
+ *    - Helpers for common operations
+ *    - Custom test hooks for setup/teardown
+ *    - GitHub Actions configuration for CI/CD integration
+ * 2. Implement tests for:
+ *    - Form validation (required fields, format validation)
+ *    - Multi-step navigation (next, previous, jump to step)
+ *    - Data persistence between steps
+ *    - Form submission and error handling
+ *    - Responsive behavior on different viewports
+ * 3. Include visual testing capabilities
+ * 4. Add accessibility testing (WCAG compliance)
+ * 5. Implement parallel test execution
+ * 6. Configure HTML reporting with screenshots
+ * 7. Add retry logic for flaky tests
+ */
+
+### 9. API Testing Framework with RestAssured
+
+/**
+ * Create a comprehensive RestAssured API testing framework in Java for a RESTful e-commerce API:
+ * 1. Implement tests for these endpoints:
+ *    - /products (GET, POST, PUT, DELETE)
+ *    - /orders (GET, POST, PUT)
+ *    - /users (GET, POST, PUT, DELETE)
+ *    - /auth (POST)
+ * 2. Include:
+ *    - Base test class with common setup
+ *    - POJO classes for request/response serialization
+ *    - Data providers for parameterized testing
+ *    - Test listeners for logging and reporting
+ *    - Environment-specific configuration handling
+ * 3. Implement authentication and authorization testing
+ * 4. Add performance checks with response time assertions
+ * 5. Include schema validation using JSON Schema
+ * 6. Create test suites for smoke, regression, and end-to-end scenarios
+ * 7. Add detailed reporting with Allure
+ * 8. Include CI/CD integration with Maven
+ */
+
+### 10. Mobile Test Automation with Appium
+
+/**
+ * Develop an Appium test automation framework for a hybrid mobile banking application:
+ * 1. Create a framework with:
+ *    - Base test class for Android and iOS
+ *    - Screen objects for each app screen
+ *    - Utility classes for gestures, waits, and element handling
+ *    - Cross-platform test execution capability
+ * 2. Implement tests for:
+ *    - User authentication
+ *    - Account balance viewing
+ *    - Fund transfers between accounts
+ *    - Bill payments
+ *    - Transaction history
+ * 3. Handle both native and webview contexts
+ * 4. Add capabilities for:
+ *    - Screenshot capture on failures
+ *    - Video recording of test execution
+ *    - Device logs collection
+ *    - Performance metrics gathering
+ * 5. Implement parallel execution on multiple devices
+ * 6. Add reporting with test status, screenshots, and execution times
+ */
+
+### 11. Performance Testing Script with JMeter
+
+/**
+ * Create a comprehensive JMeter performance test script for an e-commerce website:
+ * 1. Design test scenarios for:
+ *    - Homepage loading (50 concurrent users)
+ *    - Product search functionality (100 concurrent users)
+ *    - Product detail page loading (75 concurrent users)
+ *    - Shopping cart operations (50 concurrent users)
+ *    - Checkout process (25 concurrent users)
+ * 2. Include:
+ *    - Thread Groups with appropriate ramp-up periods
+ *    - HTTP Requests with proper parameters
+ *    - CSV Data Sets for test data variation
+ *    - Assertions for response validation
+ *    - Timers to simulate realistic user behavior
+ *    - Listeners for results collection and analysis
+ * 3. Configure:
+ *    - Dynamic correlation for session handling
+ *    - Parameterization for different user profiles
+ *    - Response time thresholds for SLA verification
+ * 4. Add summary reporting and detailed error logging
+ * 5. Include stress test configuration for peak load simulation
+ */
+
+## Debugging Prompts
+
+### 12. Root Cause Analysis for Memory Leak
+
+/**
+ * Analyze the following Node.js application code for memory leaks and suggest fixes:
+ * 
+ * ```javascript
+ * const express = require('express');
+ * const app = express();
+ * let requestData = [];
+ * 
+ * app.use((req, res, next) => {
+ *   requestData.push({
+ *     url: req.url,
+ *     method: req.method,
+ *     headers: req.headers,
+ *     body: req.body,
+ *     timestamp: Date.now()
+ *   });
+ *   next();
+ * });
+ * 
+ * app.get('/api/data', (req, res) => {
+ *   // Process request
+ *   res.json({ success: true, count: requestData.length });
+ * });
+ * 
+ * setInterval(() => {
+ *   console.log(`Stored requests: ${requestData.length}`);
+ * }, 10000);
+ * 
+ * app.listen(3000);
+ * ```
+ * 
+ * Provide:
+ * 1. Detailed root cause analysis of the memory leak
+ * 2. Memory usage patterns and growth indicators
+ * 3. Recommended fixes with code examples
+ * 4. Best practices to prevent similar issues
+ * 5. Suggested monitoring and alerting approaches
+ */
+
+### 13. Multi-threaded Deadlock Resolution
+
+/**
+ * Debug and fix this Java multi-threaded application that experiences deadlocks:
+ * 
+ * ```java
+ * public class ResourceManager {
+ *     private final Object resource1 = new Object();
+ *     private final Object resource2 = new Object();
+ *     
+ *     public void process1() {
+ *         synchronized(resource1) {
+ *             System.out.println("Process1: Holding resource 1...");
+ *             try { Thread.sleep(100); } catch (Exception e) {}
+ *             System.out.println("Process1: Waiting for resource 2...");
+ *             synchronized(resource2) {
+ *                 System.out.println("Process1: Holding both resources");
+ *             }
+ *         }
+ *     }
+ *     
+ *     public void process2() {
+ *         synchronized(resource2) {
+ *             System.out.println("Process2: Holding resource 2...");
+ *             try { Thread.sleep(100); } catch (Exception e) {}
+ *             System.out.println("Process2: Waiting for resource 1...");
+ *             synchronized(resource1) {
+ *                 System.out.println("Process2: Holding both resources");
+ *             }
+ *         }
+ *     }
+ * }
+ * ```
+ * 
+ * Provide:
+ * 1. Detailed explanation of the deadlock condition
+ * 2. Thread state analysis
+ * 3. Multiple solution approaches with code examples
+ * 4. Best practices for thread synchronization
+ * 5. Recommendations for deadlock detection and prevention
+ */
+
+### 14. Flaky Test Stabilization
+
+/**
+ * Analyze and fix this flaky Selenium test that fails intermittently:
+ * 
+ * ```java
+ * @Test
+ * public void testSearchFunctionality() {
+ *     driver.get("https://www.example.com");
+ *     WebElement searchBox = driver.findElement(By.id("search"));
+ *     searchBox.sendKeys("test query");
+ *     driver.findElement(By.id("search-button")).click();
+ *     WebElement results = driver.findElement(By.className("search-results"));
+ *     assertTrue(results.isDisplayed());
+ *     WebElement firstResult = driver.findElement(By.cssSelector(".result-item:first-child"));
+ *     firstResult.click();
+ *     WebElement productTitle = driver.findElement(By.id("product-title"));
+ *     assertEquals("Expected Product", productTitle.getText());
+ * }
+ * ```
+ * 
+ * Provide:
+ * 1. Root cause analysis of potential flakiness
+ * 2. Multiple stabilization techniques with code examples
+ * 3. Wait strategy recommendations
+ * 4. Error handling improvements
+ * 5. Test environment considerations
+ * 6. Logging enhancements for better debugging
+ * 7. Retry strategies for genuinely intermittent issues
+ */
+
+### 15. API Error Debugging Strategy
+
+/**
+ * Develop a comprehensive debugging strategy for the following API error scenario:
+ * 
+ * Error: A payment processing API intermittently returns 502 Bad Gateway errors 
+ * during high-traffic periods, but works fine during normal load.
+ * 
+ * Provide:
+ * 1. Systematic debugging approach with step-by-step process
+ * 2. Required monitoring and logging instrumentation
+ * 3. Server-side investigation techniques
+ * 4. Client-side mitigation strategies
+ * 5. Load testing methodology to reproduce the issue
+ * 6. Root cause analysis framework
+ * 7. Long-term reliability improvements
+ * 8. Suggested code examples for robust error handling
+ */
+
+## Quality and Reliability Prompts
+
+### 16. Code Quality Analysis Workflow
+
+/**
+ * Create a comprehensive code quality analysis workflow for a Java microservices project:
+ * 1. Design a multi-stage process including:
+ *    - Static code analysis with SonarQube
+ *    - Unit test coverage assessment
+ *    - Integration test verification
+ *    - Performance benchmark comparison
+ *    - Security vulnerability scanning
+ * 2. Include configuration for:
+ *    - Quality gates with threshold definitions
+ *    - Custom rule sets for project-specific standards
+ *    - Code coverage requirements by component type
+ *    - Security severity categorization
+ * 3. Provide:
+ *    - CI/CD integration scripts
+ *    - Reporting templates for stakeholders
+ *    - Automated notification system for quality breaches
+ *    - Trend analysis for quality metrics over time
+ * 4. Add remediation workflow for addressing identified issues
+ */
+
+### 17. Comprehensive Test Coverage Strategy
+
+/**
+ * Develop a test coverage strategy for a financial application with regulatory compliance requirements:
+ * 1. Design a multi-layered approach covering:
+ *    - Unit testing (code coverage targets and strategies)
+ *    - Integration testing (component interaction verification)
+ *    - System testing (end-to-end scenarios)
+ *    - Performance testing (load, stress, endurance)
+ *    - Security testing (penetration, vulnerability assessment)
+ *    - Compliance testing (regulatory requirements verification)
+ * 2. Include:
+ *    - Coverage metrics and targets for each layer
+ *    - Test prioritization framework based on risk
+ *    - Automation vs. manual testing recommendations
+ *    - Test data management strategy
+ * 3. Provide:
+ *    - Coverage reporting framework
+ *    - Gap analysis methodology
+ *    - Continuous improvement process
+ *    - Audit trail for compliance demonstration
+ */
+
+### 18. Secure Code Review Checklist
+
+/**
+ * Create a comprehensive secure code review checklist for a healthcare application handling sensitive patient data:
+ * 1. Include verification items for:
+ *    - Input validation and sanitization
+ *    - Authentication and authorization mechanisms
+ *    - Session management security
+ *    - Data encryption in transit and at rest
+ *    - API security controls
+ *    - Logging and audit trails
+ *    - Error handling and information exposure
+ *    - Third-party dependency security
+ * 2. Categorize items by:
+ *    - Risk level (Critical, High, Medium, Low)
+ *    - Compliance category (HIPAA, GDPR, etc.)
+ *    - Implementation area (Frontend, Backend, Database)
+ * 3. Provide:
+ *    - Verification techniques for each item
+ *    - Common pitfalls and remediation strategies
+ *    - Code examples of secure vs. insecure patterns
+ *    - Automated detection recommendations where applicable
+ */
+
+### 19. Test Data Management Strategy
+
+/**
+ * Design a comprehensive test data management strategy for a multi-tenant SaaS application:
+ * 1. Address the following areas:
+ *    - Test data generation techniques
+ *    - Data anonymization for production-like testing
+ *    - Database seeding and reset mechanisms
+ *    - Environment-specific data handling
+ *    - Data versioning and change management
+ *    - On-demand data provisioning
+ * 2. Include:
+ *    - Data privacy compliance requirements
+ *    - Test data storage and access controls
+ *    - Data cleanup and retention policies
+ *    - Performance considerations for large datasets
+ * 3. Provide:
+ *    - Implementation architecture
+ *    - Tool recommendations and configurations
+ *    - Sample scripts for key operations
+ *    - Integration with CI/CD pipelines
+ */
+
+### 20. DevOps Test Integration Plan
+
+/**
+ * Create a DevOps test integration plan for a containerized microservices architecture:
+ * 1. Design testing stages for:
+ *    - Pre-commit testing (linting, static analysis)
+ *    - Build-time testing (unit tests, component tests)
+ *    - Deployment testing (integration, contract tests)
+ *    - Post-deployment testing (health checks, smoke tests)
+ *    - Production monitoring and synthetic testing
+ * 2. Include:
+ *    - Tool selection and configuration for each stage
+ *    - Test environment management with containerization
+ *    - Test data strategies for each environment
+ *    - Performance and security testing integration
+ * 3. Provide:
+ *    - CI/CD pipeline configuration
+ *    - Kubernetes test orchestration examples
+ *    - Failure recovery and rollback strategies
+ *    - Metrics collection and visualization approach
+ *    - Continuous feedback mechanisms
+ */

@@ -1,0 +1,68 @@
+Prompt 1: Robust REST API with Validation and Logging
+-----------------------------------------------------
+Design a RESTful API using Go's net/http package to manage tasks.
+Requirements:
+- Task struct must include ID, Name, Description, and Status fields.
+- Implement handlers for Create, Read (by ID), Update, and Delete.
+- Add input validation for each field.
+- Use structured logging for all operations (success or error).
+- Return proper HTTP status codes.
+- Include example curl commands for testing.
+
+Prompt 2: Unit Tests for REST API Handlers
+------------------------------------------
+Write Go unit tests using the net/http/httptest package for the following:
+- POST /tasks creates a valid task
+- GET /tasks?id=2 returns task with ID 2
+- DELETE /tasks?id=999 returns 404 if task not found
+Mock the request body, headers, and query parameters.
+Check JSON response body, status code, and error handling.
+
+Prompt 3: Error Handling with JSON Responses
+--------------------------------------------
+Improve the existing REST API to return all error messages as structured JSON with `error`, `status`, and `timestamp` fields.
+Use a helper function to write JSON error responses.
+Ensure no plaintext errors are returned.
+
+Prompt 4: Pagination and Filtering for GET /tasks
+-------------------------------------------------
+Enhance the GET /tasks handler to support query parameters:
+- page, limit, status (optional)
+Return tasks paginated and filtered by status.
+Add logic to handle edge cases like page=0 or invalid limit.
+
+Prompt 5: Middleware for Logging and Request Timing
+---------------------------------------------------
+Create HTTP middleware that logs each request’s method, path, and response time in milliseconds.
+Attach it to all task API routes.
+Ensure logs follow a consistent format.
+
+Prompt 6: Graceful Server Shutdown
+----------------------------------
+Add signal handling to gracefully shut down the server on SIGINT or SIGTERM.
+Ensure all open requests complete before exit.
+Log shutdown start and completion.
+
+Prompt 7: Struct-Level Validation Using Tags
+--------------------------------------------
+Use Go struct tags with `validate` package to validate the Task struct fields.
+- Name: required, 3–50 chars
+- Description: optional, max 200 chars
+- Status: must be one of (todo, in-progress, done)
+Return validation errors as JSON.
+
+Prompt 8: Swagger/OpenAPI Documentation
+---------------------------------------
+Use the swaggo/swag package to auto-generate Swagger docs for the task API.
+Add annotations for all routes.
+Ensure the docs are accessible at /swagger/index.html.
+
+Prompt 9: Rate Limiting Middleware
+----------------------------------
+Add middleware to restrict each IP to 100 requests per 15 minutes using an in-memory token bucket approach.
+Reject requests with 429 status if limit exceeded.
+
+Prompt 10: Health Check and Metrics Endpoint
+--------------------------------------------
+Add GET /healthz that returns 200 OK with uptime and timestamp.
+Expose /metrics endpoint with Prometheus metrics like request count, error count, and response durations.

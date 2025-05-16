@@ -1,0 +1,19 @@
+Prompt Used:
+// Provide steps to install Java JDK 17+ on Windows, verify installation, and set JAVA_HOME
+
+1. Download Java JDK from https://adoptium.net/ or Oracle JDK official site.
+2. Run the installer and complete installation.
+3. During installation, check "Add JAVA to PATH" if prompted.
+
+4. Verify installation:
+   Open Command Prompt and run:
+   > java --version
+
+5. Set JAVA_HOME manually (if needed):
+   - Right-click "This PC" → Properties → Advanced System Settings → Environment Variables.
+   - Add a new system variable:
+     - Variable name: JAVA_HOME
+     - Variable value: C:\Program Files\Java\jdk-17.x
+
+6. Confirm JAVA_HOME:
+   > echo %JAVA_HOME%

@@ -1,0 +1,93 @@
+## Chapter 3 — Section: node-setup
+
+Prompt 1: Generate tsconfig.json for React TypeScript Project
+-----------------------------------------------------
+Create a `tsconfig.json` optimized for a React TypeScript project.
+Requirements:
+- Enable JSX support
+- Include paths alias support
+- Strict type checking enabled
+- Use ES2020 target and module
+- Add custom compilerOptions and exclude node_modules
+
+Prompt 2: ESLint Configuration for TypeScript and React
+-----------------------------------------------------
+Write an `.eslintrc.json` that supports TypeScript and React linting.
+Requirements:
+- Extend from `eslint:recommended`, `plugin:react/recommended`, `plugin:@typescript-eslint/recommended`
+- Set parser to `@typescript-eslint/parser`
+- Add environment: browser, es2021
+- Customize rules: no-unused-vars, semi, quotes
+
+Prompt 3: Prettier Configuration for Consistent Formatting
+-----------------------------------------------------
+Generate a `prettier.config.json` file.
+Requirements:
+- Use 2 spaces indentation
+- Add trailing commas
+- Prefer single quotes
+- Set print width to 100
+- Ensure compatibility with ESLint
+
+Prompt 4: Create Combined ESLint + Prettier Setup
+-----------------------------------------------------
+Configure ESLint and Prettier to work together in a TypeScript project.
+Requirements:
+- Add plugins: `eslint-plugin-prettier` and `eslint-config-prettier`
+- Add Prettier to ESLint rules
+- Warn when formatting differs from Prettier
+- Resolve conflicts with TypeScript rules
+
+Prompt 5: Initialize TypeScript Project with CLI
+-----------------------------------------------------
+Write a shell script to initialize a Node.js project with TypeScript, ESLint, and Prettier.
+Requirements:
+- Initialize with `npm init -y`
+- Install TypeScript, ESLint, Prettier and required plugins
+- Generate config files: tsconfig, eslint, prettier
+- Add sample script in `src/index.ts`
+
+Prompt 6: Validate tsconfig Paths with CLI Tool
+-----------------------------------------------------
+Use TypeScript CLI to validate paths and include/exclude settings.
+Requirements:
+- Run `tsc --showConfig`
+- Check compiler paths mapping
+- Print list of files being included
+- Script should fail if `node_modules` or `dist` is being compiled
+
+Prompt 7: Generate tsconfig.json for Monorepo
+-----------------------------------------------------
+Create a tsconfig.base.json for a monorepo project.
+Requirements:
+- Support module resolution from multiple sub-packages
+- Base config extends shared settings
+- Include references for `packages/*`
+- Enable project references for build
+
+Prompt 8: ESLint Rule to Restrict Console Logs in Production
+-----------------------------------------------------
+Write a custom ESLint rule that allows `console.log` only in development files.
+Requirements:
+- Block `console.log` usage in `/src/` except `*.dev.ts`
+- Use ESLint overrides
+- Show error message when violated
+
+Prompt 9: Create VS Code Settings for ESLint and Prettier
+-----------------------------------------------------
+Generate `.vscode/settings.json` to auto-format with Prettier and lint with ESLint.
+Requirements:
+- Format on save
+- ESLint as default formatter for TypeScript and JavaScript
+- Disable conflicting formatters
+- Ensure compatibility with workspace configs
+
+Prompt 10: Generate Prettier Ignore File
+-----------------------------------------------------
+Create a `.prettierignore` file to exclude certain folders from formatting.
+Requirements:
+- Ignore node_modules, dist, build, coverage, .next
+- Exclude auto-generated `.d.ts` files
+- Ensure it supports nested paths
+- Include comment headers for grouping
+

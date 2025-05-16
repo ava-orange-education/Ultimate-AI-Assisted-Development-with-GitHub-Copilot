@@ -1,0 +1,99 @@
+Prompt 1: Use Smart Pointers for Database Connection
+----------------------------------------------------
+Create a class `DBConnection` that connects to a database in the constructor and disconnects in the destructor.
+Use `std::unique_ptr` or `std::shared_ptr` to manage connection lifetime.
+
+Prompt 2: Refactor Raw Pointers to Smart Pointers
+-------------------------------------------------
+Take legacy code using `new`/`delete` and refactor to use `std::unique_ptr` and `std::make_unique()`.
+Ensure there are no memory leaks or double deletions.
+
+Prompt 3: Implement a Custom Deleter with unique_ptr
+----------------------------------------------------
+Write a smart pointer that manages a resource needing a custom cleanup function (e.g., fclose).
+Use `std::unique_ptr<Resource, CustomDeleter>` and demonstrate RAII.
+
+Prompt 4: Sort Vector of Structs Using Lambda
+---------------------------------------------
+Given a vector of Employee structs with name and salary, sort them by salary descending using a lambda in `std::sort()`.
+
+Prompt 5: Capture External Variables in Lambda
+----------------------------------------------
+Demonstrate capturing external variables in a lambda by value and by reference.
+Modify the external variable inside the lambda and print before/after values.
+
+Prompt 6: Filter and Transform Using Ranges
+-------------------------------------------
+Use C++20 ranges to filter a list of integers to even numbers, square them, and collect the result into a vector.
+Avoid explicit loops.
+
+Prompt 7: Use Structured Bindings with std::map
+-----------------------------------------------
+Iterate over a map of student scores using structured bindings in a range-based for loop.
+Print student name and score without using `.first` and `.second`.
+
+Prompt 8: Implement Lambda with Mutable Capture
+-----------------------------------------------
+Create a lambda that captures a counter by value, uses `mutable`, and increments it internally for each invocation.
+Demonstrate repeated calls.
+
+Prompt 9: Create Generic Lambda with auto Parameters
+----------------------------------------------------
+Write a lambda that accepts two `auto` parameters and returns their sum.
+Call it with ints, doubles, and strings to demonstrate generic typing.
+
+Prompt 10: Use std::move in Lambda for Resource Transfer
+--------------------------------------------------------
+Demonstrate moving a vector into a lambda using capture-by-move syntax `[v = std::move(myVec)]`.
+Process the vector inside the lambda and show that `myVec` is now empty.
+
+Prompt 11: Compose Lambdas into a Pipeline
+------------------------------------------
+Define three lambdas: double, increment, square.
+Create a pipeline function that composes them and applies to a vector of inputs sequentially.
+
+Prompt 12: Replace Function Objects with Lambdas
+------------------------------------------------
+Take code using functors or function pointers and replace them with inline lambdas.
+Demonstrate equivalent behavior with more compact syntax.
+
+Prompt 13: Use ranges::views::filter and transform in Chain
+-----------------------------------------------------------
+Filter a vector of integers for even numbers, then multiply them by 3 using `ranges::views::filter` and `views::transform`.
+Print the final result using a for loop or ranges::to.
+
+Prompt 14: Lazy Evaluation with Views
+-------------------------------------
+Demonstrate that ranges views delay execution until iteration.
+Show a chain of transformations and a debug log to track when computations occur.
+
+Prompt 15: Sort Map Values Using Structured Binding
+---------------------------------------------------
+Sort a vector of pairs using structured bindings inside the lambda comparator.
+Print sorted keys and values using `for (const auto& [key, val] : vec)`.
+
+Prompt 16: Capture this Pointer in Class Lambda
+-----------------------------------------------
+Inside a class method, define a lambda that captures `this` and accesses private member variables.
+Demonstrate modification of class state through the lambda.
+
+Prompt 17: Return Lambda from a Function
+----------------------------------------
+Create a function that returns a lambda which captures its local state.
+Use the returned lambda in multiple places and test captured values.
+
+Prompt 18: Benchmark std::shared_ptr vs raw pointer Access
+----------------------------------------------------------
+Create a loop that accesses a field inside a class using both raw and shared_ptr.
+Compare the CPU time and number of instructions executed using a profiler.
+
+Prompt 19: Refactor Recursive Function to Lambda
+------------------------------------------------
+Convert a recursive Fibonacci function to use a lambda expression.
+Use default capture to recursively call the lambda from within itself.
+
+Prompt 20: Unit Test Lambda Sorting Logic
+-----------------------------------------
+Write unit tests using Google Test or Catch2 to test sorting logic applied through a lambda.
+Use test cases with custom comparators, edge values, and invalid input.
+

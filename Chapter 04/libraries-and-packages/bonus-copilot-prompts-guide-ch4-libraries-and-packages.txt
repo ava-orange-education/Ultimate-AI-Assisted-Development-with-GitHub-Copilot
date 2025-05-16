@@ -1,0 +1,94 @@
+## Chapter 4 — Section: libraries-and-packages
+
+Prompt 1: Scrape Top Headlines from a News Website
+-----------------------------------------------------
+Write a Python script using BeautifulSoup to scrape the top 5 headlines from a news website (e.g., CNN or BBC).
+Requirements:
+- Use `requests` and `bs4`
+- Extract titles from <h2> or <h3> tags
+- Clean up text and print numbered list
+- Handle missing elements gracefully
+
+Prompt 2: Scrape Product Titles and Prices from an E-Commerce Page
+-----------------------------------------------------
+Use BeautifulSoup to extract product names and prices from a static HTML e-commerce page.
+Requirements:
+- Use class selectors for product info
+- Return a list of dictionaries
+- Handle cases with missing prices
+- Write data to `products.json`
+
+Prompt 3: Perform Basic Data Analysis Using pandas
+-----------------------------------------------------
+Load a CSV file containing product sales and compute:
+- Total sales
+- Average price
+- Number of unique products
+Requirements:
+- Use pandas
+- Validate file exists
+- Print results using formatted output
+
+Prompt 4: Visualize Product Prices Using matplotlib
+-----------------------------------------------------
+Use matplotlib to create a bar chart of product names vs prices.
+Requirements:
+- Read from a CSV or JSON file
+- Label axes and add title
+- Rotate x-axis labels for readability
+- Save plot as PNG
+
+Prompt 5: Scrape Blog Titles from Multiple Pages
+-----------------------------------------------------
+Write a scraper that fetches blog titles across multiple paginated URLs.
+Requirements:
+- Loop through pages using page=? param
+- Respect 1-second delay between requests
+- Stop when no more results
+- Log results to a file
+
+Prompt 6: Fill Missing Prices in DataFrame with Mean
+-----------------------------------------------------
+Write a script that loads product data with missing prices and fills them with the column mean.
+Requirements:
+- Use pandas and numpy
+- Handle non-numeric values
+- Log before/after fill count
+- Save cleaned data to new CSV
+
+Prompt 7: Create a CLI to Scrape and Save Headlines
+-----------------------------------------------------
+Build a CLI using argparse to scrape headlines from a URL and save to a file.
+Requirements:
+- Options: --url, --limit, --output
+- Use requests + bs4
+- Format output to markdown
+- Include error handling for invalid URL
+
+Prompt 8: Plot Distribution of Prices from Scraped Data
+-----------------------------------------------------
+Using pandas and seaborn, plot histogram of product prices.
+Requirements:
+- Load scraped price data
+- Handle outliers (cap at 99 percentile)
+- Annotate mean and median
+- Display interactive plot with plt.show()
+
+Prompt 9: Extract Meta Tags from Web Page for SEO
+-----------------------------------------------------
+Write a script that extracts all meta tags (description, keywords) from a webpage.
+Requirements:
+- Use requests and BeautifulSoup
+- Print tag names and content
+- Support optional output to JSON
+- Add error handling for invalid HTML
+
+Prompt 10: Merge Sales Data from Multiple CSVs
+-----------------------------------------------------
+Write a script to merge multiple sales reports (CSV) into one DataFrame.
+Requirements:
+- Match on common columns: date, product_id
+- Add source filename column
+- Remove duplicate rows
+- Save final merged file with timestamp
+

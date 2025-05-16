@@ -1,0 +1,94 @@
+## Chapter 1 — Section: apis
+
+Prompt 1: Simulate GitHub Copilot API Request in Python
+-----------------------------------------------------
+Write a Python function that simulates sending a POST request to the GitHub Copilot API.
+Requirements:
+- Use `requests` library
+- JSON body must include: prompt, language, model
+- Handle response with proper status check
+- Return suggestions list from the JSON response
+- Include a test call with mock input
+
+Prompt 2: Validate JSON Schema for Copilot Feedback
+-----------------------------------------------------
+Create a JSON schema to validate Copilot feedback payloads.
+Requirements:
+- Fields: prompt (string), suggestion (string), accepted (boolean), timestamp (ISO string)
+- Use Python’s `jsonschema` library
+- Validate two example payloads: one valid, one invalid
+- Output detailed validation errors
+
+Prompt 3: Mock Copilot API Using Node.js and Express
+-----------------------------------------------------
+Create a mock REST API in Node.js that mimics GitHub Copilot’s response format.
+Requirements:
+- Route: POST /copilot/generate
+- Accept JSON payload with `prompt`, `language`
+- Respond with a mock suggestion JSON array
+- Include error handling and input validation
+
+Prompt 4: Use Postman to Test Copilot-like Endpoint
+-----------------------------------------------------
+Document a Postman test collection for sending requests to a Copilot-style code suggestion API.
+Requirements:
+- POST request to /suggest
+- Body: raw JSON { "prompt": "...", "language": "..." }
+- Test script: assert status = 200, response contains `suggestion`
+- Add environment variable for base URL
+
+Prompt 5: Create Curl Commands for Copilot Feedback API
+-----------------------------------------------------
+Write curl commands for interacting with a hypothetical feedback endpoint.
+Requirements:
+- Send POST with feedback JSON
+- Send GET to retrieve feedback history
+- Add headers for content-type and auth
+- Include examples for 2 different users
+
+Prompt 6: Secure Copilot API with JWT
+-----------------------------------------------------
+Secure a Copilot-style API using JWT authentication.
+Requirements:
+- Use Express.js with `jsonwebtoken` library
+- Middleware to verify token in Authorization header
+- Reject requests without token
+- Include route to generate a valid token for testing
+
+Prompt 7: Serialize Copilot Request Model in Java (Spring Boot)
+-----------------------------------------------------
+Create a Spring Boot model class to represent a Copilot API request.
+Requirements:
+- Fields: prompt, language, modelVersion
+- Use `@NotBlank` validation
+- Add Lombok annotations for getters/setters
+- Include example unit test to serialize to JSON using Jackson
+
+Prompt 8: Rate Limit a Copilot-like API using Python Flask
+-----------------------------------------------------
+Implement rate limiting middleware in Flask.
+Requirements:
+- Limit each IP to 5 requests/min
+- Use Flask-Limiter or custom decorator
+- Apply to POST /suggest endpoint
+- Return 429 with JSON error message if exceeded
+
+Prompt 9: Generate OpenAPI Spec for Suggestion Endpoint
+-----------------------------------------------------
+Write an OpenAPI 3.0 spec (YAML format) for a Copilot-style suggestion endpoint.
+Requirements:
+- POST /generate
+- Request body schema: prompt, language
+- Response schema: suggestions[]
+- Include error responses for 400 and 500
+- Add example values
+
+Prompt 10: Explain Copilot Response Format Using TypeScript Interface
+-----------------------------------------------------
+Define a TypeScript interface to model the Copilot response payload.
+Requirements:
+- Fields: suggestionId, code, score, timestamp
+- Add optional field: explanation
+- Use union types for `score` field (e.g., number | "high" | "low")
+- Include function to parse and validate response
+

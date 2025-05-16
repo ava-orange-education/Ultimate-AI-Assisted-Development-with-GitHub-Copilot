@@ -1,0 +1,56 @@
+Prompt 1: Simulate a Race Condition Using Shared Slice
+------------------------------------------------------
+Create a Go program that appends concurrently to a shared slice using multiple goroutines.
+Do not use synchronization to expose the race condition.
+Run with `go run -race` to confirm the issue.
+
+Prompt 2: Fix Race Condition with sync.Mutex
+--------------------------------------------
+Use sync.Mutex to protect the shared slice.
+Ensure correct use of Lock/Unlock and test that the race is no longer detected.
+Print the final content of the slice to validate integrity.
+
+Prompt 3: Concurrent Processing with sync.WaitGroup
+---------------------------------------------------
+Implement a worker function that performs string transformation (e.g., uppercase).
+Spawn multiple goroutines, each processing a string. Use WaitGroup to wait for completion.
+
+Prompt 4: Use Buffered Channel as Task Queue
+--------------------------------------------
+Create a task queue using a buffered channel.
+Send 100 integer tasks into the channel, and spawn 5 worker goroutines to consume and process them concurrently.
+
+Prompt 5: Timeout Handling with select and time.After
+-----------------------------------------------------
+Demonstrate how to timeout a goroutine task using select and time.After.
+If the task takes too long, return a timeout error.
+Simulate delays using time.Sleep.
+
+Prompt 6: Use Context with Cancellation
+---------------------------------------
+Wrap goroutines with context.Context and implement cancellation.
+Cancel context after 2 seconds and verify that all long-running goroutines exit early.
+Log context cancellations.
+
+Prompt 7: Semaphore Pattern using Buffered Channel
+--------------------------------------------------
+Limit concurrent execution of goroutines using a buffered channel as a semaphore.
+Allow only 3 goroutines to run in parallel while launching 10 tasks.
+
+Prompt 8: Fan-Out and Fan-In Pattern
+------------------------------------
+Create a pipeline where a single producer distributes tasks to multiple workers (fan-out).
+All results are collected into a single output channel (fan-in).
+Use WaitGroup for synchronization.
+
+Prompt 9: Deadlock Example and Fix
+----------------------------------
+Write a program that demonstrates deadlock using 2 goroutines trying to acquire 2 locks in reverse order.
+Explain and fix the deadlock using lock ordering or channel-based design.
+
+Prompt 10: Unit Tests for Concurrency
+-------------------------------------
+Write a unit test that checks concurrent execution of a task queue.
+Use goroutines, WaitGroup, and mock a shared counter.
+Ensure the final result matches expected and test edge cases like empty input.
+

@@ -1,0 +1,92 @@
+## Chapter 3 — Section: debugging-ai-assisted
+
+Prompt 1: Fix Null Reference Bug in User Data
+-----------------------------------------------------
+You have a function `getUserDetails()` that throws an error when `user.profile` is null.
+Prompt Copilot to:
+- Add optional chaining to safely access nested fields
+- Return a default profile object if null
+- Log fallback behavior
+- Include example of a failing user object and fixed version
+
+Prompt 2: Debug Empty Array Bug in Fetch Function
+-----------------------------------------------------
+A fetch function returns an empty array unexpectedly.
+Prompt Copilot to:
+- Check API response format
+- Log raw response and verify correct JSON parsing
+- Add type check for response structure
+- Provide fallback mock data if data is missing
+
+Prompt 3: Identify TypeError with Undefined Input
+-----------------------------------------------------
+A function throws `Cannot read properties of undefined`.
+Prompt Copilot to:
+- Use type guard before accessing properties
+- Add default parameter value
+- Refactor function to handle optional input safely
+- Include edge case tests
+
+Prompt 4: Trace Memory Leak in React Component
+-----------------------------------------------------
+You suspect a memory leak in a component that sets an interval.
+Prompt Copilot to:
+- Add `useEffect` cleanup with `clearInterval`
+- Log creation and cleanup
+- Explain React’s unmounting behavior
+- Include test case with rapid mount/unmount
+
+Prompt 5: Fix Bug in Async Data Fetching
+-----------------------------------------------------
+An async fetch in `useEffect` runs multiple times unexpectedly.
+Prompt Copilot to:
+- Add dependency array in useEffect
+- Cancel fetch on unmount using AbortController
+- Log lifecycle steps
+- Include corrected version of the hook
+
+Prompt 6: Help Identify Broken Promise Chain
+-----------------------------------------------------
+A `.then()` chain fails to propagate errors.
+Prompt Copilot to:
+- Replace with async/await
+- Add try-catch block
+- Log errors with context
+- Add return types to avoid implicit any
+
+Prompt 7: Improve Stack Trace for Recursive Error
+-----------------------------------------------------
+A recursive function overflows silently.
+Prompt Copilot to:
+- Add max depth guard
+- Throw informative error with context
+- Suggest tail recursion optimization if applicable
+- Include base case verification
+
+Prompt 8: Diagnose Unexpected UI Behavior in Form Submission
+-----------------------------------------------------
+A form submits but resets unexpectedly on failure.
+Prompt Copilot to:
+- Prevent default submission
+- Validate before calling reset
+- Add error state tracking
+- Show fixed `handleSubmit` function
+
+Prompt 9: Suggest Fix for Unexpected NaN Result
+-----------------------------------------------------
+A calculation returns NaN under specific conditions.
+Prompt Copilot to:
+- Check division or parsing logic
+- Add logging for each operand
+- Use Number.isNaN() for detection
+- Propose fallback result
+
+Prompt 10: Annotate Buggy Function for Clarity and Debugging
+-----------------------------------------------------
+Provide inline comments and debug logs in a complex function.
+Prompt Copilot to:
+- Comment each logical block
+- Log inputs and outputs
+- Highlight potential failure points
+- Suggest test case based on control flow
+

@@ -1,0 +1,52 @@
+Prompt 1: Concurrent Web Scraper with Goroutines
+------------------------------------------------
+Write a Go program to scrape the title of multiple URLs concurrently using goroutines.
+Use net/http for requests and goquery for HTML parsing.
+Collect results in a channel and print them with the URL.
+
+Prompt 2: Add Timeout for Each Request
+--------------------------------------
+Enhance the scraper to use http.Client with a timeout of 5 seconds.
+Cancel and report any requests that exceed the timeout threshold.
+
+Prompt 3: Use Context to Cancel Requests
+----------------------------------------
+Use context.WithTimeout for each request to allow graceful cancellation.
+Ensure response bodies are closed and log when a context expires.
+
+Prompt 4: Rate Limiting for Web Requests
+----------------------------------------
+Limit the number of concurrent HTTP requests using a semaphore implemented with a buffered channel.
+Allow only 3 concurrent scrapes and queue the rest.
+
+Prompt 5: Retry Failed Requests with Backoff
+--------------------------------------------
+Implement retry logic with exponential backoff for failed HTTP GETs (e.g., timeout, 500 errors).
+Retry up to 3 times before logging as failed.
+
+Prompt 6: Scrape and Extract Meta Description
+---------------------------------------------
+Modify the scraper to also extract <meta name="description"> from each page in addition to the title.
+Return both in the result struct.
+
+Prompt 7: Save Results to JSON File
+-----------------------------------
+Write the output of the scraper (URL, title, description) to a JSON file named results.json.
+Ensure UTF-8 encoding and readable formatting.
+
+Prompt 8: Add Logging and Progress Display
+------------------------------------------
+Log each URL being processed, time taken, and status (success/failure).
+Show progress percentage on the console.
+
+Prompt 9: Unit Test Web Scraper with Mock Server
+------------------------------------------------
+Write unit tests for the scraping function using httptest.Server.
+Serve mock HTML and validate parsing logic.
+Test timeout, retries, and invalid HTML.
+
+Prompt 10: Parse Links and Follow Internal Pages
+------------------------------------------------
+Enhance the scraper to extract <a href> links from the homepage and follow internal links only (same domain).
+Scrape titles from these internal pages up to a max depth of 2.
+

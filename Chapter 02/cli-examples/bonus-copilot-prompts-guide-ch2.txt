@@ -1,0 +1,93 @@
+## Chapter 2 — Section: cli-examples
+
+Prompt 1: Automate GitHub CLI Authentication
+-----------------------------------------------------
+Write a shell script that checks if GitHub CLI (`gh`) is installed, and if not, installs it on macOS or Linux. 
+Requirements:
+- Detect OS type
+- Use appropriate package manager (brew/apt)
+- Prompt user to run `gh auth login`
+- Exit with success/failure status
+- Include ANSI color codes for status messages
+
+Prompt 2: Generate GitHub CLI Command to Create Repo
+-----------------------------------------------------
+Use GitHub CLI to create a public repository with a README.
+Requirements:
+- Use `gh repo create`
+- Accept repo name as argument
+- Add README and set visibility to public
+- Push current folder if it's a Git repo
+- Include error handling if command fails
+
+Prompt 3: Write Copilot CLI Init Command with Workflow
+-----------------------------------------------------
+Generate a command using GitHub Copilot CLI to initialize AI for a project.
+Requirements:
+- Use `copilot init` with specific language
+- Select GPT-4 model
+- Enable workspace logging
+- Include shell example with Copilot CLI installed via npm
+
+Prompt 4: Create GitHub Actions Workflow to Auto-Label Docs PR
+-----------------------------------------------------
+Write a GitHub Actions YAML workflow to label pull requests that touch `.md` or `.txt` files.
+Requirements:
+- Trigger on pull_request
+- Use `actions/labeler` or `peter-evans/create-or-update-comment`
+- Add `documentation` label
+- Include example PR filter path
+
+Prompt 5: Schedule Copilot Sync Using Cron
+-----------------------------------------------------
+Create a cron job to pull latest changes from Copilot-enhanced branch every hour.
+Requirements:
+- Shell script to pull from origin/copilot-main
+- Log success/failure with timestamp
+- Entry in crontab with redirection to log file
+- Include comments for clarity
+
+Prompt 6: Export Copilot CLI Output to JSON
+-----------------------------------------------------
+Write a shell command that runs Copilot CLI with a prompt and saves the result to a timestamped JSON file.
+Requirements:
+- Use `copilot suggest` or `copilot generate`
+- Use `jq` to format JSON
+- Include date prefix in output filename
+- Log prompt and output together
+
+Prompt 7: GitHub CLI Command to Clone All Repos in Org
+-----------------------------------------------------
+Use GitHub CLI to list and clone all repositories in an organization.
+Requirements:
+- Use `gh repo list` and `gh repo clone`
+- Accept org name as an argument
+- Clone into a subfolder named after org
+- Skip private repos unless `--include-private` is passed
+
+Prompt 8: Shell Script to Archive Old Copilot Logs
+-----------------------------------------------------
+Write a bash script to zip all `.log` files older than 7 days in the Copilot logs directory.
+Requirements:
+- Use `find` and `zip`
+- Store archives with date in filename
+- Delete logs after archiving
+- Log the archive creation result
+
+Prompt 9: Auto-Sync GitHub CLI Token to Environment
+-----------------------------------------------------
+Write a script to extract and export GitHub CLI auth token from `~/.config/gh/hosts.yml`.
+Requirements:
+- Parse YAML using `yq`
+- Export token as `GITHUB_TOKEN`
+- Add fallback if file doesn’t exist
+
+Prompt 10: Monitor GitHub PR Events Using CLI
+-----------------------------------------------------
+Use `gh` CLI to monitor open PRs in a repo and print author, title, and number of comments.
+Requirements:
+- Output in tabular format
+- Refresh every 60 seconds
+- Filter by `open` state and base branch `main`
+- Use a `watch`-based loop
+

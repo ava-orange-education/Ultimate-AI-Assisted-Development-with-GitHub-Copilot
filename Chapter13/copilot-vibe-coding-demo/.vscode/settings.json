@@ -1,0 +1,12 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  "github.copilot.advanced": {
+    "inlineSuggest.count": 3,
+    "inlineSuggest.model": "gpt-4o"
+  }
+}

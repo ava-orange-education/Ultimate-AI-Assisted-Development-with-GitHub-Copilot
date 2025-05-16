@@ -1,0 +1,100 @@
+Prompt 1: Toggle GPIO Pin Using Bit Manipulation in C
+-----------------------------------------------------
+Write a C program to toggle a GPIO pin on an embedded board using direct register access.
+Simulate setting and clearing a bit using `|=` and `&=~` operations.
+
+Prompt 2: Debounce GPIO Input with Software Logic
+-------------------------------------------------
+Implement software debounce logic for a GPIO input button using a time delay or counter threshold.
+Ensure that the signal is stable before triggering an interrupt or state change.
+
+Prompt 3: Configure GPIO Pin as Output/Input
+--------------------------------------------
+Create a function to initialize GPIO pins as input or output on a microcontroller.
+Use macros to define direction bits and validate pin configurations.
+
+Prompt 4: Write Round-Robin Scheduler for Tasks
+-----------------------------------------------
+Implement a basic round-robin task scheduler in C.
+Each task is a function pointer in an array. Loop through all tasks and invoke them one after another on each tick.
+
+Prompt 5: Support Task Delay and Resumption
+-------------------------------------------
+Enhance the round-robin scheduler to support task delays using a tick counter.
+Use a global tick timer to resume delayed tasks after N milliseconds.
+
+Prompt 6: Add Preemption with Priority
+--------------------------------------
+Extend the scheduler to allow tasks with higher priority to preempt lower-priority tasks.
+Maintain a priority queue or sorted list of tasks.
+
+Prompt 7: I2C Driver to Read Temperature Sensor
+-----------------------------------------------
+Write a C driver to read temperature data from an I2C sensor (e.g., LM75).
+Use standard I2C read/write functions to communicate with the slave device and return temperature as float.
+
+Prompt 8: Handle I2C Bus Arbitration Failures
+---------------------------------------------
+Detect and handle arbitration lost or NACK errors in I2C transactions.
+Retry the transmission or log an error with proper recovery logic.
+
+Prompt 9: Initialize I2C Peripheral with Configurable Frequency
+---------------------------------------------------------------
+Write an I2C initialization routine that sets the bus speed to 100kHz or 400kHz.
+Use constants and register macros to configure timing registers.
+
+Prompt 10: Mock GPIO and I2C Interfaces for Testing
+---------------------------------------------------
+Design mock GPIO and I2C functions for unit testing embedded logic.
+Return simulated data or emulate failure cases without requiring actual hardware.
+
+Prompt 11: Blink LED Using GPIO in Main Loop
+--------------------------------------------
+Write a program to blink an LED connected to a GPIO pin every 500ms.
+Use a software delay loop or timer interrupt to toggle the pin state.
+
+Prompt 12: Implement Cooperative Multitasking
+---------------------------------------------
+Modify the round-robin scheduler to yield control from each task voluntarily.
+Use a cooperative approach where tasks can call a `yield()` function.
+
+Prompt 13: Track CPU Utilization in Scheduler
+---------------------------------------------
+Add counters to measure how much CPU time each task consumes.
+Log or transmit this info periodically to monitor load balancing.
+
+Prompt 14: Low-Power Mode Trigger on Inactivity
+-----------------------------------------------
+Monitor GPIO or task activity. If idle for a certain period, enter a simulated low-power mode.
+Wake up on GPIO interrupt or timer tick.
+
+Prompt 15: Implement Circular Buffer for I2C Read Logs
+------------------------------------------------------
+Create a ring buffer to log I2C sensor readings.
+On each read, store the latest temperature value and timestamp in the buffer and rotate index.
+
+Prompt 16: Use Interrupt for GPIO Button Press
+----------------------------------------------
+Configure a GPIO pin interrupt on falling edge for a button press.
+Debounce the input and trigger a callback to toggle an LED.
+
+Prompt 17: Validate GPIO Pin State with Volatile Keyword
+--------------------------------------------------------
+Use the `volatile` keyword to declare GPIO read/write registers and explain its need in embedded C.
+Demonstrate incorrect behavior without it.
+
+Prompt 18: Use Timer Interrupt for Task Switching
+-------------------------------------------------
+Generate periodic interrupts using a timer peripheral.
+In the ISR, call the scheduler to switch tasks or execute one scheduled function.
+
+Prompt 19: Generate Alert if Temperature Exceeds Threshold
+----------------------------------------------------------
+Read I2C temperature data and trigger a GPIO alarm pin high if value exceeds 40°C.
+Log threshold breaches or simulate an alarm beep.
+
+Prompt 20: Unit Test Round-Robin Scheduler Execution Order
+----------------------------------------------------------
+Write tests to ensure round-robin task order is preserved.
+Test cases should verify no starvation, all tasks run, and tick-based delays are respected.
+

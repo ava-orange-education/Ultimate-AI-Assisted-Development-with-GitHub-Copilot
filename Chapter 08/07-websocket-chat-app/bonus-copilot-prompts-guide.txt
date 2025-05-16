@@ -1,0 +1,51 @@
+Prompt 1: Basic WebSocket Chat Server
+-------------------------------------
+Create a WebSocket server using the `ws` library in Node.js.
+Accept connections, listen for messages, and broadcast received messages to all connected clients.
+
+Prompt 2: Assign Unique User IDs on Connection
+----------------------------------------------
+Assign each client a unique user ID upon connection.
+Prefix all broadcast messages with the sender's ID or name for clarity in chat.
+
+Prompt 3: Handle Disconnection Gracefully
+-----------------------------------------
+Detect when a client disconnects and log a message.
+Remove them from the clients list to avoid sending further messages to closed sockets.
+
+Prompt 4: Broadcast Join and Leave Events
+-----------------------------------------
+Notify all clients when a user joins or leaves the chat.
+Include timestamp and user ID in the notification message.
+
+Prompt 5: Add Heartbeat Mechanism to Detect Dead Connections
+------------------------------------------------------------
+Send a periodic ping from the server and expect a pong from the client.
+If a client fails to respond in time, terminate the connection.
+Use `ws` heartbeat pattern with setInterval().
+
+Prompt 6: Support Private Messaging
+-----------------------------------
+Implement private message support using a format like `/msg userID message`.
+Route the message only to the targeted user. Return an error if the target is not connected.
+
+Prompt 7: Track Active Users and Expose /users API
+--------------------------------------------------
+Maintain a list of active user IDs or names.
+Expose an HTTP endpoint (e.g., /users) that returns all connected users in JSON format using Express.js + WebSocket combo.
+
+Prompt 8: Add Message History for New Clients
+---------------------------------------------
+Store the last N messages (e.g., 20) in memory.
+When a new client connects, send them the chat history before joining the live stream.
+
+Prompt 9: Use Message Schema and Type Handling
+----------------------------------------------
+Wrap all messages in a structured JSON format with fields: type, sender, timestamp, payload.
+Differentiate between 'chat', 'join', 'leave', and 'system' messages for easier client parsing.
+
+Prompt 10: Add Jest Unit Tests for Message Parser
+-------------------------------------------------
+Write unit tests for the internal message parsing logic.
+Test detection of message type, sender ID, command parsing, and failure handling for malformed input.
+

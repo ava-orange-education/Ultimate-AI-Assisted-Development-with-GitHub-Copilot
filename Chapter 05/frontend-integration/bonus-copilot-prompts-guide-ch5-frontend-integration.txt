@@ -1,0 +1,159 @@
+## Chapter 5 — Section: frontend-integration
+
+Prompt 1: Build a React Component to Fetch and Display Product List
+-----------------------------------------------------
+Write a functional React component named `ProductList`.
+Requirements:
+- Use `useEffect` + `fetch()` to call `/api/products`
+- Display in a table
+- Add loading and error states
+
+Prompt 2: Add Live Updates Using WebSocket in React
+-----------------------------------------------------
+Enhance `LiveOrders.jsx` to receive live order updates.
+Requirements:
+- Connect to WebSocket
+- Append new order to list
+- Show toast for each update
+
+Prompt 3: Create Controlled Form in Vue for User Input
+-----------------------------------------------------
+Create a Vue component `UserForm.vue`.
+Requirements:
+- Use `v-model` to bind input
+- Validate required fields
+- Submit using POST request
+
+Prompt 4: Use Axios with Interceptors in React
+-----------------------------------------------------
+Configure Axios globally for API calls.
+Requirements:
+- Add request/response interceptors
+- Inject Authorization token
+- Handle 401 redirects to login
+
+Prompt 5: Display API Errors Gracefully in React UI
+-----------------------------------------------------
+Write error boundary component.
+Requirements:
+- Wrap main app in `<ErrorBoundary>`
+- Catch and log API errors
+- Display user-friendly error message
+
+Prompt 6: Use Copilot to Add Pagination Controls in React Table
+-----------------------------------------------------
+Add pagination to a product list component.
+Requirements:
+- Show page number controls
+- Fetch data based on page param
+- Highlight active page
+
+Prompt 7: Apply Debounce on Search Box in React
+-----------------------------------------------------
+Create a search input that debounces user input.
+Requirements:
+- Use `useRef()` and `setTimeout`
+- Avoid triggering API on every keystroke
+- Support minimum character threshold
+
+Prompt 8: Integrate API Form Submission in Vue
+-----------------------------------------------------
+Submit form data using `fetch()` or `axios`.
+Requirements:
+- Validate on frontend
+- Show response message
+- Disable button while loading
+
+Prompt 9: Secure Frontend with Role-Based UI Rendering
+-----------------------------------------------------
+Show/hide sections based on user role.
+Requirements:
+- Fetch role from `/api/user/me`
+- Show admin-only buttons
+- Use context or props to manage
+
+Prompt 10: Use useReducer for Complex State in React
+-----------------------------------------------------
+Replace multiple `useState` hooks with `useReducer`.
+Requirements:
+- Manage filters, page, sort in reducer
+- Improve readability
+- Add unit test for reducer
+
+Prompt 11: Lazy Load Component in React Router
+-----------------------------------------------------
+Dynamically load `ProductList.jsx` only when route is matched.
+Requirements:
+- Use `React.lazy()` and `Suspense`
+- Show fallback loader
+- Split bundle size
+
+Prompt 12: Add Global Notification System in Vue
+-----------------------------------------------------
+Build notification system using global event bus.
+Requirements:
+- Add `Notification.vue` component
+- Support success/error
+- Auto-dismiss after 5 seconds
+
+Prompt 13: Connect Frontend with Spring Boot Backend
+-----------------------------------------------------
+Test integration of frontend app with running backend.
+Requirements:
+- Proxy `/api/*` calls during dev
+- Configure CORS if needed
+- Display backend response in UI
+
+Prompt 14: Upload File via React Component
+-----------------------------------------------------
+Add file upload support to a form.
+Requirements:
+- Use `FormData`
+- Call `POST /upload`
+- Show progress and success message
+
+Prompt 15: Animate List Transitions in Vue
+-----------------------------------------------------
+Use `<transition-group>` to animate order entries.
+Requirements:
+- Add enter/leave CSS animations
+- Animate on add/delete
+
+Prompt 16: Use Custom Hook for API Requests in React
+-----------------------------------------------------
+Refactor API logic into `useApiRequest()` hook.
+Requirements:
+- Accept endpoint and method
+- Return data, loading, error
+- Handle cancellation
+
+Prompt 17: Show Placeholder UI While Loading
+-----------------------------------------------------
+Use skeleton loaders instead of spinner.
+Requirements:
+- Add `<SkeletonCard />` component
+- Show during API call
+- Replace with actual data once loaded
+
+Prompt 18: Sync URL Parameters with React State
+-----------------------------------------------------
+Read and update query parameters like `?page=2&sort=name`.
+Requirements:
+- Use `useSearchParams()` or `URLSearchParams`
+- Keep state in sync with URL
+
+Prompt 19: Build Dashboard Card Component with Props
+-----------------------------------------------------
+Create a reusable `StatCard` component.
+Requirements:
+- Props: title, value, icon, color
+- Render styled card with dynamic content
+- Use in dashboard grid
+
+Prompt 20: Ask Copilot to Scaffold React + Spring Boot Integration Template
+-----------------------------------------------------
+Prompt Copilot to:
+- Scaffold React app with API folder
+- Proxy to Spring Boot backend
+- Share build config for full-stack project
+

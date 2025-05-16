@@ -1,0 +1,51 @@
+Prompt 1: Basic Appium Script for Booking Flow
+----------------------------------------------
+Write an Appium test using JavaScript to automate a mobile ride booking scenario.
+Enter pickup and drop locations, confirm booking, and verify success message.
+
+Prompt 2: Add Page Object Model Structure
+-----------------------------------------
+Refactor the test to use the Page Object Model pattern.
+Define separate classes for BookingPage and ConfirmationPage.
+Encapsulate actions like enterPickup(), enterDrop(), confirmRide().
+
+Prompt 3: Parameterize Test Data for Locations
+----------------------------------------------
+Allow pickup and drop locations to be passed as variables.
+Use a test data file or environment variables to run the same test with different input locations.
+
+Prompt 4: Handle Location Autocomplete Suggestions
+--------------------------------------------------
+Enhance the test to wait for and select an autocomplete suggestion after typing the pickup location.
+Use element text matching or index to choose the correct result.
+
+Prompt 5: Add Assertion for Booking Confirmation
+------------------------------------------------
+Assert that the booking confirmation text is present after submitting the ride request.
+Include a timeout wait if the confirmation takes time to appear.
+
+Prompt 6: Handle No Internet or Network Failure Scenario
+--------------------------------------------------------
+Simulate a network drop using Appium or ADB commands during booking.
+Assert that the app displays a proper 'No internet' error and test retry behavior.
+
+Prompt 7: Capture Screenshots on Test Failure
+---------------------------------------------
+Enhance the test to capture a screenshot if any step fails.
+Save it with a timestamped filename in a /screenshots folder using the Appium driver API.
+
+Prompt 8: Test Cancel Ride Functionality
+----------------------------------------
+After confirming a ride, navigate to the ride details screen and tap on 'Cancel'.
+Assert the cancellation confirmation and ride state change in the UI.
+
+Prompt 9: Test Booking When Location Access is Denied
+-----------------------------------------------------
+Deny location permissions on app start.
+Verify if the app handles denied permissions and prompts the user to allow them in settings.
+
+Prompt 10: Run the Same Test on Android and iOS
+-----------------------------------------------
+Parameterize the test to run on both Android and iOS using capability sets.
+Ensure selectors are abstracted using accessibility IDs or testID attributes for platform-agnostic test flow.
+

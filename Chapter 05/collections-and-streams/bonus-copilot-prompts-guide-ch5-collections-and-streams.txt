@@ -1,0 +1,161 @@
+## Chapter 5 — Section: collections-and-streams
+
+Prompt 1: Filter Java Collections Using Stream API
+-----------------------------------------------------
+Write a method to filter a list of users to return only active ones using Java 8 Stream API.
+Requirements:
+- Use `.filter()` with a lambda
+- Return a new list
+- Handle null input list safely
+- Add logging for number of results
+
+Prompt 2: Sort a List of Products by Name and Price
+-----------------------------------------------------
+Write a Stream-based method to sort a list of products first by name, then by price ascending.
+Requirements:
+- Use `.sorted()` with `Comparator.comparing()`
+- Return new sorted list
+- Add unit test using JUnit5
+
+Prompt 3: Use Stream Collectors to Group Orders by Status
+-----------------------------------------------------
+Group a list of orders by their status into a `Map<OrderStatus, List<Order>>`.
+Requirements:
+- Use `Collectors.groupingBy()`
+- Print grouped result
+- Add null-safe checks
+
+Prompt 4: Map a List of Users to Their Emails
+-----------------------------------------------------
+Write a Stream pipeline that maps user objects to their email addresses.
+Requirements:
+- Use `.map()` + `.collect(Collectors.toList())`
+- Remove null/blank emails using filter
+- Add size check before/after
+
+Prompt 5: Flatten Nested Collections with flatMap
+-----------------------------------------------------
+Convert a list of categories, each containing a list of products, into a single flat list of products.
+Requirements:
+- Use `flatMap()`
+- Preserve order
+- Collect to `List<Product>`
+
+Prompt 6: Generate a List of Uppercase Product Names
+-----------------------------------------------------
+Use Stream to convert a list of product names to uppercase.
+Requirements:
+- Handle null names safely
+- Use `String::toUpperCase`
+- Avoid modifying original list
+
+Prompt 7: Create a Summary Statistics Report from Integer List
+-----------------------------------------------------
+Given a list of integers (prices), compute summary stats.
+Requirements:
+- Use `Collectors.summarizingInt()`
+- Output min, max, avg, count, sum
+- Format results in readable string
+
+Prompt 8: Partition Users into Admin and Non-Admin Groups
+-----------------------------------------------------
+Use `Collectors.partitioningBy()` to split users into two groups.
+Requirements:
+- Predicate: isAdmin flag
+- Return `Map<Boolean, List<User>>`
+- Log both lists and sizes
+
+Prompt 9: Build a Stream Pipeline with Multiple Intermediate Operations
+-----------------------------------------------------
+Write a method that:
+- Filters orders > $100
+- Maps to customer name
+- Removes duplicates
+- Collects to sorted list
+
+Prompt 10: Combine Multiple Lists Using Stream.concat()
+-----------------------------------------------------
+Combine three separate lists of strings into one.
+Requirements:
+- Use `Stream.concat()` twice
+- Collect to a single `List<String>`
+- Print merged result
+
+Prompt 11: Convert Java List to CSV String with Join Collector
+-----------------------------------------------------
+Convert a list of product names to a comma-separated string.
+Requirements:
+- Use `Collectors.joining(", ")`
+- Remove blank entries
+- Add header "Product List:" to output string
+
+Prompt 12: Use peek() to Log Elements in Stream Pipeline
+-----------------------------------------------------
+Add debugging logs to a stream processing chain using `.peek()`.
+Requirements:
+- Log element before and after mapping
+- Use `System.out.println()`
+
+Prompt 13: Transform Map<K,V> to List<String> of Key-Value Pairs
+-----------------------------------------------------
+Convert a map of users to formatted strings like "John:Admin".
+Requirements:
+- Use `entrySet().stream()`
+- Map each to String
+- Collect to list
+
+Prompt 14: Parallel Stream for Batch Processing
+-----------------------------------------------------
+Use parallel streams to process a large list of orders.
+Requirements:
+- Log thread name during processing
+- Benchmark execution time
+- Ensure result correctness
+
+Prompt 15: Remove Duplicates from List Using Distinct
+-----------------------------------------------------
+Write a method that removes duplicates from a list of integers.
+Requirements:
+- Use `.distinct()`
+- Maintain original order
+- Return new list
+
+Prompt 16: Convert Enum to Map with Stream
+-----------------------------------------------------
+Given an array of enums, create a `Map<Enum, String>` where value = enum name.
+Requirements:
+- Use `Arrays.stream()`
+- Use `Collectors.toMap()`
+- Add test to verify map size
+
+Prompt 17: Refactor Loop-Based Filtering to Stream API
+-----------------------------------------------------
+Convert for-loop-based user filtering logic to Stream pipeline.
+Requirements:
+- Preserve output order
+- Add inline comment for each stream step
+
+Prompt 18: Count Elements Matching Condition
+-----------------------------------------------------
+Use stream to count how many products are in stock.
+Requirements:
+- Use `.filter()` + `.count()`
+- Log result with context
+- Avoid modifying input list
+
+Prompt 19: Filter and Convert to Set with Custom Comparator
+-----------------------------------------------------
+Filter orders over 500 and collect to a TreeSet by customer name.
+Requirements:
+- Use `Collectors.toCollection(TreeSet::new)`
+- Use custom Comparator
+- Print result sorted
+
+Prompt 20: Use reduce() to Compute Product of Numbers
+-----------------------------------------------------
+Write a method that multiplies all integers in a list.
+Requirements:
+- Use `.reduce(1, (a,b) -> a * b)`
+- Handle empty list with default value
+- Log intermediate values with peek
+

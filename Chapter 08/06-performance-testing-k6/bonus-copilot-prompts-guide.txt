@@ -1,0 +1,59 @@
+Prompt 1: Basic K6 POST Load Test
+---------------------------------
+Write a K6 script to POST JSON payloads to a social API endpoint.
+Use 10 virtual users (VUs) and run the test for 30 seconds.
+Assert status 201 and response duration < 500ms.
+
+Prompt 2: Dynamic Payload Generation with Random User IDs
+---------------------------------------------------------
+Modify the test to generate random user IDs and comment content in each iteration.
+Use `Math.random()` or K6 UUID utils to ensure unique payloads per VU.
+
+Prompt 3: Check Response Body and Status Code
+---------------------------------------------
+Use `check()` to verify:
+- response.status === 201
+- response body includes a success message
+Log failed checks for debugging.
+
+Prompt 4: Set Custom HTTP Headers
+---------------------------------
+Include Authorization Bearer token and content-type headers in the request.
+Parametrize headers so they can be reused or toggled via environment variables.
+
+Prompt 5: Add Thresholds for Performance Metrics
+------------------------------------------------
+Configure thresholds in K6 options:
+- 95% of requests must complete < 400ms
+- Error rate must remain below 1%
+Use `thresholds` config to enforce these rules.
+
+Prompt 6: Output Summary Report and JSON Result
+-----------------------------------------------
+Enable summary export to stdout and to a JSON file using `--summary-export`.
+Include total requests, average time, and % failed.
+
+Prompt 7: Parameterize Test Config via Environment Variables
+------------------------------------------------------------
+Allow environment variables to set the target URL, number of VUs, duration, and headers.
+Access them in the K6 script using `__ENV`.
+
+Prompt 8: Stress Test with Ramp Up Load
+---------------------------------------
+Simulate traffic spike by configuring stages:
+- 10 VUs for 10s
+- 50 VUs for 30s
+- 100 VUs for 1m
+- ramp down
+Use this for stress or soak testing.
+
+Prompt 9: Simulate Failed Requests
+----------------------------------
+Mock or simulate random failures (e.g., return 500 or 400) from server endpoint.
+Test K6 script behavior under failure and capture failure rate.
+
+Prompt 10: Custom Summary with Aggregated Results
+-------------------------------------------------
+Use `handleSummary()` to format a custom result report after the test completes.
+Output HTML or markdown summary showing pass rate, average duration, and VU behavior.
+

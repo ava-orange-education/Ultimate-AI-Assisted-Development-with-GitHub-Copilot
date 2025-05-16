@@ -1,0 +1,94 @@
+## Chapter 2 — Section: cli-examples/workflows
+
+Prompt 1: GitHub Actions Workflow to Label PRs
+-----------------------------------------------------
+Create a GitHub Actions workflow that labels pull requests based on file changes.
+Requirements:
+- Use `actions/labeler` or custom logic
+- Label PRs touching `.md` files as `documentation`
+- Trigger on pull_request
+- Run on push to main and PR open
+- Include sample `.github/labeler.yml`
+
+Prompt 2: Auto-assign Reviewers for Code PRs
+-----------------------------------------------------
+Write a workflow that automatically assigns reviewers to every pull request.
+Requirements:
+- Trigger on pull_request
+- Use `peter-evans/assign-reviewers@v1`
+- Randomly choose from team list
+- Include fallback reviewer
+- Only assign on PR to `main` branch
+
+Prompt 3: Build and Test Java Project on Push
+-----------------------------------------------------
+Write a GitHub Actions workflow to build and test a Maven Java project.
+Requirements:
+- Trigger on push and pull_request
+- Use openjdk-17
+- Cache dependencies
+- Run `mvn clean verify`
+- Upload test reports as artifacts
+
+Prompt 4: Lint and Format Code using Prettier
+-----------------------------------------------------
+Create a workflow to run Prettier on all JS and TS files.
+Requirements:
+- Trigger on pull_request
+- Use `actions/setup-node`
+- Install Prettier via npm
+- Run `prettier --check .`
+- Fail job if code is not formatted
+
+Prompt 5: Deploy Static Website to GitHub Pages
+-----------------------------------------------------
+Write a workflow to deploy static HTML/CSS/JS site from `main` to GitHub Pages.
+Requirements:
+- Trigger on push to `main`
+- Build step: copy files to output directory
+- Use `peaceiris/actions-gh-pages`
+- Set personal access token for deployment
+
+Prompt 6: Conditional Step for Specific File Change
+-----------------------------------------------------
+Add a conditional step in workflow that only runs when a file in `/docs` is changed.
+Requirements:
+- Use `if: contains(github.event.head_commit.message, 'docs')`
+- Or check file changes via `paths`
+- Add echo command confirming docs update
+
+Prompt 7: Auto-merge Approved PRs with Label
+-----------------------------------------------------
+Create a workflow to auto-merge PRs labeled `automerge` once approved.
+Requirements:
+- Trigger on pull_request_review
+- Use `peter-evans/enable-pull-request-automerge`
+- Merge using squash strategy
+- Restrict to PRs targeting `main`
+
+Prompt 8: Send Slack Notification on Deployment
+-----------------------------------------------------
+Write a step to send a message to Slack when a deployment succeeds.
+Requirements:
+- Use Slack Webhook URL stored in secret
+- Message should include environment, commit SHA
+- Trigger on successful job completion
+
+Prompt 9: Matrix Build for Multiple Node Versions
+-----------------------------------------------------
+Create a matrix strategy to run tests on Node.js 14, 16, and 18.
+Requirements:
+- Use matrix in `strategy`
+- Install dependencies and run `npm test`
+- Fail fast on any version
+- Upload combined report
+
+Prompt 10: Schedule Workflow Every Night
+-----------------------------------------------------
+Write a GitHub Actions cron job that runs every day at midnight.
+Requirements:
+- Schedule using cron expression
+- Run Python script to generate daily metrics
+- Upload output as artifact
+- Notify via email or Slack if errors occur
+

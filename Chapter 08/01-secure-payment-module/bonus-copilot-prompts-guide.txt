@@ -1,0 +1,54 @@
+Prompt 1: Secure Payment Processing with Input Validation
+---------------------------------------------------------
+Develop a Python class that processes payments securely.
+Validate inputs like amount, currency, and payment method.
+Raise descriptive exceptions for each validation failure and log them.
+
+Prompt 2: API Key Format Validation and Error Logging
+-----------------------------------------------------
+Ensure the payment processor constructor validates the API key format using regex.
+If the key is invalid, raise ValueError and log an unauthorized attempt with timestamp and IP.
+
+Prompt 3: Simulated Payment Gateway Integration
+-----------------------------------------------
+Mock the payment request to a third-party payment API using `requests.post()`.
+Structure the payload properly and handle non-200 responses with descriptive error logging.
+
+Prompt 4: Add Retry Logic for Network Failures
+----------------------------------------------
+Add a retry mechanism with exponential backoff (up to 3 attempts) for payment API failures.
+Log each retry attempt and reason. Raise final error if all attempts fail.
+
+Prompt 5: Logging Sensitive Fields Securely
+-------------------------------------------
+When logging payment details, ensure sensitive data (card number, CVV) are masked.
+Use custom log formatter or helper method to sanitize logs.
+
+Prompt 6: Support Multiple Payment Methods
+------------------------------------------
+Extend the process_payment method to handle multiple types: credit_card, debit_card, net_banking, wallet.
+Add validation logic for each method’s required fields.
+
+Prompt 7: Unit Tests for Payment Processor
+------------------------------------------
+Write unit tests using `unittest` or `pytest` that cover:
+- Valid and invalid API keys
+- Successful and failed payment calls
+- Validation errors and edge cases.
+
+Prompt 8: Dependency Injection for HTTP Client
+----------------------------------------------
+Refactor the class to accept an optional HTTP client.
+Use dependency injection to allow easier testing with mocked `requests.post()`.
+
+Prompt 9: Secure Configuration Management
+-----------------------------------------
+Store API keys and gateway URLs in environment variables.
+Use `os.getenv()` to fetch them securely and fall back with an error if missing.
+
+Prompt 10: Performance Benchmarking of Payment Processor
+--------------------------------------------------------
+Write a benchmark script that simulates 1000 payments using threading or async.
+Log time taken, average response time, and failure rate.
+Identify any performance bottlenecks.
+

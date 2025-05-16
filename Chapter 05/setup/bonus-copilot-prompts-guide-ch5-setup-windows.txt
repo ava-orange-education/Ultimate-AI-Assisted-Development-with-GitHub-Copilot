@@ -1,0 +1,167 @@
+## Chapter 5 — Section: setup/windows-java-setup.txt
+
+Prompt 1: Install Java JDK on Windows via Chocolatey
+-----------------------------------------------------
+Write a PowerShell script that installs OpenJDK 17 using Chocolatey.
+Requirements:
+- Check if Chocolatey is installed
+- Run `choco install openjdk`
+- Validate installation with `java -version`
+- Set JAVA_HOME environment variable
+
+Prompt 2: Set JAVA_HOME and Add to System PATH
+-----------------------------------------------------
+Write a script to update system environment variables for Java.
+Requirements:
+- Set JAVA_HOME to C:\Program Files\OpenJDK\jdk-17
+- Append JAVA_HOME\bin to PATH
+- Persist changes using `[Environment]` API
+- Prompt for admin access if needed
+
+Prompt 3: Verify Java Installation via Version Check
+-----------------------------------------------------
+Generate a script to verify Java installation on Windows.
+Requirements:
+- Run `java -version` and `javac -version`
+- Print success/failure with colored output
+- Log results to `java-setup.log`
+- Include retry message if not found
+
+Prompt 4: Create a HelloWorld.java Script and Compile it
+-----------------------------------------------------
+Write a script that creates and compiles HelloWorld.java from terminal.
+Requirements:
+- Create a temp folder
+- Save a HelloWorld class with main method
+- Compile using `javac`
+- Run using `java` and show output
+
+Prompt 5: Setup GitHub Copilot CLI on Windows
+-----------------------------------------------------
+Write instructions or script to set up GitHub Copilot CLI on Windows.
+Requirements:
+- Install Node.js and npm if not available
+- Use `npm install -g @githubnext/copilot-cli`
+- Authenticate using `copilot login`
+- Print usage help
+
+Prompt 6: Create IntelliJ Project Directory from Script
+-----------------------------------------------------
+Write a batch or PowerShell script to initialize a basic Java project folder.
+Requirements:
+- Create src and bin folders
+- Add sample HelloWorld.java
+- Add `.idea` and `.iml` placeholder
+- Generate README.md
+
+Prompt 7: Automate IntelliJ Configuration Import for Java Projects
+-----------------------------------------------------
+Create a script to copy preset IntelliJ configuration files to `.idea` folder.
+Requirements:
+- Include code style, inspection profile, compiler settings
+- Copy from a central repo or backup
+- Add validation for target path
+
+Prompt 8: Use GitHub Copilot to Document Java Setup Script
+-----------------------------------------------------
+Prompt Copilot to:
+- Add structured doc comments to each step of a PowerShell Java setup script
+- Explain why JAVA_HOME is needed
+- Mention `javac` role
+- Format with region markers
+
+Prompt 9: Validate Java Installation in PowerShell
+-----------------------------------------------------
+Write a function in PowerShell that checks Java installation.
+Requirements:
+- Ensure `java.exe` exists in PATH
+- Print version
+- Check JAVA_HOME is not empty
+- Return success/failure code
+
+Prompt 10: Add GitHub Copilot Plugin to IntelliJ from Marketplace
+-----------------------------------------------------
+Write Copilot prompt to:
+- Search for Copilot plugin in IntelliJ Plugin Marketplace
+- Install and enable it
+- Restart IDE
+- Verify installation by prompting code suggestion
+
+Prompt 11: Configure Git in Windows for Copilot CLI Use
+-----------------------------------------------------
+Write a setup guide or prompt to:
+- Set Git username and email globally
+- Enable credential manager
+- Clone a Java project from GitHub
+- Run `copilot suggest` from terminal
+
+Prompt 12: Troubleshoot JAVA_HOME Misconfiguration in Windows
+-----------------------------------------------------
+Create a diagnostic prompt to:
+- Check if JAVA_HOME is incorrect
+- Check `java` vs `javac` path mismatch
+- Suggest correct fix steps
+- Validate with echo commands
+
+Prompt 13: Prompt Copilot to Generate Java Setup Instructions for Windows
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Generate a complete Java + IntelliJ + GitHub CLI setup checklist for Windows 11
+- Include downloads, install paths, and configuration
+- Save to markdown file
+
+Prompt 14: Create Restart-Free Environment Variable Script
+-----------------------------------------------------
+Write a script that sets JAVA_HOME and PATH for current session only.
+Requirements:
+- No restart needed
+- Use `$env:` in PowerShell
+- Print confirmation
+- Useful for temporary setups
+
+Prompt 15: Auto-Install Visual C++ Runtime if Needed
+-----------------------------------------------------
+Prompt Copilot to:
+- Detect missing Visual C++ Redistributable during Java install
+- Provide PowerShell fallback installer
+- Validate presence in registry or installed programs
+
+Prompt 16: Write a Script to Validate Java Setup for Copilot Use
+-----------------------------------------------------
+Requirements:
+- Confirm Java version >= 17
+- Confirm Node.js and npm present
+- Confirm `copilot` CLI works
+- Output as success checklist
+
+Prompt 17: Use Copilot to Create Java Compile Script for Windows
+-----------------------------------------------------
+Write a script using Copilot that:
+- Finds all .java files in `src/`
+- Compiles to `bin/`
+- Displays number of compiled files
+- Handles errors gracefully
+
+Prompt 18: Download OpenJDK Zip and Extract via Script
+-----------------------------------------------------
+Write a PowerShell script to:
+- Download OpenJDK ZIP from trusted URL
+- Extract to `C:\Java\OpenJDK`
+- Set JAVA_HOME accordingly
+- Clean up ZIP after extraction
+
+Prompt 19: Generate Copilot Prompt for Automating Windows Java Setup
+-----------------------------------------------------
+Prompt Copilot to:
+- Combine IntelliJ + Java + GitHub setup into one PowerShell or batch script
+- Support dry-run and verbose mode
+- Validate each step
+
+Prompt 20: Enable Long File Paths Support for Java Builds
+-----------------------------------------------------
+Write a PowerShell script to:
+- Enable Windows long file paths via registry
+- Use `Set-ItemProperty` cmdlet
+- Restart Explorer if needed
+- Print final status message
+

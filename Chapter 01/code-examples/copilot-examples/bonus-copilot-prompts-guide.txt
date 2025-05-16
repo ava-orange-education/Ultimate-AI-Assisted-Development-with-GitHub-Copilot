@@ -1,0 +1,100 @@
+## Chapter 1 — Section: copilot-examples
+
+Prompt 1: Add Function with Type Annotations in Python
+-----------------------------------------------------
+Create a Python function to add two numbers.
+Requirements:
+- Accept two arguments: a and b
+- Use type annotations (int or float)
+- Validate types using isinstance
+- Raise ValueError for invalid input types
+- Include a test case using assert
+
+Prompt 2: Generate Python Docstring from Function
+-----------------------------------------------------
+Write a Python function and ask Copilot to generate a docstring.
+Requirements:
+- Function name: calculate_area
+- Accepts two float arguments: length and width
+- Returns area as float
+- Generate a structured Google-style docstring
+- Include example usage
+
+Prompt 3: Document a Java Method with Javadoc
+-----------------------------------------------------
+Write a Java method to compute the power of a number.
+Requirements:
+- Use `Math.pow(base, exponent)`
+- Return double value
+- Include Javadoc with @param and @return
+- Describe method behavior and edge cases
+- Include example in main()
+
+Prompt 4: Enhance Readability of a Python Function
+-----------------------------------------------------
+Ask Copilot to improve the readability of a long inline Python expression.
+Requirements:
+- Original: `result = sum([x**2 for x in range(100) if x % 2 == 0])`
+- Copilot should suggest breaking into functions
+- Explain how this improves clarity and testability
+- Add optional print statements for intermediate steps
+
+Prompt 5: Generate Unit Tests for a String Utility in Java
+-----------------------------------------------------
+Ask Copilot to write JUnit 5 test cases for `StringUtils.capitalize(String input)`.
+Requirements:
+- Test null input (expect NullPointerException)
+- Test empty string
+- Test lowercase input (e.g., "java")
+- Test already capitalized input
+- Add @DisplayName for each test
+
+Prompt 6: Convert Python Loop to List Comprehension
+-----------------------------------------------------
+Provide a for-loop that filters and squares even numbers.
+Ask Copilot to rewrite it using list comprehension.
+Requirements:
+- Original: use append inside loop
+- Rewritten: compact and efficient
+- Output list should match exactly
+- Include time complexity comment
+
+Prompt 7: Generate Logging Statements for Java Method
+-----------------------------------------------------
+Ask Copilot to insert structured SLF4J logging into a Java method.
+Requirements:
+- Use logger.info, logger.error
+- Log method entry, parameters, and return value
+- Handle try-catch block logging
+- Include MDC context if applicable
+
+Prompt 8: Refactor Python Function into Class
+-----------------------------------------------------
+Take a function that processes student records and refactor it into a class.
+Requirements:
+- Define class `StudentProcessor`
+- Include methods for loading, processing, and reporting
+- Store internal state using class attributes
+- Add type hints and docstrings
+- Create unit test for class
+
+Prompt 9: Copilot Suggestion for HTML Form
+-----------------------------------------------------
+Ask Copilot to generate a responsive HTML form with input validation.
+Requirements:
+- Fields: name, email, message
+- Use HTML5 validation attributes
+- Mobile-friendly layout using flexbox
+- Add `<label>` for accessibility
+- Style using embedded CSS
+
+Prompt 10: Explain Copilot Completion for SQL Query
+-----------------------------------------------------
+Ask Copilot to write a SQL query that retrieves the top 5 highest-paid employees from a table.
+Requirements:
+- Table name: employees
+- Columns: name, salary, department
+- Order by salary descending
+- Limit to 5 rows
+- Add a prompt to explain each clause
+

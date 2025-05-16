@@ -1,0 +1,168 @@
+## Chapter 5 — Section: basic-java-programming/factorial_calculation/FactorialCalculator.java
+
+Prompt 1: Generate Iterative Factorial Function in Java
+-----------------------------------------------------
+Write a Java function `calculateFactorial(int n)` using iteration.
+Requirements:
+- Validate input (n >= 0)
+- Use for loop
+- Return long type for large values
+- Include test case for input 5
+
+Prompt 2: Generate Recursive Factorial Function in Java
+-----------------------------------------------------
+Create a recursive method to compute factorial.
+Requirements:
+- Base case: if n == 0 return 1
+- Use stack-safe recursion
+- Annotate with @Recursive for clarity
+- Compare performance with iterative
+
+Prompt 3: Add Exception Handling for Invalid Input
+-----------------------------------------------------
+Update `calculateFactorial(int n)` to throw exception for negative inputs.
+Requirements:
+- Throw `IllegalArgumentException`
+- Print stack trace in caller
+- Show example usage
+
+Prompt 4: Write JUnit Test for FactorialCalculator
+-----------------------------------------------------
+Generate JUnit 5 test cases for factorial function.
+Requirements:
+- Test inputs: 0, 1, 5, 10
+- Test invalid case -1
+- Use `@BeforeEach` setup
+- Include test case descriptions
+
+Prompt 5: Optimize Factorial Calculation with Memoization
+-----------------------------------------------------
+Refactor factorial function to use memoization.
+Requirements:
+- Use static HashMap to store results
+- Add synchronized block for thread-safety
+- Clear cache before test run
+- Print cache hit rate
+
+Prompt 6: Measure Execution Time of Factorial Computation
+-----------------------------------------------------
+Write code to benchmark factorial method.
+Requirements:
+- Use `System.nanoTime()`
+- Measure time for multiple input sizes
+- Print output in ms
+- Compare recursive vs memoized
+
+Prompt 7: Use BigInteger for Large Factorial Results
+-----------------------------------------------------
+Rewrite factorial to return `BigInteger`.
+Requirements:
+- Handle input up to 1000
+- Use `BigInteger.multiply()`
+- Test correctness by comparing with online value
+
+Prompt 8: Document Factorial Function with JavaDoc
+-----------------------------------------------------
+Generate JavaDoc for factorial method.
+Requirements:
+- Add `@param`, `@return`, `@throws`
+- Include example usage in doc
+- Mention use cases
+
+Prompt 9: Add Logging for Factorial Steps
+-----------------------------------------------------
+Instrument factorial function with logs at each step.
+Requirements:
+- Use `java.util.logging.Logger`
+- Print current n and result at each step
+- Format logs with timestamps
+
+Prompt 10: Create Command-Line Tool to Compute Factorial
+-----------------------------------------------------
+Write a main method that reads n from command-line.
+Requirements:
+- Validate input
+- Call factorial method
+- Print result
+- Handle parse errors
+
+Prompt 11: Create REST API Endpoint for Factorial
+-----------------------------------------------------
+Expose factorial calculation via a Spring Boot REST controller.
+Requirements:
+- Endpoint: /api/factorial?n=5
+- Return JSON response
+- Handle error for invalid input
+- Log computation time
+
+Prompt 12: Compare Tail-Recursive vs Normal Recursive Factorial
+-----------------------------------------------------
+Create two methods: one tail-recursive, one standard.
+Requirements:
+- Tail version must pass accumulator
+- Benchmark both with large n
+- Explain JVM tail-call limitations
+
+Prompt 13: Refactor Factorial Code to Use Functional Interface
+-----------------------------------------------------
+Use Java’s `Function<Integer, BigInteger>` to define factorial.
+Requirements:
+- Store function in a variable
+- Pass as parameter to another method
+- Use lambda or method reference
+
+Prompt 14: Add Input Validation Using Java Annotations
+-----------------------------------------------------
+Create a `@PositiveInteger` annotation to validate factorial input.
+Requirements:
+- Use reflection or validation framework
+- Throw exception if n < 0
+- Add unit test for validation
+
+Prompt 15: Create Graph Plot of Factorial Growth (Log Scale)
+-----------------------------------------------------
+Generate array of n vs factorial(n) for 1–20.
+Requirements:
+- Print values to console
+- Suggest use with external plotting tool
+- Highlight exponential growth pattern
+
+Prompt 16: Refactor for Multithreaded Computation
+-----------------------------------------------------
+Split factorial calculation into chunks using threads.
+Requirements:
+- Use ForkJoinPool or ExecutorService
+- Merge results via multiplication
+- Benchmark parallel performance
+
+Prompt 17: Add Unit Test with Parameterized Inputs
+-----------------------------------------------------
+Use JUnit5’s `@ParameterizedTest` to test factorials.
+Requirements:
+- Test cases for 0 to 10
+- Use `@CsvSource`
+- Validate return values
+
+Prompt 18: Highlight Common Mistakes in Factorial Logic
+-----------------------------------------------------
+Ask Copilot to identify:
+- Incorrect base cases
+- Integer overflow
+- Recursion without exit
+- Suggest fixes for each
+
+Prompt 19: Track Memory Usage for Factorial Computation
+-----------------------------------------------------
+Measure memory consumed while computing factorial of n.
+Requirements:
+- Use `Runtime.getRuntime()`
+- Print before/after memory
+- Trigger GC before measurement
+
+Prompt 20: Use Copilot to Generate Factorial Comparison Table
+-----------------------------------------------------
+Write code to:
+- Print factorial values for n = 1 to 20
+- Include iterative, recursive, memoized results
+- Output table with formatting
+

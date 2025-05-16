@@ -1,0 +1,28 @@
+# Prompt: GitHub Actions workflow for deploying Node.js app to AWS Lambda
+name: Node.js to AWS Lambda CI
+
+on:
+  push:
+    paths:
+      - "lambda/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd lambda
+          npm install
+
+      - name: Deploy to AWS Lambda
+        run: |
+          aws lambda update-function-code --function-name myLambdaFunction --zip-file fileb://function.zip

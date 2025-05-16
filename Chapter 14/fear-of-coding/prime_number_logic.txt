@@ -1,0 +1,8 @@
+# Copilot Prompt: "Explain the logic to check if a number is prime."
+
+A prime number is greater than 1 and divisible only by 1 and itself.
+
+To check if a number is prime:
+- Loop from 2 to the square root of the number.
+- If any number in that range divides the input evenly, it is not a prime.
+- If no such divisor is found, it's a prime number.

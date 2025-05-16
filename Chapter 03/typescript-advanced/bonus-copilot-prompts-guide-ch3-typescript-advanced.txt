@@ -1,0 +1,90 @@
+## Chapter 3 — Section: typescript-advanced
+
+Prompt 1: Define and Extend Interfaces for Blog Post
+-----------------------------------------------------
+Write two TypeScript interfaces: `BasePost` and `BlogPost`.
+Requirements:
+- BasePost includes title and content
+- BlogPost extends BasePost with author, tags, publishedAt
+- Create a sample object using BlogPost
+- Enforce readonly title
+
+Prompt 2: Use Optional Chaining and Nullish Coalescing
+-----------------------------------------------------
+Create a function that safely returns the author name of a blog post object.
+Requirements:
+- Use optional chaining for deep access
+- Use nullish coalescing to fallback to 'Unknown'
+- Type blog object input properly
+- Return a string value
+
+Prompt 3: Create a Generic Function for Array Filtering
+-----------------------------------------------------
+Write a generic TypeScript function `filterItems<T>()` that filters an array based on a predicate.
+Requirements:
+- Accepts array and callback predicate
+- Returns a new filtered array
+- Add tests using string and number arrays
+- Include inline JSDoc
+
+Prompt 4: Implement Method Decorator for Logging
+-----------------------------------------------------
+Create a method decorator `@LogExecution()` that logs method name and time taken.
+Requirements:
+- Use console.time and console.timeEnd
+- Apply to a method in a class
+- Type arguments properly
+- Include example usage in service class
+
+Prompt 5: Define Mapped Type for Readonly and Nullable Properties
+-----------------------------------------------------
+Create a mapped type `DeepReadonlyNullable<T>` that makes all properties optional, readonly, and nullable.
+Requirements:
+- Use keyof and mapped types
+- Apply to a complex interface
+- Show transformed structure
+- Explain limitations
+
+Prompt 6: Type a Function That Accepts Either Array or Single Item
+-----------------------------------------------------
+Create a function that accepts a string or array of strings.
+Requirements:
+- Normalize input to array
+- Use `Array.isArray()` for type narrowing
+- Return type: string[]
+- Add example calls
+
+Prompt 7: Use keyof with Type Inference for Dynamic Property Access
+-----------------------------------------------------
+Write a function that takes an object and a key, returns the value.
+Requirements:
+- Type-safe using generics
+- Return value should infer correct type
+- Disallow invalid key types
+- Add test for object with id, name, role
+
+Prompt 8: Use Conditional Types to Infer Result Type
+-----------------------------------------------------
+Create a utility type `Result<T>` that returns 'Success<T>' if T extends true, else 'Failure'.
+Requirements:
+- Use `extends` in conditional type
+- Create two types: Success<T> and Failure
+- Add examples for `Result<true>` and `Result<false>`
+
+Prompt 9: Create and Use Custom Type Guard
+-----------------------------------------------------
+Implement a custom type guard `isBlogPost(obj: any): obj is BlogPost`.
+Requirements:
+- Check if object has required fields
+- Use in if-statement to safely access properties
+- Add test cases with valid and invalid inputs
+
+Prompt 10: Design Class with Access Modifiers and Inheritance
+-----------------------------------------------------
+Create a base class `Post` and a derived class `BlogPost`.
+Requirements:
+- Use private, protected, public fields
+- Include a constructor and method
+- Extend class and override method in subclass
+- Use readonly where appropriate
+

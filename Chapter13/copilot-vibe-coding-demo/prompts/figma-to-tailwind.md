@@ -1,0 +1,1 @@
+Generate responsive Tailwind layout for a login form with image on left and form on right.

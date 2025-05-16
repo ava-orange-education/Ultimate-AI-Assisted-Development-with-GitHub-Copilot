@@ -1,0 +1,22 @@
+<!-- 
+Prompt:
+Write a simple browser-based WebSocket client in HTML and JavaScript for a real-time chat app. 
+The page should have an input box and a send button to send messages to a WebSocket server. 
+Add another button to simulate 'typing' events. 
+The client should handle server messages of type message, typing, disconnection, and welcome, and display them in a chat window.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Chat</title>
+</head>
+<body>
+    <input type="text" id="messageInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+    <button onmousedown="startTyping()" onmouseup="stopTyping()">Typing...</button>
+    <div id="chat"></div>
+
+    <script src="client.js"></script>
+</body>
+</html>

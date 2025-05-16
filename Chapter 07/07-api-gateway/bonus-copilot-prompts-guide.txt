@@ -1,0 +1,58 @@
+Prompt 1: Create a Basic Reverse Proxy in Go
+--------------------------------------------
+Write a Go program that acts as a reverse proxy using `net/http/httputil`.
+Route /users to http://localhost:5001 and /orders to http://localhost:5002.
+Log incoming requests and target backend service.
+
+Prompt 2: Add Load Balancing to the Gateway
+-------------------------------------------
+Enhance the reverse proxy to support round-robin load balancing across multiple backend instances.
+For /users, balance between http://localhost:5001 and http://localhost:5003.
+Persist routing by endpoint path.
+
+Prompt 3: Add JWT Authentication Middleware
+-------------------------------------------
+Add middleware to the proxy that extracts JWT tokens from the Authorization header.
+Validate the token and reject requests with 401 if invalid or missing.
+Include user ID and role in forwarded headers.
+
+Prompt 4: Rate Limiting Middleware
+----------------------------------
+Implement IP-based rate limiting middleware that allows 100 requests per minute.
+Return 429 Too Many Requests if exceeded. Use in-memory storage and reset counts periodically.
+
+Prompt 5: Request Timeout Handling
+----------------------------------
+Configure each proxy request with a timeout of 3 seconds using a custom http.Client.
+Log and return 504 Gateway Timeout on failure.
+
+Prompt 6: Rewrite Request Headers
+---------------------------------
+Rewrite incoming headers before forwarding the request:
+- Remove Authorization
+- Add X-Forwarded-For and X-Request-ID
+Ensure consistent logging of request IDs.
+
+Prompt 7: Response Compression for Proxied Responses
+----------------------------------------------------
+Add gzip compression for all responses returned by the gateway.
+Use Go’s gzip writer and wrap the response writer in middleware.
+Set appropriate headers: Content-Encoding and Vary.
+
+Prompt 8: Graceful Shutdown of Gateway Server
+---------------------------------------------
+Add SIGINT/SIGTERM signal handling to allow graceful shutdown.
+Drain open connections and log shutdown completion. Use `http.Server.Shutdown` API with context.
+
+Prompt 9: Add Access Logging with Log Rotation
+----------------------------------------------
+Log each request’s method, path, status, duration, and client IP.
+Store logs in rotating files using lumberjack or ltsv format.
+Rotate daily or by size (10MB).
+
+Prompt 10: Health Check Endpoint for Gateway
+--------------------------------------------
+Expose a /health endpoint on the API gateway that returns 200 OK.
+Add uptime, memory usage, and goroutine count in JSON.
+Cache metrics for a short duration to reduce overhead.
+

@@ -1,0 +1,157 @@
+## Chapter 5 — Section: basic-java-programming/prime_number_check/PrimeNumberChecker.java
+
+Prompt 1: Write a Basic Prime Number Checker in Java
+-----------------------------------------------------
+Create a method `isPrime(int n)` that checks if a number is prime.
+Requirements:
+- Return true for primes
+- Use trial division method
+- Handle edge cases for n < 2
+- Add unit test for values 1–10
+
+Prompt 2: Optimize Prime Checker with Square Root Limit
+-----------------------------------------------------
+Update prime check logic to iterate up to √n.
+Requirements:
+- Avoid checking even numbers after 2
+- Use `Math.sqrt(n)` and cast to int
+- Benchmark performance for n = 10^6
+
+Prompt 3: Create JUnit Test Suite for Prime Checker
+-----------------------------------------------------
+Write a test class with:
+- `@Test` methods for common primes
+- Negative tests for composite numbers
+- Edge cases: 0, 1, 2
+- Use `assertTrue` and `assertFalse`
+
+Prompt 4: Generate Prime Numbers in a Given Range
+-----------------------------------------------------
+Write a method `List<Integer> generatePrimes(int start, int end)`.
+Requirements:
+- Validate inputs
+- Use isPrime internally
+- Return list of primes between start and end
+
+Prompt 5: Benchmark Prime Checker on Large Numbers
+-----------------------------------------------------
+Write a main method to:
+- Test isPrime on 10^5, 10^6, 10^7
+- Print execution time
+- Compare naive vs optimized version
+
+Prompt 6: Refactor Prime Checker Using Java Streams
+-----------------------------------------------------
+Create a method that prints first N primes using Stream API.
+Requirements:
+- Use `IntStream.range` with filter
+- Limit to N results
+- Print list with `collect(Collectors.toList())`
+
+Prompt 7: Use BigInteger.isProbablePrime for Large Numbers
+-----------------------------------------------------
+Write a method that checks primality using `BigInteger.isProbablePrime(int certainty)`.
+Requirements:
+- Convert int to BigInteger
+- Use certainty = 10
+- Print result with message
+
+Prompt 8: Document Prime Checker Logic with JavaDoc
+-----------------------------------------------------
+Add documentation to isPrime method.
+Requirements:
+- Describe algorithm
+- Include time complexity
+- Add input/output examples
+
+Prompt 9: Create REST API to Check Prime Status
+-----------------------------------------------------
+Expose `/api/prime-check?n=37` using Spring Boot.
+Requirements:
+- Use `@GetMapping`
+- Return JSON { "number": 37, "isPrime": true }
+- Add exception handling for bad input
+
+Prompt 10: Print All Primes Below N Using Sieve of Eratosthenes
+-----------------------------------------------------
+Write a method `List<Integer> sieve(int n)` to find all primes below n.
+Requirements:
+- Use boolean array
+- Mark non-primes in loops
+- Return final prime list
+
+Prompt 11: Generate HTML Table of Prime Numbers Using Java
+-----------------------------------------------------
+Write Java code to:
+- Generate HTML string table of primes 1–100
+- Format as 10 columns per row
+- Save to file `primes.html`
+
+Prompt 12: Add Logging for Prime Checks
+-----------------------------------------------------
+Use `java.util.logging.Logger` to log each number being checked.
+Requirements:
+- Log input and result
+- Use level: INFO
+- Disable logs in production with config
+
+Prompt 13: Test Prime Checker Using ParameterizedTest
+-----------------------------------------------------
+Use JUnit 5 `@ParameterizedTest` with:
+- `@ValueSource` for known primes
+- `@CsvSource` for value + expected result
+- Validate against isPrime
+
+Prompt 14: Create Java GUI to Input and Check Prime
+-----------------------------------------------------
+Use Swing to build a GUI app:
+- Input field for number
+- Button to check prime
+- Result displayed below
+- Exception handling for bad input
+
+Prompt 15: Create CLI Tool for Prime Check
+-----------------------------------------------------
+Write a main method to:
+- Accept input `n` from args
+- Call isPrime
+- Print result in green/red based on prime status
+
+Prompt 16: Generate Prime Number Table with Count and Ratio
+-----------------------------------------------------
+Create a report:
+- Count number of primes from 1–1000
+- Compute ratio to total
+- Print final percentage
+- Format nicely in console
+
+Prompt 17: Build a Prime Number Microservice
+-----------------------------------------------------
+Spring Boot app:
+- Expose /api/primes/{n}
+- Return list of primes <= n
+- Include Swagger/OpenAPI docs
+- Add unit + integration tests
+
+Prompt 18: Create a Prime Detector Class with Utility Methods
+-----------------------------------------------------
+Write a PrimeUtil class:
+- Methods: isPrime, getNextPrime, generatePrimes(n)
+- Static methods only
+- Prevent instantiation with private constructor
+
+Prompt 19: Highlight Common Mistakes in Prime Checking
+-----------------------------------------------------
+Prompt Copilot to:
+- Detect incorrect condition for n <= 1
+- Warn about checking divisibility by all numbers
+- Suggest using early exit for even numbers
+
+Prompt 20: Visualize Prime Distribution Using ASCII Chart
+-----------------------------------------------------
+Print '*' for prime and '.' for non-prime in a horizontal row.
+Requirements:
+- For numbers 1 to 100
+- Newline every 20 characters
+- Useful for visualizing density
+

@@ -1,0 +1,55 @@
+Prompt 1: Basic Worker Pool Implementation
+------------------------------------------
+Implement a worker pool in Go that processes integer tasks concurrently using goroutines.
+Use a buffered channel for the task queue and a fixed number of workers.
+Print task ID and the worker ID processing it.
+
+Prompt 2: Add Timeout per Task
+------------------------------
+Wrap each worker’s task logic in context.WithTimeout.
+Simulate long-running tasks and cancel if they exceed 2 seconds.
+Log timeout events.
+
+Prompt 3: Retry Failed Tasks
+----------------------------
+Add retry logic in the worker to attempt a task up to 3 times before marking it as failed.
+Log each retry and final result. Use a map to track retry attempts by task ID.
+
+Prompt 4: Task Result Collection
+--------------------------------
+Enhance the worker pool to collect and return task results in a result channel.
+Print the summary once all tasks complete. Include task ID, worker ID, and status.
+
+Prompt 5: Use sync.WaitGroup for Pool Synchronization
+-----------------------------------------------------
+Synchronize all task processing using sync.WaitGroup.
+Ensure the main goroutine exits only after all workers have completed their assigned tasks.
+
+Prompt 6: Dynamically Scale Workers
+-----------------------------------
+Create a worker pool that adjusts the number of active workers based on current load (number of pending tasks).
+Increase up to a max limit and shrink when idle.
+
+Prompt 7: Implement a Graceful Shutdown
+---------------------------------------
+Handle SIGINT (Ctrl+C) signal and gracefully shut down the worker pool.
+Stop accepting new tasks, finish in-flight ones, and log shutdown summary.
+
+Prompt 8: Error Aggregation and Logging
+---------------------------------------
+Track and aggregate errors encountered by workers during task execution.
+Report final counts of success and failures. Save the full error log to a file.
+
+Prompt 9: Add Task Priority Support
+-----------------------------------
+Modify the task queue to support high-priority tasks.
+Use a priority queue (heap) and ensure high-priority tasks are dispatched first.
+
+Prompt 10: Unit Test the Worker Pool
+------------------------------------
+Write unit tests that verify:
+- All tasks are processed
+- Timeout tasks are canceled
+- Retry logic is applied
+Mock long-running and failed task scenarios.
+

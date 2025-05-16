@@ -1,0 +1,39 @@
+# Prompt:
+# Generate a Dockerfile and Kubernetes deployment YAML for a Node.js microservice.
+# - The app listens on port 8080.
+# - Use Nginx as a reverse proxy.
+# - Deploy as a Kubernetes pod.
+
+# Kubernetes Deployment YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-microservice
+  template:
+    metadata:
+      labels:
+        app: nodejs-microservice
+    spec:
+      containers:
+      - name: nodejs-microservice
+        image: your-dockerhub-username/nodejs-microservice:latest # Replace with your Docker image
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-microservice
+spec:
+  selector:
+    app: nodejs-microservice
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer

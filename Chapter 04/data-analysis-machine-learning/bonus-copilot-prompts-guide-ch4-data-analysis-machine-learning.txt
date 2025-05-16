@@ -1,0 +1,92 @@
+## Chapter 4 — Section: data-analysis-machine-learning
+
+Prompt 1: Fill Missing Values with Column Median
+-----------------------------------------------------
+Write a function that fills missing numeric values in a pandas DataFrame with the column's median.
+Requirements:
+- Handle both int and float columns
+- Return new DataFrame
+- Warn if entire column is null
+- Include test case with sample data
+
+Prompt 2: Encode Categorical Features Using OneHotEncoder
+-----------------------------------------------------
+Use sklearn’s OneHotEncoder to transform a DataFrame with string categories.
+Requirements:
+- Use `ColumnTransformer` to only encode specific columns
+- Return transformed array with column names
+- Include handling for unknown values
+- Print feature names after transform
+
+Prompt 3: Normalize Features Using StandardScaler
+-----------------------------------------------------
+Write a function that normalizes numeric columns using sklearn’s StandardScaler.
+Requirements:
+- Return transformed DataFrame with same column names
+- Include check for non-numeric columns
+- Use pipeline for transformation
+- Include mean and std output
+
+Prompt 4: Build a Decision Tree Classifier on Iris Dataset
+-----------------------------------------------------
+Use sklearn to train a Decision Tree on the Iris dataset.
+Requirements:
+- Split into train/test sets
+- Train classifier and evaluate accuracy
+- Plot tree using `plot_tree()`
+- Print confusion matrix
+
+Prompt 5: Handle Missing Values Using IterativeImputer
+-----------------------------------------------------
+Use sklearn’s IterativeImputer to fill missing values.
+Requirements:
+- Apply to DataFrame with numeric columns
+- Use BayesianRidge as estimator
+- Show before/after stats
+- Warn if more than 30% data is missing
+
+Prompt 6: Visualize Class Distribution with Seaborn
+-----------------------------------------------------
+Create a bar plot showing the distribution of classes in a labeled dataset.
+Requirements:
+- Use seaborn countplot
+- Add color palette and axis labels
+- Rotate x labels if needed
+- Include total count as title
+
+Prompt 7: Train/Test Split with Stratification
+-----------------------------------------------------
+Use sklearn’s `train_test_split` to split data with balanced class distribution.
+Requirements:
+- Pass stratify param
+- Ensure 80/20 split
+- Log class counts in each set
+- Handle binary and multi-class
+
+Prompt 8: Evaluate Classifier with Cross Validation
+-----------------------------------------------------
+Evaluate a classifier using 5-fold cross-validation and print average scores.
+Requirements:
+- Use sklearn’s `cross_val_score`
+- Include accuracy, precision, recall
+- Log per-fold results
+- Show best and worst scores
+
+Prompt 9: Save and Load Trained Model with Joblib
+-----------------------------------------------------
+Train a model and save it using joblib.
+Requirements:
+- Use DecisionTreeClassifier
+- Save to `model.joblib`
+- Load and predict on new data
+- Print comparison of pre/post load accuracy
+
+Prompt 10: Create a Preprocessing Pipeline with ColumnTransformer
+-----------------------------------------------------
+Build a preprocessing pipeline that scales numeric columns and one-hot encodes categorical columns.
+Requirements:
+- Use ColumnTransformer
+- Combine with classifier using Pipeline
+- Fit/predict on example dataset
+- Display shape of transformed features
+

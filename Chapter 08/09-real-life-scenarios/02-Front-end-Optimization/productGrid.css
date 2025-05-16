@@ -1,0 +1,26 @@
+/* Prompt:
+Write CSS for a responsive product grid that adjusts to 1 column on mobile, 2 columns on tablets, and 4 columns on desktops.
+*/
+
+.product-grid {
+    display: grid;
+    gap: 16px;
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

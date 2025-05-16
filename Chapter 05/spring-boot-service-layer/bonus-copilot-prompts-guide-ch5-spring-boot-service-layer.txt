@@ -1,0 +1,158 @@
+## Chapter 5 — Section: spring-boot-service-layer
+
+Prompt 1: Implement Singleton Pattern for Database Connection
+-----------------------------------------------------
+Use Copilot to write a thread-safe singleton class `DatabaseConnectionManager`.
+Requirements:
+- Use `private static volatile` instance
+- Synchronize only on first initialization
+- Add `getInstance()` method
+
+Prompt 2: Use @Service Annotation for Business Logic Class
+-----------------------------------------------------
+Create a `UserService` class annotated with `@Service`.
+Requirements:
+- Inject UserRepository using constructor injection
+- Add methods like `findUserById`, `getAllUsers`
+- Handle null checks safely
+
+Prompt 3: Inject Service into Controller Using @Autowired
+-----------------------------------------------------
+Demonstrate Spring’s DI by injecting a service class into controller.
+Requirements:
+- Use constructor injection
+- Avoid `@Autowired` field injection
+- Validate via unit test
+
+Prompt 4: Create Pagination Logic in Service Layer
+-----------------------------------------------------
+Write a method in `ItemService` to return paginated results.
+Requirements:
+- Accept `page`, `size` params
+- Return Page<Item>
+- Delegate to repository layer
+
+Prompt 5: Use Interface for Service Abstraction
+-----------------------------------------------------
+Define `UserService` interface and implementation.
+Requirements:
+- Use interface in controller
+- Add `@Primary` to default implementation
+- Create a mock implementation for testing
+
+Prompt 6: Write Unit Test for Singleton Instance Uniqueness
+-----------------------------------------------------
+Write JUnit test to verify singleton behavior.
+Requirements:
+- Assert same instance across multiple calls
+- Add thread-safe check
+- Test concurrent access
+
+Prompt 7: Add Logging to All Service Methods
+-----------------------------------------------------
+Use SLF4J to log method entry and exit in service class.
+Requirements:
+- Include parameter and return values
+- Format logs consistently
+- Use aspect if possible
+
+Prompt 8: Handle NullPointerException Gracefully in Service Logic
+-----------------------------------------------------
+Update service method to guard against null dependencies.
+Requirements:
+- Use `Optional.ofNullable(...)`
+- Add custom exception on failure
+- Log warning before exception
+
+Prompt 9: Mock Repository in Service Unit Tests
+-----------------------------------------------------
+Write JUnit + Mockito test for a service method.
+Requirements:
+- Mock repository dependency
+- Define behavior using `when().thenReturn()`
+- Validate service output
+
+Prompt 10: Implement Exception Propagation from Repository to Service
+-----------------------------------------------------
+Add try-catch in service method for repository exceptions.
+Requirements:
+- Catch `DataAccessException`
+- Wrap in custom exception
+- Include original cause in log
+
+Prompt 11: Annotate Service Method with @Transactional
+-----------------------------------------------------
+Add `@Transactional` to a method modifying multiple entities.
+Requirements:
+- Rollback on runtime exception
+- Log before/after transaction
+- Include rollback test case
+
+Prompt 12: Inject Configuration Property into Service
+-----------------------------------------------------
+Access a custom property from `application.properties`.
+Requirements:
+- Use `@Value("${app.configKey}")`
+- Inject into service constructor
+- Fallback to default value if missing
+
+Prompt 13: Validate Input Parameters in Service Layer
+-----------------------------------------------------
+Add parameter validation before executing service logic.
+Requirements:
+- Use `Assert.notNull()` or custom check
+- Throw `IllegalArgumentException` on failure
+- Add test coverage for invalid inputs
+
+Prompt 14: Use Service Layer to Coordinate Between Two Repositories
+-----------------------------------------------------
+Write a service method that:
+- Reads user from one repo
+- Logs activity to another repo
+- Ensures atomicity of both operations
+
+Prompt 15: Load Data from External API in Service Layer
+-----------------------------------------------------
+Create a service method that:
+- Uses `RestTemplate` to fetch data
+- Parses JSON to POJO
+- Handles timeouts and error codes
+
+Prompt 16: Convert Service Output to DTO for Controller
+-----------------------------------------------------
+Transform entity object to a lightweight DTO in service.
+Requirements:
+- Create DTO class with limited fields
+- Use model mapper or manual mapping
+- Unit test for mapping logic
+
+Prompt 17: Write Service Layer Integration Test
+-----------------------------------------------------
+Test full flow: controller → service → repository using `@SpringBootTest`.
+Requirements:
+- Use test database
+- Load sample data
+- Verify final output via assertions
+
+Prompt 18: Schedule Periodic Service Method Execution
+-----------------------------------------------------
+Use `@Scheduled` to run a service method every 15 minutes.
+Requirements:
+- Log execution timestamp
+- Add enable scheduling config
+- Test with shorter interval
+
+Prompt 19: Secure Service Methods Using Role-based Access
+-----------------------------------------------------
+Use `@PreAuthorize("hasRole('ADMIN')")` on sensitive service method.
+Requirements:
+- Enable method-level security
+- Simulate authorized and unauthorized access
+
+Prompt 20: Prompt Copilot to Scaffold Full Service Layer for Order Module
+-----------------------------------------------------
+Ask Copilot to:
+- Generate `OrderService`, interface, and tests
+- Include validation, transformation, logging
+- Scaffold integration with repository layer
+

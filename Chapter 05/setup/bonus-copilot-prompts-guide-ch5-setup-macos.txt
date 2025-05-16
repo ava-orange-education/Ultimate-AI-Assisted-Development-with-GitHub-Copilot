@@ -1,0 +1,157 @@
+## Chapter 5 — Section: setup/macos-java-setup.txt
+
+Prompt 1: Install OpenJDK via Homebrew on macOS
+-----------------------------------------------------
+Write a shell script to install OpenJDK 17 using Homebrew.
+Requirements:
+- Check for Homebrew installation
+- Run `brew install openjdk@17`
+- Add `JAVA_HOME` using `/usr/libexec/java_home`
+- Append to `.zshrc` or `.bash_profile`
+
+Prompt 2: Set JAVA_HOME Automatically After JDK Install
+-----------------------------------------------------
+Write a script that sets `JAVA_HOME` after installing OpenJDK.
+Requirements:
+- Use `/usr/libexec/java_home -v 17`
+- Export JAVA_HOME
+- Append to shell profile file
+- Reload profile file on completion
+
+Prompt 3: Validate Java Installation with Version Output
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Run `java -version` and `javac -version`
+- Validate that both commands return successfully
+- Print formatted check result
+- Log details to `java_setup.log`
+
+Prompt 4: Install GitHub Copilot CLI on macOS
+-----------------------------------------------------
+Prompt Copilot to:
+- Install Node.js and npm via Homebrew
+- Use `npm install -g @githubnext/copilot-cli`
+- Add CLI path to `.zshrc` if needed
+- Authenticate using `copilot auth login`
+
+Prompt 5: Create a Copilot Test Project in Java
+-----------------------------------------------------
+Write a script that:
+- Initializes a Java project in `~/projects/copilot-java-demo`
+- Creates HelloWorld.java
+- Compiles and runs it
+- Shows how Copilot can be used inside this project
+
+Prompt 6: Auto-Detect Installed JDKs on macOS
+-----------------------------------------------------
+Create a script that lists all available JDK versions.
+Requirements:
+- Use `/usr/libexec/java_home -V`
+- Parse and print Java version list
+- Allow user to select default
+- Set JAVA_HOME temporarily
+
+Prompt 7: Generate Shell Alias for Java Compiler
+-----------------------------------------------------
+Prompt Copilot to:
+- Add `alias javac17='javac -source 17 -target 17'` to `.zshrc`
+- Reload terminal after update
+- Print test command for compilation
+
+Prompt 8: Setup Maven or Gradle on macOS
+-----------------------------------------------------
+Write a Copilot prompt to:
+- Install Maven or Gradle via Homebrew
+- Validate version
+- Add binary path to system PATH
+- Suggest default config file setup
+
+Prompt 9: Troubleshoot JAVA_HOME Conflicts on macOS
+-----------------------------------------------------
+Prompt Copilot to:
+- Detect conflicting JAVA_HOME settings
+- Validate output of `echo $JAVA_HOME`
+- Recommend cleanup of old exports
+- Print corrected value with explanation
+
+Prompt 10: Use Copilot to Auto-Generate Profile Script
+-----------------------------------------------------
+Prompt Copilot to:
+- Generate a `.java-env.sh` file for Java setup
+- Include JAVA_HOME export and PATH update
+- Document each line
+- Source this file from `.zshrc`
+
+Prompt 11: Create a Java Project Using Copilot Suggestions
+-----------------------------------------------------
+Ask Copilot to:
+- Scaffold a `src/` and `lib/` folder
+- Add example class file and compile command
+- Include README instructions
+- Suggest gitignore entries
+
+Prompt 12: Benchmark Compilation Speed of Java App
+-----------------------------------------------------
+Create a script that:
+- Compiles a Java app multiple times
+- Uses `time` command to measure compilation
+- Outputs average compile time
+- Compares performance across JDK versions
+
+Prompt 13: Prompt Copilot to List Common JDK Install Errors on macOS
+-----------------------------------------------------
+Write a prompt that asks Copilot to:
+- List and describe common Java setup issues on macOS
+- Suggest step-by-step fix for each
+- Output to Markdown with table of contents
+
+Prompt 14: Enable Java Support in IntelliJ via CLI
+-----------------------------------------------------
+Prompt Copilot to:
+- Add Java SDK to IntelliJ project via `.idea` configuration
+- Validate by opening the project and building successfully
+- Use `idea` CLI command if available
+
+Prompt 15: Verify PATH Setup for Java After Install
+-----------------------------------------------------
+Create a script that:
+- Prints current $PATH
+- Checks if JAVA_HOME/bin is in path
+- Warns if not found
+- Suggests immediate fix
+
+Prompt 16: Reconfigure JAVA_HOME Using Copilot-Suggested Command
+-----------------------------------------------------
+Write a Copilot prompt that:
+- Shows how to re-export JAVA_HOME interactively
+- Stores it permanently in `.zshrc`
+- Explains how to reset with `/usr/libexec/java_home`
+
+Prompt 17: Compare Java Setup Steps Across OS Versions
+-----------------------------------------------------
+Prompt Copilot to:
+- Outline differences in Java setup for macOS Ventura, Monterey, and Big Sur
+- Include screenshots or terminal differences
+- Provide consistent workaround
+
+Prompt 18: Auto-Sync Java Setup Script via Copilot CLI
+-----------------------------------------------------
+Prompt Copilot to:
+- Create `java-setup.js` to automate JDK install and config
+- Run it via `copilot exec` or `npx`
+- Document its flow with comments
+
+Prompt 19: Provide Copilot Prompts for Diagnosing JDK Not Found
+-----------------------------------------------------
+Prompt Copilot to:
+- Suggest diagnostics when `javac` not found
+- Print full path using `which javac`
+- Recommend reinstall or relink steps
+
+Prompt 20: Annotate a Full Java macOS Setup Script with Copilot
+-----------------------------------------------------
+Ask Copilot to:
+- Auto-comment each part of a long `.sh` file used for Java setup
+- Improve clarity, add steps validation
+- Convert it to a reusable installer script
+

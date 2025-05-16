@@ -1,0 +1,101 @@
+Prompt 1: Optimize Naive Matrix Multiplication
+----------------------------------------------
+Refactor a naive O(n^3) matrix multiplication algorithm in C++.
+Use loop reordering and cache-friendly access patterns to reduce memory stalls.
+Measure runtime before and after.
+
+Prompt 2: Use OpenMP for Parallel Matrix Multiplication
+-------------------------------------------------------
+Enhance matrix multiplication by adding OpenMP pragmas to parallelize inner loops.
+Ensure thread safety and validate output correctness. Report speedup on multi-core systems.
+
+Prompt 3: Block-Based Matrix Multiplication
+-------------------------------------------
+Implement a blocked matrix multiplication algorithm.
+Use a tunable block size and compare cache performance and execution time vs. naive method.
+
+Prompt 4: Benchmark Sorting Algorithms on Large Datasets
+--------------------------------------------------------
+Create a benchmarking program to test QuickSort, MergeSort, and HeapSort on datasets > 10^6 elements.
+Measure time and memory usage for each algorithm and report comparative results.
+
+Prompt 5: Implement Multi-threaded Merge Sort
+---------------------------------------------
+Use `std::thread` to parallelize merge sort on large arrays.
+Divide work among threads and synchronize merging. Ensure correctness and log time taken for each thread.
+
+Prompt 6: Compare std::sort with Custom MergeSort
+-------------------------------------------------
+Compare C++ STL’s `std::sort()` with your custom multi-threaded merge sort implementation.
+Benchmark on arrays of increasing sizes and identify when multi-threading becomes beneficial.
+
+Prompt 7: Profile Trie Memory Consumption
+-----------------------------------------
+Construct a trie with 10,000+ strings and measure memory usage using a custom allocator or profiler.
+Log how node sharing reduces memory and compare with hashmap-based storage.
+
+Prompt 8: Optimize Trie with Pointer Compression
+------------------------------------------------
+Compress trie nodes using fixed-size arrays or bit manipulation.
+Evaluate memory usage and performance change before and after optimization.
+
+Prompt 9: Use SIMD for Vector Addition
+--------------------------------------
+Implement vector addition using SSE or AVX intrinsics in C++.
+Compare performance with scalar implementation. Include fallback for non-SIMD CPUs.
+
+Prompt 10: Optimize Recursion with Tail Recursion and Memoization
+-----------------------------------------------------------------
+Convert a recursive Fibonacci or DFS function into a tail-recursive version or iterative version.
+Add memoization and compare function call counts and stack usage.
+
+Prompt 11: Memory Pooling for Fast Allocation
+---------------------------------------------
+Implement a memory pool to optimize frequent small object allocations (e.g., in trie or linked list).
+Benchmark allocation/deallocation time vs. malloc/free.
+
+Prompt 12: Use Move Semantics to Avoid Unnecessary Copies
+---------------------------------------------------------
+In a vector transformation pipeline, replace expensive object copies with move semantics.
+Instrument copy/move constructors to verify when copies are avoided.
+
+Prompt 13: Analyze Cache Misses Using Perf or Valgrind
+------------------------------------------------------
+Run your C++ executable with `valgrind --tool=cachegrind` or `perf stat`.
+Identify cache miss hotspots and optimize code layout or loop order accordingly.
+
+Prompt 14: Profile Code with gprof and Eliminate Bottlenecks
+------------------------------------------------------------
+Use `gprof` to profile a CPU-intensive algorithm.
+Sort by self-time and identify top 3 functions to optimize (inline, unroll, or parallelize).
+
+Prompt 15: Avoid False Sharing in Parallel Arrays
+-------------------------------------------------
+Split memory layout to avoid multiple threads writing to adjacent cache lines.
+Demonstrate false sharing using a parallel array sum, then fix using padding/alignment.
+
+Prompt 16: Compare Raw Pointers vs std::vector Performance
+----------------------------------------------------------
+Benchmark dynamic arrays created with raw pointers and `new` vs. `std::vector`.
+Measure access speed, allocation/deallocation time, and memory fragmentation.
+
+Prompt 17: Inline Critical Functions
+------------------------------------
+Use `inline` or `__attribute__((always_inline))` on hot-path functions to reduce call overhead.
+Use objdump to verify inlining. Measure any performance improvements.
+
+Prompt 18: Optimize File Reading with mmap
+------------------------------------------
+Replace file reading using `ifstream` with memory-mapped file access using `mmap()`.
+Measure speed improvement on reading large binary files.
+
+Prompt 19: Use LRU Cache to Speed Up Expensive Computation
+----------------------------------------------------------
+Implement an LRU cache using `std::unordered_map` and list.
+Apply it to cache results of expensive recursive computations or I/O operations.
+
+Prompt 20: Measure Impact of Compiler Optimization Flags
+--------------------------------------------------------
+Compile your program using `-O0`, `-O2`, `-O3`, and `-Ofast`.
+Measure runtime for CPU-bound workloads and log performance gains with each level.
+

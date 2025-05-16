@@ -1,0 +1,160 @@
+## Chapter 5 — Section: backend-services
+
+Prompt 1: Scaffold a Spring Boot Microservice with OrderController
+-----------------------------------------------------
+Generate a REST microservice with endpoint `/orders`.
+Requirements:
+- Annotate `OrderController` with `@RestController`
+- Add GET and POST endpoints
+- Use `OrderService` for business logic
+
+Prompt 2: Create DTO and Entity Classes for Orders
+-----------------------------------------------------
+Use Copilot to create `OrderDto` and `Order` entity classes.
+Requirements:
+- Include id, customerName, items, status
+- Map DTO to entity
+- Add validations on fields
+
+Prompt 3: Expose Inter-Service API to Fetch Orders by Customer ID
+-----------------------------------------------------
+Write an endpoint `/orders/customer/{id}`.
+Requirements:
+- Use `@GetMapping`
+- Return all orders for that customer
+- Use path variable mapping
+
+Prompt 4: Register Microservice with Eureka Discovery Client
+-----------------------------------------------------
+Configure `OrderService` as a Eureka client.
+Requirements:
+- Add `@EnableEurekaClient`
+- Register with application name
+- Add eureka server URL to `application.yml`
+
+Prompt 5: Create Feign Client to Communicate with Inventory Service
+-----------------------------------------------------
+Use OpenFeign to talk to inventory microservice.
+Requirements:
+- Define interface with `@FeignClient`
+- Map endpoint `/inventory/check/{productId}`
+- Add fallback factory
+
+Prompt 6: Enable Circuit Breaker for Inventory Calls
+-----------------------------------------------------
+Add resilience to remote calls using Resilience4j.
+Requirements:
+- Use `@CircuitBreaker` on method
+- Configure threshold in `application.yml`
+- Log fallback trigger
+
+Prompt 7: Integrate Kafka to Publish Order Events
+-----------------------------------------------------
+Write a KafkaProducerService to publish events on order creation.
+Requirements:
+- Define `OrderCreatedEvent` schema
+- Send to `orders-topic`
+- Log key and partition
+
+Prompt 8: Generate Consumer to Listen to Order Topic
+-----------------------------------------------------
+Create Kafka listener to consume from `orders-topic`.
+Requirements:
+- Use `@KafkaListener`
+- Parse event and log content
+- Handle deserialization errors
+
+Prompt 9: Add Metrics Collection to REST APIs
+-----------------------------------------------------
+Instrument endpoints with Micrometer.
+Requirements:
+- Add `@Timed` annotation
+- Enable Prometheus export
+- Expose `/actuator/metrics`
+
+Prompt 10: Write Integration Test for REST + Kafka Flow
+-----------------------------------------------------
+Test that a POST request triggers Kafka event.
+Requirements:
+- Use embedded Kafka
+- Mock Kafka listener
+- Verify event content
+
+Prompt 11: Refactor Microservice into Domain-Driven Modules
+-----------------------------------------------------
+Structure microservice into layers:
+- controller, service, model, events
+- Use package-private access control
+- Add README for module layout
+
+Prompt 12: Handle Kafka Message Retry on Failure
+-----------------------------------------------------
+Use Dead Letter Queue for failed processing.
+Requirements:
+- Configure DLT topic
+- Log failed messages
+- Retry configurable via backoff
+
+Prompt 13: Enable Load Balancing via Spring Cloud LoadBalancer
+-----------------------------------------------------
+Use client-side load balancing when calling other services.
+Requirements:
+- Add dependency for `spring-cloud-loadbalancer`
+- Use service name instead of host:port
+- Validate round-robin requests
+
+Prompt 14: Secure Inter-Service Communication with OAuth2
+-----------------------------------------------------
+Protect API calls between services using token.
+Requirements:
+- Configure resource server
+- Validate token in header
+- Log authentication info
+
+Prompt 15: Add Request Tracing with Sleuth and Zipkin
+-----------------------------------------------------
+Enable trace propagation across microservices.
+Requirements:
+- Add Sleuth + Zipkin dependencies
+- Log traceId in every call
+- Verify spans in Zipkin UI
+
+Prompt 16: Use OpenAPI Spec for Contract Sharing Between Services
+-----------------------------------------------------
+Generate OpenAPI YAML for Order API.
+Requirements:
+- Annotate controller with `@Operation`
+- Use `springdoc-openapi`
+- Share spec with consuming teams
+
+Prompt 17: Deploy Order Microservice as Docker Container
+-----------------------------------------------------
+Write a Dockerfile for the Spring Boot app.
+Requirements:
+- Use multi-stage build
+- Expose port 8080
+- Use `entrypoint` for `java -jar`
+
+Prompt 18: Auto-Restart Service on Failure with Health Check
+-----------------------------------------------------
+Configure Spring Boot health endpoint and restart policy.
+Requirements:
+- Enable `/actuator/health`
+- Log restart event
+- Integrate with Docker or K8s
+
+Prompt 19: Create Async Endpoint Using CompletableFuture
+-----------------------------------------------------
+Add `/orders/async` endpoint returning `CompletableFuture<ResponseEntity>`.
+Requirements:
+- Simulate delay
+- Return HTTP 202 Accepted
+- Include callback handler
+
+Prompt 20: Prompt Copilot to Scaffold Full Event-Driven Microservice
+-----------------------------------------------------
+Ask Copilot to:
+- Scaffold `OrderController`, service, Kafka producer, consumer
+- Add model, DTO, and config
+- Include retry, fallback, and logging
+

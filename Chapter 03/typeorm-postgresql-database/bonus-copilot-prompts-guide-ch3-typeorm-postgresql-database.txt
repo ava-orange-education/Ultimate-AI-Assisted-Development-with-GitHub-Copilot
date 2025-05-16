@@ -1,0 +1,92 @@
+## Chapter 3 — Section: typeorm-postgresql-database
+
+Prompt 1: Define TypeORM Entity for User Table
+-----------------------------------------------------
+Create a TypeORM entity class `User` mapped to a PostgreSQL table.
+Requirements:
+- Fields: id (PK, auto-increment), name, email (unique), createdAt
+- Use appropriate decorators: @Entity, @PrimaryGeneratedColumn, etc.
+- Add validation using class-validator
+- Use TypeScript types for fields
+
+Prompt 2: Configure TypeORM with PostgreSQL Connection
+-----------------------------------------------------
+Write a `ormconfig.ts` or equivalent configuration for TypeORM.
+Requirements:
+- Set type to 'postgres'
+- Use environment variables for host, port, username, password
+- Sync schema to DB
+- Support CLI commands for migrations
+- Export the config as default
+
+Prompt 3: Create and Use TypeORM Repository for User
+-----------------------------------------------------
+Set up a custom repository to handle user queries.
+Requirements:
+- Method to find user by email
+- Method to get all users sorted by createdAt
+- Use `getRepository(User)` pattern
+- Include try-catch and error logging
+
+Prompt 4: Connect to PostgreSQL in App Startup
+-----------------------------------------------------
+Initialize TypeORM connection in your Express + TypeScript backend.
+Requirements:
+- Use `DataSource.initialize()`
+- Exit app on DB connection failure
+- Log successful connection
+- Encapsulate in a function `connectDatabase()`
+
+Prompt 5: Create Migration File for User Table
+-----------------------------------------------------
+Write a migration script to create the `users` table.
+Requirements:
+- Use TypeORM CLI or write SQL in `up()` and `down()`
+- Add constraints for NOT NULL and unique email
+- Support rollback
+- Include timestamped file naming convention
+
+Prompt 6: Write Service Function to Create and Save User
+-----------------------------------------------------
+Create a userService function to save user into DB using repository.
+Requirements:
+- Validate fields before saving
+- Use `await repo.save(user)`
+- Catch and throw meaningful DB errors
+- Return created user object
+
+Prompt 7: Query with Join Using TypeORM Relations
+-----------------------------------------------------
+Create `Post` entity related to `User` with ManyToOne relationship.
+Requirements:
+- Define both entities with relation decorators
+- Add method to fetch posts with user details
+- Eager load using `relations` array
+- Test result structure in controller
+
+Prompt 8: Use QueryBuilder to Filter Users Dynamically
+-----------------------------------------------------
+Build a dynamic query using TypeORM QueryBuilder.
+Requirements:
+- Filter by optional name and isActive
+- Return paginated list with limit and offset
+- Order by createdAt desc
+- Type input and return values
+
+Prompt 9: Add Timestamp and Soft Delete Columns
+-----------------------------------------------------
+Enhance User entity to include `updateAt`, `deleteAt` using decorators.
+Requirements:
+- Use @UpdateDateColumn and @DeleteDateColumn
+- Enable softDelete in repository
+- Add service method to soft delete by ID
+
+Prompt 10: Write Unit Tests for TypeORM User Repo Functions
+-----------------------------------------------------
+Use Jest to write unit tests for your User repository methods.
+Requirements:
+- Mock database using sqlite or test containers
+- Test save, find, delete operations
+- Use beforeAll and afterAll hooks
+- Assert results using `expect`
+

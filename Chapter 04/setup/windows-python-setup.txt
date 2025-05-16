@@ -1,0 +1,16 @@
+Prompt Used:
+// Provide steps to install Python 3.8+ on Windows, verify installation, and set up a virtual environment
+
+1. Download Python installer from https://www.python.org/downloads/
+2. During installation, **check** the box "Add Python to PATH".
+3. Complete installation.
+
+4. Verify Python installation:
+   Open Command Prompt and run:
+   > python --version
+
+5. Create a virtual environment:
+   > python -m venv myenv
+
+6. Activate the virtual environment:
+   > myenv\Scripts\activate

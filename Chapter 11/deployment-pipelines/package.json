@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-microservice",
+  "version": "1.0.0",
+  "description": "A sample Node.js microservice for deployment using Copilot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "echo 'No linting configured'",
+    "test": "echo 'No tests configured'"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
